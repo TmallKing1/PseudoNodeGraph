@@ -1,0 +1,3822 @@
+[
+ {
+  "page": "event",
+  "zh": "自定义变量变化时",
+  "en": "When Custom Variable Changes",
+  "kind": "function",
+  "target": "onCustomVariableChanges"
+ },
+ {
+  "page": "event",
+  "zh": "节点图变量变化时",
+  "en": "When Node Graph Variable Changes",
+  "kind": "function",
+  "target": "onNodeGraphVariableChanges"
+ },
+ {
+  "page": "event",
+  "zh": "预设状态变化时",
+  "en": "When Preset Status Changes",
+  "kind": "function",
+  "target": "onPresetStatusChanges"
+ },
+ {
+  "page": "event",
+  "zh": "实体创建时",
+  "en": "When Entity Is Created",
+  "kind": "function",
+  "target": "onEntityIsCreated"
+ },
+ {
+  "page": "event",
+  "zh": "实体移除/销毁时",
+  "en": "When Entity Is Removed/Destroyed",
+  "kind": "function",
+  "target": "onEntityIsRemovedDestroyed"
+ },
+ {
+  "page": "event",
+  "zh": "实体销毁时",
+  "en": "When Entity Is Destroyed",
+  "kind": "function",
+  "target": "onEntityIsDestroyed"
+ },
+ {
+  "page": "event",
+  "zh": "角色移动速度达到条件时",
+  "en": "When Character Movement SPD Meets Condition",
+  "kind": "function",
+  "target": "onCharacterMovementSPDMeetsCondition"
+ },
+ {
+  "page": "event",
+  "zh": "实体阵营变化时",
+  "en": "When Entity Faction Changes",
+  "kind": "function",
+  "target": "onEntityFactionChanges"
+ },
+ {
+  "page": "event",
+  "zh": "角色倒下时",
+  "en": "When the Character Is Down",
+  "kind": "function",
+  "target": "onCharacterIsDown"
+ },
+ {
+  "page": "event",
+  "zh": "角色复苏时",
+  "en": "When Character Revives",
+  "kind": "function",
+  "target": "onCharacterRevives"
+ },
+ {
+  "page": "event",
+  "zh": "玩家所有角色倒下时",
+  "en": "When All Player's Characters Are Down",
+  "kind": "function",
+  "target": "onAllPlayersCharactersAreDown"
+ },
+ {
+  "page": "event",
+  "zh": "玩家异常倒下并复苏时",
+  "en": "When Player Is Abnormally Downed and Revives",
+  "kind": "function",
+  "target": "onPlayerIsAbnormallyDownedAndRevives"
+ },
+ {
+  "page": "event",
+  "zh": "玩家所有角色复苏时",
+  "en": "When All Player's Characters Are Revived",
+  "kind": "function",
+  "target": "onAllPlayersCharactersAreRevived"
+ },
+ {
+  "page": "event",
+  "zh": "玩家传送完成时",
+  "en": "When Player Teleport Completes",
+  "kind": "function",
+  "target": "onPlayerTeleportCompletes"
+ },
+ {
+  "page": "event",
+  "zh": "前台角色变化时",
+  "en": "When the Active Character Changes",
+  "kind": "function",
+  "target": "onActiveCharacterChanges"
+ },
+ {
+  "page": "event",
+  "zh": "离开碰撞触发器时",
+  "en": "When Exiting Collision Trigger",
+  "kind": "function",
+  "target": "onExitingCollisionTrigger"
+ },
+ {
+  "page": "event",
+  "zh": "进入碰撞触发器时",
+  "en": "When Entering Collision Trigger",
+  "kind": "function",
+  "target": "onEnteringCollisionTrigger"
+ },
+ {
+  "page": "event",
+  "zh": "受到攻击时",
+  "en": "When Attacked",
+  "kind": "function",
+  "target": "onAttacked"
+ },
+ {
+  "page": "event",
+  "zh": "攻击命中时",
+  "en": "When Attack Hits",
+  "kind": "function",
+  "target": "onAttackHits"
+ },
+ {
+  "page": "event",
+  "zh": "被恢复生命值时",
+  "en": "When HP Is Recovered",
+  "kind": "function",
+  "target": "onHpIsRecovered"
+ },
+ {
+  "page": "event",
+  "zh": "发起恢复生命值时",
+  "en": "When Initiating HP Recovery",
+  "kind": "function",
+  "target": "onInitiatingHPRecovery"
+ },
+ {
+  "page": "event",
+  "zh": "进入易受打断状态时",
+  "en": "When Entering an Interruptible State",
+  "kind": "function",
+  "target": "onEnteringAnInterruptibleState"
+ },
+ {
+  "page": "event",
+  "zh": "基础运动器停止时",
+  "en": "When Basic Motion Device Stops",
+  "kind": "function",
+  "target": "onBasicMotionDeviceStops"
+ },
+ {
+  "page": "event",
+  "zh": "路径到达路点时",
+  "en": "When Path Reaches Waypoint",
+  "kind": "function",
+  "target": "onPathReachesWaypoint"
+ },
+ {
+  "page": "event",
+  "zh": "命中检测触发时",
+  "en": "When On-Hit Detection Is Triggered",
+  "kind": "function",
+  "target": "onOnHitDetectionIsTriggered"
+ },
+ {
+  "page": "event",
+  "zh": "定时器触发时",
+  "en": "When Timer Is Triggered",
+  "kind": "function",
+  "target": "onTimerIsTriggered"
+ },
+ {
+  "page": "event",
+  "zh": "全局计时器触发时",
+  "en": "When Global Timer Is Triggered",
+  "kind": "function",
+  "target": "onGlobalTimerIsTriggered"
+ },
+ {
+  "page": "event",
+  "zh": "界面控件组触发时",
+  "en": "When UI Control Group Is Triggered",
+  "kind": "function",
+  "target": "onUiControlGroupIsTriggered"
+ },
+ {
+  "page": "event",
+  "zh": "单位状态结束时",
+  "en": "When Unit Status Ends",
+  "kind": "function",
+  "target": "onUnitStatusEnds"
+ },
+ {
+  "page": "event",
+  "zh": "单位状态变更时",
+  "en": "When Unit Status Changes",
+  "kind": "function",
+  "target": "onUnitStatusChanges"
+ },
+ {
+  "page": "event",
+  "zh": "发生元素反应事件时",
+  "en": "When Elemental Reaction Event Occurs",
+  "kind": "function",
+  "target": "onElementalReactionEventOccurs"
+ },
+ {
+  "page": "event",
+  "zh": "护盾受到攻击时",
+  "en": "When Shield Is Attacked",
+  "kind": "function",
+  "target": "onShieldIsAttacked"
+ },
+ {
+  "page": "event",
+  "zh": "选项卡选中时",
+  "en": "When Tab Is Selected",
+  "kind": "function",
+  "target": "onTabIsSelected"
+ },
+ {
+  "page": "event",
+  "zh": "造物入战时",
+  "en": "When Creation Enters Combat",
+  "kind": "function",
+  "target": "onCreationEntersCombat"
+ },
+ {
+  "page": "event",
+  "zh": "造物脱战时",
+  "en": "When Creation Leaves Combat",
+  "kind": "function",
+  "target": "onCreationLeavesCombat"
+ },
+ {
+  "page": "event",
+  "zh": "玩家职业更改时",
+  "en": "When Player Class Changes",
+  "kind": "function",
+  "target": "onPlayerClassChanges"
+ },
+ {
+  "page": "event",
+  "zh": "玩家职业等级变化时",
+  "en": "When Player Class Level Changes",
+  "kind": "function",
+  "target": "onPlayerClassLevelChanges"
+ },
+ {
+  "page": "event",
+  "zh": "玩家职业解除时",
+  "en": "When Player Class Is Removed",
+  "kind": "function",
+  "target": "onPlayerClassIsRemoved"
+ },
+ {
+  "page": "event",
+  "zh": "技能节点调用时",
+  "en": "When Skill Node Is Called",
+  "kind": "function",
+  "target": "onSkillNodeIsCalled"
+ },
+ {
+  "page": "event",
+  "zh": "仇恨目标变化时",
+  "en": "When Aggro Target Changes",
+  "kind": "function",
+  "target": "onAggroTargetChanges"
+ },
+ {
+  "page": "event",
+  "zh": "自身入战时",
+  "en": "When Self Enters Combat",
+  "kind": "function",
+  "target": "onSelfEntersCombat"
+ },
+ {
+  "page": "event",
+  "zh": "自身脱战时",
+  "en": "When Self Leaves Combat",
+  "kind": "function",
+  "target": "onSelfLeavesCombat"
+ },
+ {
+  "page": "event",
+  "zh": "监听信号",
+  "en": "Monitor Signal",
+  "kind": "function",
+  "target": "onMonitorSignal"
+ },
+ {
+  "page": "event",
+  "zh": "卡牌选择器完成时",
+  "en": "When Deck Selector Is Complete",
+  "kind": "function",
+  "target": "onDeckSelectorIsComplete"
+ },
+ {
+  "page": "event",
+  "zh": "文本气泡完成时",
+  "en": "When Text Bubble Is Completed",
+  "kind": "function",
+  "target": "onTextBubbleIsCompleted"
+ },
+ {
+  "page": "event",
+  "zh": "商店出售自定义商品时",
+  "en": "When Custom Shop Item Is Sold",
+  "kind": "function",
+  "target": "onCustomShopItemIsSold"
+ },
+ {
+  "page": "event",
+  "zh": "商店出售背包物品时",
+  "en": "When Selling Inventory Items in the Shop",
+  "kind": "function",
+  "target": "onSellingInventoryItemsInTheShop"
+ },
+ {
+  "page": "event",
+  "zh": "商店收购道具时",
+  "en": "When selling items to the shop",
+  "kind": "function",
+  "target": "onSellingItemsToTheShop"
+ },
+ {
+  "page": "event",
+  "zh": "装备的词条数值改变时",
+  "en": "When Equipment Affix Value Changes",
+  "kind": "function",
+  "target": "onEquipmentAffixValueChanges"
+ },
+ {
+  "page": "event",
+  "zh": "装备初始化时",
+  "en": "When Equipment Is Initialized",
+  "kind": "function",
+  "target": "onEquipmentIsInitialized"
+ },
+ {
+  "page": "event",
+  "zh": "装备被穿戴时",
+  "en": "When Equipment Is Equipped",
+  "kind": "function",
+  "target": "onEquipmentIsEquipped"
+ },
+ {
+  "page": "event",
+  "zh": "装备被卸下时",
+  "en": "When Equipment Is Unequipped",
+  "kind": "function",
+  "target": "onEquipmentIsUnequipped"
+ },
+ {
+  "page": "event",
+  "zh": "装备买入时",
+  "en": "When Equipment is purchased",
+  "kind": "function",
+  "target": "onEquipmentIsPurchased"
+ },
+ {
+  "page": "event",
+  "zh": "装备卖出时",
+  "en": "When Equipment is sold",
+  "kind": "function",
+  "target": "onEquipmentIsSold"
+ },
+ {
+  "page": "event",
+  "zh": "背包道具新增时",
+  "en": "When Item Is Added to Inventory",
+  "kind": "function",
+  "target": "onItemIsAddedToInventory"
+ },
+ {
+  "page": "event",
+  "zh": "背包道具失去时",
+  "en": "When Item Is Lost From Inventory",
+  "kind": "function",
+  "target": "onItemIsLostFromInventory"
+ },
+ {
+  "page": "event",
+  "zh": "背包道具数量变化时",
+  "en": "When the Quantity of Inventory Item Changes",
+  "kind": "function",
+  "target": "onQuantityOfInventoryItemChanges"
+ },
+ {
+  "page": "event",
+  "zh": "背包货币数量变化时",
+  "en": "When the Quantity of Inventory Currency Changes",
+  "kind": "function",
+  "target": "onQuantityOfInventoryCurrencyChanges"
+ },
+ {
+  "page": "event",
+  "zh": "背包内道具被使用时",
+  "en": "When Items in the Inventory Are Used",
+  "kind": "function",
+  "target": "onItemsInTheInventoryAreUsed"
+ },
+ {
+  "page": "event",
+  "zh": "造物抵达巡逻路点时",
+  "en": "When Creation Reaches Patrol Waypoint",
+  "kind": "function",
+  "target": "onCreationReachesPatrolWaypoint"
+ },
+ {
+  "page": "event",
+  "zh": "复杂造物预设状态变化时",
+  "en": "When Complex Creation Preset Status Changes",
+  "kind": "function",
+  "target": "onComplexCreationPresetStatusChanges"
+ },
+ {
+  "page": "event",
+  "zh": "悬浮交互页操作触发时",
+  "en": "When Floating Interaction Page is Triggered",
+  "kind": "function",
+  "target": "onFloatingInteractionPageIsTriggered"
+ },
+ {
+  "page": "event",
+  "zh": "玩家离开操控运动器时",
+  "en": "When Player Leaves Control Motion Device",
+  "kind": "function",
+  "target": "onPlayerLeavesControlMotionDevice"
+ },
+ {
+  "page": "event",
+  "zh": "玩家跟随操控运动器时",
+  "en": "When Player Follows Control Motion Device",
+  "kind": "function",
+  "target": "onPlayerFollowsControlMotionDevice"
+ },
+ {
+  "page": "event",
+  "zh": "玩家激活操控运动器列表变化时",
+  "en": "When Player's Activated Control Motion Device List Changes",
+  "kind": "function",
+  "target": "onPlayersActivatedControlMotionDeviceListChanges"
+ },
+ {
+  "page": "exec",
+  "zh": "打印字符串",
+  "en": "Print String",
+  "kind": "function",
+  "target": "printString",
+  "sig": "printString(string: str): void"
+ },
+ {
+  "page": "exec",
+  "zh": "有限循环",
+  "en": "Finite Loop",
+  "kind": "native",
+  "target": "for (let i = start; i <= end; i++) { ... }（闭区间，见文档）"
+ },
+ {
+  "page": "exec",
+  "zh": "跳出循环",
+  "en": "Break Loop",
+  "kind": "native",
+  "target": "break;"
+ },
+ {
+  "page": "exec",
+  "zh": "设置局部变量",
+  "en": "Set Local Variable",
+  "kind": "native",
+  "target": "let x: T = value; x = newValue;"
+ },
+ {
+  "page": "exec",
+  "zh": "转发事件",
+  "en": "Forwarding Event",
+  "kind": "function",
+  "target": "forwardingEvent",
+  "sig": "forwardingEvent(targetEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "拼接列表",
+  "en": "Concatenate List",
+  "kind": "function",
+  "target": "concatenateList",
+  "sig": "concatenateList<T extends NodeValue = NodeValue>(targetList: T[], inputList: T[]): void"
+ },
+ {
+  "page": "exec",
+  "zh": "清除列表",
+  "en": "Clear List",
+  "kind": "function",
+  "target": "clearList",
+  "sig": "clearList<T extends NodeValue = NodeValue>(list: T[]): void"
+ },
+ {
+  "page": "exec",
+  "zh": "对列表插入值",
+  "en": "Insert Value Into List",
+  "kind": "function",
+  "target": "insertValueIntoList",
+  "sig": "insertValueIntoList<T extends NodeValue = NodeValue>(list: T[], insertID: int, insertValue: T): void"
+ },
+ {
+  "page": "exec",
+  "zh": "对列表移除值",
+  "en": "Remove Value From List",
+  "kind": "function",
+  "target": "removeValueFromList",
+  "sig": "removeValueFromList<T extends NodeValue = NodeValue>(list: T[], removeID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "对列表设置值",
+  "en": "Set List Value",
+  "kind": "function",
+  "target": "setListValue",
+  "sig": "setListValue<T extends NodeValue = NodeValue>(list: T[], id: int, value: T): void"
+ },
+ {
+  "page": "exec",
+  "zh": "列表排序",
+  "en": "List Sorting",
+  "kind": "function",
+  "target": "listSorting",
+  "sig": "listSorting<T extends NodeValue = NodeValue>(list: T[], sortBy: SortOrder): void"
+ },
+ {
+  "page": "exec",
+  "zh": "列表迭代循环",
+  "en": "List Iteration Loop",
+  "kind": "native",
+  "target": "for (const item of list) { ... }"
+ },
+ {
+  "page": "exec",
+  "zh": "设置自定义变量",
+  "en": "Set Custom Variable",
+  "kind": "function",
+  "target": "setCustomVariable",
+  "sig": "setCustomVariable<T extends NodeValue = NodeValue>(targetEntity: Entity, variableName: str, variableValue: T, triggerEvent: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置节点图变量",
+  "en": "Set Node Graph Variable",
+  "kind": "function",
+  "target": "setNodeGraphVariable",
+  "sig": "setNodeGraphVariable<T extends NodeValue = NodeValue>(variableName: str, variableValue: T, triggerEvent: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置预设状态",
+  "en": "Set Preset Status",
+  "kind": "function",
+  "target": "setPresetStatus",
+  "sig": "setPresetStatus(targetEntity: Entity, presetStatusIndex: int, presetStatusValue: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "销毁实体",
+  "en": "Destroy Entity",
+  "kind": "function",
+  "target": "destroyEntity",
+  "sig": "destroyEntity(targetEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "创建实体",
+  "en": "Create Entity",
+  "kind": "function",
+  "target": "createEntity",
+  "sig": "createEntity(targetGUID: GUID, unitTagIndexList: int[]): void"
+ },
+ {
+  "page": "exec",
+  "zh": "创建元件",
+  "en": "Create Prefab",
+  "kind": "function",
+  "target": "createPrefab",
+  "sig": "createPrefab(prefabID: PrefabId, location: Vec3, rotate: Vec3, ownerEntity: Entity, overwriteLevel: bool, level: int, unitTagIndexList: int[]): Entity"
+ },
+ {
+  "page": "exec",
+  "zh": "激活/关闭模型显示",
+  "en": "Activate/Disable Model Display",
+  "kind": "function",
+  "target": "activateDisableModelDisplay",
+  "sig": "activateDisableModelDisplay(targetEntity: Entity, activate: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "移除实体",
+  "en": "Remove Entity",
+  "kind": "function",
+  "target": "removeEntity",
+  "sig": "removeEntity(targetEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "创建元件组",
+  "en": "Create Prefab Group",
+  "kind": "function",
+  "target": "createPrefabGroup",
+  "sig": "createPrefabGroup(prefabGroupID: int, location: Vec3, rotate: Vec3, ownerEntity: Entity, level: int, unitTagIndexList: int[], overwriteLevel: bool): Entity[]"
+ },
+ {
+  "page": "exec",
+  "zh": "修改模型颜色和材质",
+  "en": "Edit Model Color & Material",
+  "kind": "function",
+  "target": "editModelColorAndMaterial",
+  "sig": "editModelColorAndMaterial(targetEntity: Entity, overwriteColorConfigurations: bool, enableCustomColor: bool, fillColor: int, colorOpacity: float, colorBlendType: ColorBlendType, overwriteMaterialConfigurations: bool, enableCustomMaterial: bool, fillMaterialType: FillMaterialType): void"
+ },
+ {
+  "page": "exec",
+  "zh": "结算关卡",
+  "en": "Settle Stage",
+  "kind": "function",
+  "target": "settleStage",
+  "sig": "settleStage(): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置当前环境时间",
+  "en": "Set Current Environment Time",
+  "kind": "function",
+  "target": "setCurrentEnvironmentTime",
+  "sig": "setCurrentEnvironmentTime(environmentTime: float): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置环境时间流逝速度",
+  "en": "Set Environment Time Passage Speed",
+  "kind": "function",
+  "target": "setEnvironmentTimePassageSpeed",
+  "sig": "setEnvironmentTimePassageSpeed(environmentTimePassageSpeed: float): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置实体阵营",
+  "en": "Set Entity Faction",
+  "kind": "function",
+  "target": "setEntityFaction",
+  "sig": "setEntityFaction(targetEntity: Entity, faction: Faction): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活复苏点",
+  "en": "Activate Revive Point",
+  "kind": "function",
+  "target": "activateRevivePoint",
+  "sig": "activateRevivePoint(playerEntity: Entity, revivePointID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "注销复苏点",
+  "en": "Deactivate Revive Point",
+  "kind": "function",
+  "target": "deactivateRevivePoint",
+  "sig": "deactivateRevivePoint(playerEntity: Entity, revivePointID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "允许/禁止玩家复苏",
+  "en": "Allow/Forbid Player to Revive",
+  "kind": "function",
+  "target": "allowForbidPlayerToRevive",
+  "sig": "allowForbidPlayerToRevive(playerEntity: Entity, allow: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家剩余复苏次数",
+  "en": "Set Player Remaining Revives",
+  "kind": "function",
+  "target": "setPlayerRemainingRevives",
+  "sig": "setPlayerRemainingRevives(playerEntity: Entity, remainingTimes: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家复苏耗时",
+  "en": "Set Player Revive Time",
+  "kind": "function",
+  "target": "setPlayerReviveTime",
+  "sig": "setPlayerReviveTime(playerEntity: Entity, duration: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "复苏角色",
+  "en": "Revive Character",
+  "kind": "function",
+  "target": "reviveCharacter",
+  "sig": "reviveCharacter(characterEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "击倒玩家所有角色",
+  "en": "Defeat All Player's Characters",
+  "kind": "function",
+  "target": "defeatAllPlayersCharacters",
+  "sig": "defeatAllPlayersCharacters(playerEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "复苏玩家所有角色",
+  "en": "Revive All Player's Characters",
+  "kind": "function",
+  "target": "reviveAllPlayersCharacters",
+  "sig": "reviveAllPlayersCharacters(playerEntity: Entity, deductRevives: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "传送玩家(超限)",
+  "en": "Teleport Player",
+  "kind": "function",
+  "target": "teleportPlayer",
+  "sig": "teleportPlayer(playerEntity: Entity, targetLocation: Vec3, targetRotation: Vec3): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置环境配置",
+  "en": "Set Environment Configuration",
+  "kind": "function",
+  "target": "setEnvironmentConfiguration",
+  "sig": "setEnvironmentConfiguration(environmentConfigIndex: int, targetPlayerList: Entity[], enableWeatherConfig: bool, weatherConfigIndex: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置角色元素能量",
+  "en": "Set Character's Elemental Energy",
+  "kind": "function",
+  "target": "setCharactersElementalEnergy",
+  "sig": "setCharactersElementalEnergy(characterEntity: Entity, elementalEnergy: float): void"
+ },
+ {
+  "page": "exec",
+  "zh": "增加角色元素能量",
+  "en": "Increases Character's Elemental Energy",
+  "kind": "function",
+  "target": "increasesCharactersElementalEnergy",
+  "sig": "increasesCharactersElementalEnergy(characterEntity: Entity, elementalEnergyIncreaseValue: float): void"
+ },
+ {
+  "page": "exec",
+  "zh": "复苏当前场上角色",
+  "en": "Revive the active character",
+  "kind": "function",
+  "target": "reviveTheActiveCharacter",
+  "sig": "reviveTheActiveCharacter(playerEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "传送玩家(经典)",
+  "en": "Teleport Player (Classic Mode)",
+  "kind": "function",
+  "target": "teleportPlayerClassicMode",
+  "sig": "teleportPlayerClassicMode(playerEntity: Entity, targetLocation: Vec3, targetRotation: Vec3): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活/关闭原生碰撞",
+  "en": "Activate/Disable Native Collision",
+  "kind": "function",
+  "target": "activateDisableNativeCollision",
+  "sig": "activateDisableNativeCollision(targetEntity: Entity, activate: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活/关闭原生碰撞可攀爬性",
+  "en": "Activate/Disable Native Collision Climbability",
+  "kind": "function",
+  "target": "activateDisableNativeCollisionClimbability",
+  "sig": "activateDisableNativeCollisionClimbability(targetEntity: Entity, activate: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活/关闭额外碰撞",
+  "en": "Activate/Disable Extra Collision",
+  "kind": "function",
+  "target": "activateDisableExtraCollision",
+  "sig": "activateDisableExtraCollision(targetEntity: Entity, extraCollisionID: int, activate: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活/关闭额外碰撞可攀爬性",
+  "en": "Activate/Disable Extra Collision Climbability",
+  "kind": "function",
+  "target": "activateDisableExtraCollisionClimbability",
+  "sig": "activateDisableExtraCollisionClimbability(targetEntity: Entity, extraCollisionID: int, activate: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活/关闭碰撞触发器",
+  "en": "Activate/Disable Collision Trigger",
+  "kind": "function",
+  "target": "activateDisableCollisionTrigger",
+  "sig": "activateDisableCollisionTrigger(targetEntity: Entity, triggerID: int, activate: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "发起攻击",
+  "en": "Initiate Attack",
+  "kind": "function",
+  "target": "initiateAttack",
+  "sig": "initiateAttack(targetEntity: Entity, damageCoefficient: float, damageIncrement: float, locationOffset: Vec3, rotationOffset: Vec3, abilityUnit: str, overwriteAbilityUnitConfig: bool, initiatorEntity: Entity, abilityUnitOwnerEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "恢复生命",
+  "en": "Recover HP",
+  "kind": "function",
+  "target": "recoverHP",
+  "sig": "recoverHP(targetEntity: Entity, recoveryAmount: float, abilityUnit: str, overwriteAbilityUnitConfig: bool, recoverInitiatorEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "损失生命",
+  "en": "HP Loss",
+  "kind": "function",
+  "target": "hpLoss",
+  "sig": "hpLoss(targetEntity: Entity, hpLoss: float, lethal: bool, canBeBlockedByInvincibility: bool, canBeBlockedByLockedHP: bool, damagePopUpType: DamagePopUpType): void"
+ },
+ {
+  "page": "exec",
+  "zh": "直接恢复生命",
+  "en": "Recover HP Directly",
+  "kind": "function",
+  "target": "recoverHPDirectly",
+  "sig": "recoverHPDirectly(recoverInitiatorEntity: Entity, recoverTargetEntity: Entity, recoveryAmount: float, ignoreRecoveryAmountAdjustment: bool, aggroGenerationMultiplier: float, aggroGenerationIncrement: float, healingTagList: str[]): void"
+ },
+ {
+  "page": "exec",
+  "zh": "添加匀速直线型基础运动器",
+  "en": "Add Uniform Basic Linear Motion Device",
+  "kind": "function",
+  "target": "addUniformBasicLinearMotionDevice",
+  "sig": "addUniformBasicLinearMotionDevice(targetEntity: Entity, motionDeviceName: str, motionDeviceDuration: float, velocityVector: Vec3): void"
+ },
+ {
+  "page": "exec",
+  "zh": "添加匀速旋转型基础运动器",
+  "en": "Add Uniform Basic Rotation-Based Motion Device",
+  "kind": "function",
+  "target": "addUniformBasicRotationBasedMotionDevice",
+  "sig": "addUniformBasicRotationBasedMotionDevice(targetEntity: Entity, motionDeviceName: str, motionDeviceDuration: float, angularVelocityS: float, rotationAxisOrientation: Vec3): void"
+ },
+ {
+  "page": "exec",
+  "zh": "停止并删除基础运动器",
+  "en": "Stop and Delete Basic Motion Device",
+  "kind": "function",
+  "target": "stopAndDeleteBasicMotionDevice",
+  "sig": "stopAndDeleteBasicMotionDevice(targetEntity: Entity, motionDeviceName: str, stopAllBasicMotionDevices: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "暂停基础运动器",
+  "en": "Pause Basic Motion Device",
+  "kind": "function",
+  "target": "pauseBasicMotionDevice",
+  "sig": "pauseBasicMotionDevice(targetEntity: Entity, motionDeviceName: str): void"
+ },
+ {
+  "page": "exec",
+  "zh": "恢复基础运动器",
+  "en": "Recover Basic Motion Device",
+  "kind": "function",
+  "target": "recoverBasicMotionDevice",
+  "sig": "recoverBasicMotionDevice(targetEntity: Entity, motionDeviceName: str): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活基础运动器",
+  "en": "Activate Basic Motion Device",
+  "kind": "function",
+  "target": "activateBasicMotionDevice",
+  "sig": "activateBasicMotionDevice(targetEntity: Entity, motionDeviceName: str): void"
+ },
+ {
+  "page": "exec",
+  "zh": "添加朝向目标旋转型基础运动器",
+  "en": "Add Target-Oriented Rotation-Based Motion Device",
+  "kind": "function",
+  "target": "addTargetOrientedRotationBasedMotionDevice",
+  "sig": "addTargetOrientedRotationBasedMotionDevice(targetEntity: Entity, motionDeviceName: str, motionDeviceDuration: float, targetAngle: Vec3): void"
+ },
+ {
+  "page": "exec",
+  "zh": "开启定点运动器",
+  "en": "Activate Fixed-Point Motion Device",
+  "kind": "function",
+  "target": "activateFixedPointMotionDevice",
+  "sig": "activateFixedPointMotionDevice(targetEntity: Entity, motionDeviceName: str, movementMode: FixedPointMovementMode, movementSPD: float, targetLocation: Vec3, targetRotation: Vec3, lockRotation: bool, parameterType: FixedPointParamType, movementTime: float): void"
+ },
+ {
+  "page": "exec",
+  "zh": "以GUID切换跟随运动器的目标",
+  "en": "Switch Follow Motion Device Target by GUID",
+  "kind": "function",
+  "target": "switchFollowMotionDeviceTargetByGUID",
+  "sig": "switchFollowMotionDeviceTargetByGUID(targetEntity: Entity, followTargetGUID: GUID, followTargetAttachmentPointName: str, locationOffset: Vec3, rotationOffset: Vec3, followCoordinateSystem: FollowCoordinateSystem, followType: FollowType): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活/关闭跟随运动器",
+  "en": "Activate/Disable Follow Motion Device",
+  "kind": "function",
+  "target": "activateDisableFollowMotionDevice",
+  "sig": "activateDisableFollowMotionDevice(targetEntity: Entity, activate: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "以实体切换跟随运动器的目标",
+  "en": "Switch Follow Motion Device Target by Entity",
+  "kind": "function",
+  "target": "switchFollowMotionDeviceTargetByEntity",
+  "sig": "switchFollowMotionDeviceTargetByEntity(targetEntity: Entity, followTargetEntity: Entity, followTargetAttachmentPointName: str, locationOffset: Vec3, rotationOffset: Vec3, followCoordinateSystem: FollowCoordinateSystem, followType: FollowType): void"
+ },
+ {
+  "page": "exec",
+  "zh": "创建投射物",
+  "en": "Create Projectile",
+  "kind": "function",
+  "target": "createProjectile",
+  "sig": "createProjectile(prefabID: PrefabId, location: Vec3, rotate: Vec3, ownerEntity: Entity, trackTarget: Entity, overwriteLevel: bool, level: int, unitTagIndexList: int[]): Entity"
+ },
+ {
+  "page": "exec",
+  "zh": "播放限时特效",
+  "en": "Play Timed Effects",
+  "kind": "function",
+  "target": "playTimedEffects",
+  "sig": "playTimedEffects(specialEffectsAsset: ConfigId, targetEntity: Entity, attachmentPointName: str, moveWithTheTarget: bool, rotateWithTheTarget: bool, locationOffset: Vec3, rotationOffset: Vec3, zoomMultiplier: float, playBuiltInSoundEffect: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "挂载循环特效",
+  "en": "Mount Looping Special Effect",
+  "kind": "function",
+  "target": "mountLoopingSpecialEffect",
+  "sig": "mountLoopingSpecialEffect(specialEffectsAsset: ConfigId, targetEntity: Entity, attachmentPointName: str, moveWithTheTarget: bool, rotateWithTheTarget: bool, locationOffset: Vec3, rotationOffset: Vec3, zoomMultiplier: float, playBuiltInSoundEffect: bool): int"
+ },
+ {
+  "page": "exec",
+  "zh": "清除循环特效",
+  "en": "Clear Looping Special Effect",
+  "kind": "function",
+  "target": "clearLoopingSpecialEffect",
+  "sig": "clearLoopingSpecialEffect(specialEffectInstanceID: int, targetEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "根据特效资产清除特效",
+  "en": "Clear Special Effects Based on Special Effect Assets",
+  "kind": "function",
+  "target": "clearSpecialEffectsBasedOnSpecialEffectAssets",
+  "sig": "clearSpecialEffectsBasedOnSpecialEffectAssets(targetEntity: Entity, specialEffectsAsset: ConfigId): void"
+ },
+ {
+  "page": "exec",
+  "zh": "启动定时器",
+  "en": "Start Timer",
+  "kind": "function",
+  "target": "startTimer",
+  "sig": "startTimer(targetEntity: Entity, timerName: str, loop: bool, timerSequence: float[]): void"
+ },
+ {
+  "page": "exec",
+  "zh": "暂停定时器",
+  "en": "Pause Timer",
+  "kind": "function",
+  "target": "pauseTimer",
+  "sig": "pauseTimer(targetEntity: Entity, timerName: str): void"
+ },
+ {
+  "page": "exec",
+  "zh": "恢复定时器",
+  "en": "Resume Timer",
+  "kind": "function",
+  "target": "resumeTimer",
+  "sig": "resumeTimer(targetEntity: Entity, timerName: str): void"
+ },
+ {
+  "page": "exec",
+  "zh": "终止定时器",
+  "en": "Stop Timer",
+  "kind": "function",
+  "target": "stopTimer",
+  "sig": "stopTimer(targetEntity: Entity, timerName: str): void"
+ },
+ {
+  "page": "exec",
+  "zh": "暂停全局计时器",
+  "en": "Pause Global Timer",
+  "kind": "function",
+  "target": "pauseGlobalTimer",
+  "sig": "pauseGlobalTimer(targetEntity: Entity, timerName: str): void"
+ },
+ {
+  "page": "exec",
+  "zh": "启动全局计时器",
+  "en": "Start Global Timer",
+  "kind": "function",
+  "target": "startGlobalTimer",
+  "sig": "startGlobalTimer(targetEntity: Entity, timerName: str): void"
+ },
+ {
+  "page": "exec",
+  "zh": "恢复全局计时器",
+  "en": "Recover Global Timer",
+  "kind": "function",
+  "target": "recoverGlobalTimer",
+  "sig": "recoverGlobalTimer(targetEntity: Entity, timerName: str): void"
+ },
+ {
+  "page": "exec",
+  "zh": "终止全局计时器",
+  "en": "Stop Global Timer",
+  "kind": "function",
+  "target": "stopGlobalTimer",
+  "sig": "stopGlobalTimer(targetEntity: Entity, timerName: str): void"
+ },
+ {
+  "page": "exec",
+  "zh": "增加全局计时器的值",
+  "en": "Increase Global Timer Value",
+  "kind": "function",
+  "target": "increaseGlobalTimerValue",
+  "sig": "increaseGlobalTimerValue(targetEntity: Entity, timerName: str, increaseValue: float): void"
+ },
+ {
+  "page": "exec",
+  "zh": "切换主镜头模板",
+  "en": "Switch Main Camera Template",
+  "kind": "function",
+  "target": "switchMainCameraTemplate",
+  "sig": "switchMainCameraTemplate(targetPlayerList: Entity[], cameraTemplateName: str): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家镜头跟随实体",
+  "en": "Set Player Camera to Follow Entity",
+  "kind": "function",
+  "target": "setPlayerCameraToFollowEntity",
+  "sig": "setPlayerCameraToFollowEntity(playerEntity: Entity, followEntity: Entity, cameraTemplateName: str): void"
+ },
+ {
+  "page": "exec",
+  "zh": "重置玩家镜头跟随实体",
+  "en": "Reset Player Camera to Follow Entity",
+  "kind": "function",
+  "target": "resetPlayerCameraToFollowEntity",
+  "sig": "resetPlayerCameraToFollowEntity(playerEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置角色扰动装置",
+  "en": "Set Character Disruptor Device",
+  "kind": "function",
+  "target": "setCharacterDisruptorDevice",
+  "sig": "setCharacterDisruptorDevice(targetEntity: Entity, deviceID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "添加单位状态",
+  "en": "Add Unit Status",
+  "kind": "function",
+  "target": "addUnitStatus",
+  "sig": "addUnitStatus<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(applierEntity: Entity, applicationTargetEntity: Entity, unitStatusConfigID: ConfigId, appliedStacks: int, unitStatusParameterDictionary: Dict<K, V>): AddUnitStatusResult<K, V>"
+ },
+ {
+  "page": "exec",
+  "zh": "移除单位状态",
+  "en": "Remove Unit Status",
+  "kind": "function",
+  "target": "removeUnitStatus",
+  "sig": "removeUnitStatus(removeTargetEntity: Entity, unitStatusConfigID: ConfigId, removalMethod: UnitStatusRemovalMethod, removerEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活/关闭选项卡",
+  "en": "Activate/Disable Tab",
+  "kind": "function",
+  "target": "activateDisableTab",
+  "sig": "activateDisableTab(targetEntity: Entity, tabID: int, activate: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活/关闭碰撞触发源",
+  "en": "Activate/Disable Collision Trigger Source",
+  "kind": "function",
+  "target": "activateDisableCollisionTriggerSource",
+  "sig": "activateDisableCollisionTriggerSource(targetEntity: Entity, activate: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "更改玩家职业",
+  "en": "Change Player Class",
+  "kind": "function",
+  "target": "changePlayerClass",
+  "sig": "changePlayerClass(targetPlayer: Entity, classConfigID: ConfigId, existingSkillHandling: ExistingSkillHandling): void"
+ },
+ {
+  "page": "exec",
+  "zh": "提升玩家当前职业经验",
+  "en": "Increase Player's Current Class EXP",
+  "kind": "function",
+  "target": "increasePlayersCurrentClassEXP",
+  "sig": "increasePlayersCurrentClassEXP(targetPlayer: Entity, exp: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "更改玩家当前职业等级",
+  "en": "Change Player's Current Class Level",
+  "kind": "function",
+  "target": "changePlayersCurrentClassLevel",
+  "sig": "changePlayersCurrentClassLevel(targetPlayer: Entity, level: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "切换当前界面布局",
+  "en": "Switch Current Interface Layout",
+  "kind": "function",
+  "target": "switchCurrentInterfaceLayout",
+  "sig": "switchCurrentInterfaceLayout(targetPlayer: Entity, layoutIndex: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活控件组库内界面控件组",
+  "en": "Activate UI Control Group in Control Group Library",
+  "kind": "function",
+  "target": "activateUIControlGroupInControlGroupLibrary",
+  "sig": "activateUIControlGroupInControlGroupLibrary(targetPlayer: Entity, uiControlGroupIndex: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置界面控件(组)状态",
+  "en": "Set UI Control (Group) Status",
+  "kind": "function",
+  "target": "setUIControlGroupStatus",
+  "sig": "setUIControlGroupStatus(targetPlayer: Entity, uiControlGroupIndex: int, displayStatus: UIControlDisplayStatus): void"
+ },
+ {
+  "page": "exec",
+  "zh": "移除控件组库内界面控件组",
+  "en": "Remove Interface Control Group From Control Group Library",
+  "kind": "function",
+  "target": "removeInterfaceControlGroupFromControlGroupLibrary",
+  "sig": "removeInterfaceControlGroupFromControlGroupLibrary(targetPlayer: Entity, uiControlGroupIndex: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "播放界面动效控件",
+  "en": "Play UI Animation on Control",
+  "kind": "function",
+  "target": "playUIAnimationOnControl",
+  "sig": "playUIAnimationOnControl(playerEntity: Entity, specialEffectControlIndex: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "更新消息队列",
+  "en": "Refresh Notification Queue",
+  "kind": "function",
+  "target": "refreshNotificationQueue",
+  "sig": "refreshNotificationQueue<T extends NodeValue = NodeValue>(playerEntity: Entity, notificationQueueIndex: int, notificationItemID: int, notificationQueueData: T): void"
+ },
+ {
+  "page": "exec",
+  "zh": "发送客户端脚本信号",
+  "en": "Send Client Scripted Signal",
+  "kind": "function",
+  "target": "sendClientScriptedSignal",
+  "sig": "sendClientScriptedSignal<K extends SignalName>(signalName: K, targetPlayer: Entity, params: SignalParams<K>): void"
+ },
+ {
+  "page": "exec",
+  "zh": "增加技能资源量",
+  "en": "Increase Skill Resource Amount",
+  "kind": "function",
+  "target": "increaseSkillResourceAmount",
+  "sig": "increaseSkillResourceAmount(targetEntity: Entity, skillResourceConfigID: ConfigId, increaseValue: float): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置技能资源量",
+  "en": "Set Skill Resource Amount",
+  "kind": "function",
+  "target": "setSkillResourceAmount",
+  "sig": "setSkillResourceAmount(targetEntity: Entity, skillResourceConfigID: ConfigId, targetValue: float): void"
+ },
+ {
+  "page": "exec",
+  "zh": "添加角色技能",
+  "en": "Add Character Skill",
+  "kind": "function",
+  "target": "addCharacterSkill",
+  "sig": "addCharacterSkill(targetEntity: Entity, skillConfigID: ConfigId, skillSlot: SkillSlot, originalSlotSkillHandling: OriginalSlotSkillHandling): int"
+ },
+ {
+  "page": "exec",
+  "zh": "以ID删除角色技能",
+  "en": "Delete Character Skill by ID",
+  "kind": "function",
+  "target": "deleteCharacterSkillByID",
+  "sig": "deleteCharacterSkillByID(targetEntity: Entity, skillConfigID: ConfigId): void"
+ },
+ {
+  "page": "exec",
+  "zh": "初始化角色技能",
+  "en": "Initialize Character Skill",
+  "kind": "function",
+  "target": "initializeCharacterSkill",
+  "sig": "initializeCharacterSkill(targetEntity: Entity, characterSkillSlot: SkillSlot): void"
+ },
+ {
+  "page": "exec",
+  "zh": "以槽位删除角色技能",
+  "en": "Delete Character Skill by Slot",
+  "kind": "function",
+  "target": "deleteCharacterSkillBySlot",
+  "sig": "deleteCharacterSkillBySlot(targetEntity: Entity, characterSkillSlot: SkillSlot): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置角色技能冷却",
+  "en": "Set Character Skill CD",
+  "kind": "function",
+  "target": "setCharacterSkillCD",
+  "sig": "setCharacterSkillCD(targetEntity: Entity, characterSkillSlot: SkillSlot, cdTime: float, limitMaximumCDTime: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "增加角色技能冷却",
+  "en": "Increase Character Skill CD",
+  "kind": "function",
+  "target": "increaseCharacterSkillCD",
+  "sig": "increaseCharacterSkillCD(targetEntity: Entity, characterSkillSlot: SkillSlot, cdTimeIncreaseValue: float, limitMaximumCDTime: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "按最大冷却时间比例设置技能冷却",
+  "en": "Set Skill CD Based on Maximum CD Percentage",
+  "kind": "function",
+  "target": "setSkillCDBasedOnMaximumCDPercentage",
+  "sig": "setSkillCDBasedOnMaximumCDPercentage(targetEntity: Entity, characterSkillSlot: SkillSlot, ratioValue: float, limitMaximumCDTime: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "绑定自定义技能实例到指定槽位",
+  "en": "Bind Custom Skill Instance to Specified Slot",
+  "kind": "function",
+  "target": "bindCustomSkillInstanceToSpecifiedSlot",
+  "sig": "bindCustomSkillInstanceToSpecifiedSlot(targetEntity: Entity, skillInstanceID: int, skillSlot: SkillSlot, originalSlotSkillHandling: OriginalSlotSkillHandling): int"
+ },
+ {
+  "page": "exec",
+  "zh": "解绑技能实例",
+  "en": "Unbind Skill Instance",
+  "kind": "function",
+  "target": "unbindSkillInstance",
+  "sig": "unbindSkillInstance(characterEntity: Entity, skillInstanceID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "解绑槽位上的所有技能实例",
+  "en": "Unbind all Skill Instances on the Slot",
+  "kind": "function",
+  "target": "unbindAllSkillInstancesOnTheSlot",
+  "sig": "unbindAllSkillInstancesOnTheSlot(characterEntity: Entity, specifiedSlot: SkillSlot): int[]"
+ },
+ {
+  "page": "exec",
+  "zh": "创建自定义技能实例",
+  "en": "Create Custom Skill Instance",
+  "kind": "function",
+  "target": "createCustomSkillInstance",
+  "sig": "createCustomSkillInstance(characterEntity: Entity, skillConfigID: ConfigId): int"
+ },
+ {
+  "page": "exec",
+  "zh": "销毁自定义技能实例",
+  "en": "Destroy Custom Skill Instance",
+  "kind": "function",
+  "target": "destroyCustomSkillInstance",
+  "sig": "destroyCustomSkillInstance(characterEntity: Entity, skillInstanceID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "施放指定槽位面板技能",
+  "en": "Cast Skill From Specified Panel Slot",
+  "kind": "function",
+  "target": "castSkillFromSpecifiedPanelSlot",
+  "sig": "castSkillFromSpecifiedPanelSlot(characterEntity: Entity, skillSlot: SkillSlot, checkKeyAvailability: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "施放指定技能实例",
+  "en": "Cast Specified Skill Instance",
+  "kind": "function",
+  "target": "castSpecifiedSkillInstance",
+  "sig": "castSpecifiedSkillInstance(characterEntity: Entity, skillInstanceID: int, checkKeyAvailability: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "关闭指定音效播放器",
+  "en": "Close Specified Sound Effect Player",
+  "kind": "function",
+  "target": "closeSpecifiedSoundEffectPlayer",
+  "sig": "closeSpecifiedSoundEffectPlayer(targetEntity: Entity, sfxPlayerID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "启动/暂停指定音效播放器",
+  "en": "Start/Pause Specified Sound Effect Player",
+  "kind": "function",
+  "target": "startPauseSpecifiedSoundEffectPlayer",
+  "sig": "startPauseSpecifiedSoundEffectPlayer(targetEntity: Entity, sfxPlayerID: int, recover: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "调整指定音效播放器",
+  "en": "Adjust Specified Sound Effect Player",
+  "kind": "function",
+  "target": "adjustSpecifiedSoundEffectPlayer",
+  "sig": "adjustSpecifiedSoundEffectPlayer(targetEntity: Entity, sfxPlayerID: int, volume: int, playbackSpeed: float): void"
+ },
+ {
+  "page": "exec",
+  "zh": "添加音效播放器",
+  "en": "Add Sound Effect Player",
+  "kind": "function",
+  "target": "addSoundEffectPlayer",
+  "sig": "addSoundEffectPlayer(targetEntity: Entity, soundEffectAssetIndex: int, volume: int, playbackSpeed: float, loopPlayback: bool, loopIntervalTime: float, _3dSoundEffect: bool, rangeRadius: float, attenuationMode: SoundAttenuationMode, attachmentPointName: str, attachmentPointOffset: Vec3): int"
+ },
+ {
+  "page": "exec",
+  "zh": "启动/暂停玩家背景音乐",
+  "en": "Start/Pause Player Background Music",
+  "kind": "function",
+  "target": "startPausePlayerBackgroundMusic",
+  "sig": "startPausePlayerBackgroundMusic(targetEntity: Entity, recover: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "调整玩家背景音乐音量",
+  "en": "Adjust Player Background Music Volume",
+  "kind": "function",
+  "target": "adjustPlayerBackgroundMusicVolume",
+  "sig": "adjustPlayerBackgroundMusicVolume(targetEntity: Entity, volume: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家背景音乐",
+  "en": "Set Player Background Music",
+  "kind": "function",
+  "target": "setPlayerBackgroundMusic",
+  "sig": "setPlayerBackgroundMusic(targetEntity: Entity, backgroundMusicIndex: int, startTime: float, endTime: float, volume: int, loopPlayback: bool, loopInterval: float, playbackSpeed: float, enableFadeInOut: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "玩家播放单次2D音效",
+  "en": "Player Plays One-Shot 2D Sound Effect",
+  "kind": "function",
+  "target": "playerPlaysOneShot2DSoundEffect",
+  "sig": "playerPlaysOneShot2DSoundEffect(targetEntity: Entity, soundEffectAssetIndex: int, volume: int, playbackSpeed: float): void"
+ },
+ {
+  "page": "exec",
+  "zh": "实体添加单位标签",
+  "en": "Add Unit Tag to Entity",
+  "kind": "function",
+  "target": "addUnitTagToEntity",
+  "sig": "addUnitTagToEntity(targetEntity: Entity, unitTagIndex: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "实体移除单位标签",
+  "en": "Remove Unit Tag from Entity",
+  "kind": "function",
+  "target": "removeUnitTagFromEntity",
+  "sig": "removeUnitTagFromEntity(targetEntity: Entity, unitTagIndex: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "实体清空单位标签",
+  "en": "Clear Unit Tags from Entity",
+  "kind": "function",
+  "target": "clearUnitTagsFromEntity",
+  "sig": "clearUnitTagsFromEntity(targetEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置指定实体的仇恨值",
+  "en": "Set the Aggro Value of Specified Entity",
+  "kind": "function",
+  "target": "setTheAggroValueOfSpecifiedEntity",
+  "sig": "setTheAggroValueOfSpecifiedEntity(targetEntity: Entity, aggroOwnerEntity: Entity, aggroValue: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "将目标实体移除出仇恨列表",
+  "en": "Remove Target Entity From Aggro List",
+  "kind": "function",
+  "target": "removeTargetEntityFromAggroList",
+  "sig": "removeTargetEntityFromAggroList(targetEntity: Entity, aggroOwnerEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "清空指定目标的仇恨列表",
+  "en": "Clear Specified Target's Aggro List",
+  "kind": "function",
+  "target": "clearSpecifiedTargetsAggroList",
+  "sig": "clearSpecifiedTargetsAggroList(aggroOwner: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "嘲讽目标",
+  "en": "Taunt Target",
+  "kind": "function",
+  "target": "tauntTarget",
+  "sig": "tauntTarget(taunterEntity: Entity, targetEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "发送信号",
+  "en": "Send Signal",
+  "kind": "function",
+  "target": "sendSignal",
+  "sig": "sendSignal<K extends SignalName>(signalName: K, params: SignalParams<K>): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置实体生效铭牌",
+  "en": "Set Entity Active Nameplate",
+  "kind": "function",
+  "target": "setEntityActiveNameplate",
+  "sig": "setEntityActiveNameplate(targetEntity: Entity, nameplateConfigIDList: ConfigId[]): void"
+ },
+ {
+  "page": "exec",
+  "zh": "切换生效的文本气泡",
+  "en": "Switch Active Text Bubble",
+  "kind": "function",
+  "target": "switchActiveTextBubble",
+  "sig": "switchActiveTextBubble(targetEntity: Entity, textBubbleConfigurationID: ConfigId): void"
+ },
+ {
+  "page": "exec",
+  "zh": "唤起卡牌选择器",
+  "en": "Invoke Deck Selector",
+  "kind": "function",
+  "target": "invokeDeckSelector",
+  "sig": "invokeDeckSelector(targetPlayer: Entity, deckSelectorID: int, selectDuration: float, selectResultCorrespondingList: int[], selectDisplayCorrespondingList: int[], selectMinimumQuantity: int, selectMaximumQuantity: int, refreshMode: DeckSelectorRefreshMode, refreshMinimumQuantity: int, refreshMaximumQuantity: int, defaultReturnSelection: int[]): void"
+ },
+ {
+  "page": "exec",
+  "zh": "关闭卡牌选择器",
+  "en": "Close Deck Selector",
+  "kind": "function",
+  "target": "closeDeckSelector",
+  "sig": "closeDeckSelector(targetPlayer: Entity, deckSelectorIndex: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "随机卡牌选择器选择列表",
+  "en": "Random Deck Selector Selection List",
+  "kind": "function",
+  "target": "randomDeckSelectorSelectionList",
+  "sig": "randomDeckSelectorSelectionList(selectList: int[]): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家结算计分板展示数据",
+  "en": "Set Player Settlement Scoreboard Data Display",
+  "kind": "function",
+  "target": "setPlayerSettlementScoreboardDataDisplay",
+  "sig": "setPlayerSettlementScoreboardDataDisplay<T extends NodeValue = NodeValue>(setEntity: Entity, dataOrder: int, dataName: str, dataValue: T): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家结算排名数值",
+  "en": "Set Player Settlement Ranking Value",
+  "kind": "function",
+  "target": "setPlayerSettlementRankingValue",
+  "sig": "setPlayerSettlementRankingValue(playerEntity: Entity, rankingValue: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家结算成功状态",
+  "en": "Set Player Settlement Success Status",
+  "kind": "function",
+  "target": "setPlayerSettlementSuccessStatus",
+  "sig": "setPlayerSettlementSuccessStatus(playerEntity: Entity, settlementStatus: SettlementStatus): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置阵营结算排名数值",
+  "en": "Set Faction Settlement Ranking Value",
+  "kind": "function",
+  "target": "setFactionSettlementRankingValue",
+  "sig": "setFactionSettlementRankingValue(faction: Faction, rankingValue: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置阵营结算成功状态",
+  "en": "Set Faction Settlement Success Status",
+  "kind": "function",
+  "target": "setFactionSettlementSuccessStatus",
+  "sig": "setFactionSettlementSuccessStatus(faction: Faction, settlementStatus: SettlementStatus): void"
+ },
+ {
+  "page": "exec",
+  "zh": "开关实体光源",
+  "en": "Toggle Entity Light Source",
+  "kind": "function",
+  "target": "toggleEntityLightSource",
+  "sig": "toggleEntityLightSource(targetEntity: Entity, lightSourceID: int, enableOrDisable: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "以键对字典移除键值对",
+  "en": "Remove Key Value Pairs from Dictionary by Key",
+  "kind": "function",
+  "target": "removeKeyValuePairsFromDictionaryByKey",
+  "sig": "removeKeyValuePairsFromDictionaryByKey<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(dictionary: Dict<K, V>, key: K): void"
+ },
+ {
+  "page": "exec",
+  "zh": "清空字典",
+  "en": "Clear Dictionary",
+  "kind": "function",
+  "target": "clearDictionary",
+  "sig": "clearDictionary<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(dictionary: Dict<K, V>): void"
+ },
+ {
+  "page": "exec",
+  "zh": "对字典设置或新增键值对",
+  "en": "Set or Add Key Value Pairs to Dictionary",
+  "kind": "function",
+  "target": "setOrAddKeyValuePairsToDictionary",
+  "sig": "setOrAddKeyValuePairsToDictionary<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(dictionary: Dict<K, V>, key: K, value: V): void"
+ },
+ {
+  "page": "exec",
+  "zh": "对字典按键排序",
+  "en": "Sort Dictionary by Key",
+  "kind": "function",
+  "target": "sortDictionaryByKey",
+  "sig": "sortDictionaryByKey<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(dictionary: Dict<K, V>, sortBy: SortOrder): SortDictionaryByKeyResult<K, V>"
+ },
+ {
+  "page": "exec",
+  "zh": "对字典按值排序",
+  "en": "Sort Dictionary by Value",
+  "kind": "function",
+  "target": "sortDictionaryByValue",
+  "sig": "sortDictionaryByValue<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(dictionary: Dict<K, V>, sortBy: SortOrder): SortDictionaryByValueResult<K, V>"
+ },
+ {
+  "page": "exec",
+  "zh": "修改结构体",
+  "en": "Modify Structure",
+  "kind": "native",
+  "target": "s.field1 = v1;"
+ },
+ {
+  "page": "exec",
+  "zh": "打开商店",
+  "en": "Open Shop",
+  "kind": "function",
+  "target": "openShop",
+  "sig": "openShop(playerEntity: Entity, shopOwnerEntity: Entity, shopID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "关闭商店",
+  "en": "Close Shop",
+  "kind": "function",
+  "target": "closeShop",
+  "sig": "closeShop(playerEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置自定义商店商品出售信息",
+  "en": "Set Custom Shop Item Sales Info",
+  "kind": "function",
+  "target": "setCustomShopItemSalesInfo",
+  "sig": "setCustomShopItemSalesInfo<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(shopOwnerEntity: Entity, shopID: int, shopItemID: int, itemConfigID: ConfigId, sellCurrencyDictionary: Dict<K, V>, affiliatedTabID: int, limitPurchase: bool, purchaseLimit: int, sortPriority: int, canBeSold: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置背包商店商品出售信息",
+  "en": "Set Inventory Shop Item Sales Info",
+  "kind": "function",
+  "target": "setInventoryShopItemSalesInfo",
+  "sig": "setInventoryShopItemSalesInfo<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(shopOwnerEntity: Entity, shopID: int, itemConfigID: ConfigId, sellCurrencyDictionary: Dict<K, V>, affiliatedTabID: int, sortPriority: int, canBeSold: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置物品收购表中道具收购信息",
+  "en": "Set Item Purchase Info in the Purchase List",
+  "kind": "function",
+  "target": "setItemPurchaseInfoInThePurchaseList",
+  "sig": "setItemPurchaseInfoInThePurchaseList<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(shopOwnerEntity: Entity, shopID: int, shopItemConfigID: ConfigId, purchaseCurrencyDictionary: Dict<K, V>, purchasable: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "向自定义商店出售表中新增商品",
+  "en": "Add New Item to Custom Shop Sales List",
+  "kind": "function",
+  "target": "addNewItemToCustomShopSalesList",
+  "sig": "addNewItemToCustomShopSalesList<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(shopOwnerEntity: Entity, shopID: int, shopItemConfigID: ConfigId, sellCurrencyDictionary: Dict<K, V>, affiliatedTabID: int, limitPurchase: bool, purchaseLimit: int, sortPriority: int, canBeSold: bool): int"
+ },
+ {
+  "page": "exec",
+  "zh": "向背包商店出售表中新增商品",
+  "en": "Add New Item to Inventory Shop Sales List",
+  "kind": "function",
+  "target": "addNewItemToInventoryShopSalesList",
+  "sig": "addNewItemToInventoryShopSalesList<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(shopOwnerEntity: Entity, shopID: int, shopItemConfigID: ConfigId, sellCurrencyDictionary: Dict<K, V>, affiliatedTabID: int, sortPriority: int, canBeSold: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "向物品收购表中新增物品",
+  "en": "Add Items to the Purchase List",
+  "kind": "function",
+  "target": "addItemsToThePurchaseList",
+  "sig": "addItemsToThePurchaseList<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(shopOwnerEntity: Entity, shopID: int, shopItemConfigID: ConfigId, purchaseCurrencyDictionary: Dict<K, V>, purchasable: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "从自定义商店出售表中移除商品",
+  "en": "Remove Item From Custom Shop Sales List",
+  "kind": "function",
+  "target": "removeItemFromCustomShopSalesList",
+  "sig": "removeItemFromCustomShopSalesList(shopOwnerEntity: Entity, shopID: int, shopItemID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "从背包商店出售表中移除商品",
+  "en": "Remove Item From Inventory Shop Sales List",
+  "kind": "function",
+  "target": "removeItemFromInventoryShopSalesList",
+  "sig": "removeItemFromInventoryShopSalesList(shopOwnerEntity: Entity, shopID: int, itemConfigID: ConfigId): void"
+ },
+ {
+  "page": "exec",
+  "zh": "从物品收购表中移除物品",
+  "en": "Remove Item From Purchase List",
+  "kind": "function",
+  "target": "removeItemFromPurchaseList",
+  "sig": "removeItemFromPurchaseList(shopOwnerEntity: Entity, shopID: int, shopItemConfigID: ConfigId): void"
+ },
+ {
+  "page": "exec",
+  "zh": "装备添加词条",
+  "en": "Add Affix to Equipment",
+  "kind": "function",
+  "target": "addAffixToEquipment",
+  "sig": "addAffixToEquipment(equipmentID: int, affixConfigID: ConfigId, overwriteAffixValue: bool, affixValue: float): void"
+ },
+ {
+  "page": "exec",
+  "zh": "移除装备词条",
+  "en": "Remove Equipment Affix",
+  "kind": "function",
+  "target": "removeEquipmentAffix",
+  "sig": "removeEquipmentAffix(equipmentID: int, affixID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置装备词条值",
+  "en": "Set Equipment Affix Value",
+  "kind": "function",
+  "target": "setEquipmentAffixValue",
+  "sig": "setEquipmentAffixValue(equipmentIndex: int, affixID: int, affixValue: float): void"
+ },
+ {
+  "page": "exec",
+  "zh": "装备指定序号添加词条",
+  "en": "Add Affix to Equipment at Specified ID",
+  "kind": "function",
+  "target": "addAffixToEquipmentAtSpecifiedID",
+  "sig": "addAffixToEquipmentAtSpecifiedID(equipmentID: int, affixConfigID: ConfigId, insertID: int, overwriteAffixValue: bool, affixValue: float): void"
+ },
+ {
+  "page": "exec",
+  "zh": "替换装备到指定栏位",
+  "en": "Replace Equipment to the Specified Slot",
+  "kind": "function",
+  "target": "replaceEquipmentToTheSpecifiedSlot",
+  "sig": "replaceEquipmentToTheSpecifiedSlot(targetEntity: Entity, equipmentRow: int, equipmentColumn: int, equipmentIndex: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "卸下指定槽位装备",
+  "en": "Remove Equipment from Specified Slot",
+  "kind": "function",
+  "target": "removeEquipmentFromSpecifiedSlot",
+  "sig": "removeEquipmentFromSpecifiedSlot(equipmentSlotOwnerEntity: Entity, equipmentSlotRowCount: int, equipmentSlotColumnCount: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "增加背包最大容量",
+  "en": "Increase Maximum Inventory Capacity",
+  "kind": "function",
+  "target": "increaseMaximumInventoryCapacity",
+  "sig": "increaseMaximumInventoryCapacity(inventoryOwnerEntity: Entity, increaseCapacity: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "增加背包道具数量",
+  "en": "Increase Inventory Item Quantity",
+  "kind": "function",
+  "target": "increaseInventoryItemQuantity",
+  "sig": "increaseInventoryItemQuantity(inventoryOwnerEntity: Entity, itemConfigID: ConfigId, increaseValue: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置背包掉落道具/货币数量",
+  "en": "Set Inventory Drop Items/Currency Amount",
+  "kind": "function",
+  "target": "setInventoryDropItemsCurrencyAmount",
+  "sig": "setInventoryDropItemsCurrencyAmount(inventoryOwnerEntity: Entity, itemCurrencyConfigID: ConfigId, quantityDropped: int, lootType: LootType): void"
+ },
+ {
+  "page": "exec",
+  "zh": "增加背包货币数量",
+  "en": "Increase Inventory Currency Quantity",
+  "kind": "function",
+  "target": "increaseInventoryCurrencyQuantity",
+  "sig": "increaseInventoryCurrencyQuantity(inventoryOwnerEntity: Entity, currencyConfigID: ConfigId, increaseValue: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置背包道具掉落内容",
+  "en": "Set Inventory Item Drop Contents",
+  "kind": "function",
+  "target": "setInventoryItemDropContents",
+  "sig": "setInventoryItemDropContents<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(inventoryOwnerEntity: Entity, itemDropDictionary: Dict<K, V>, lootType: LootType): void"
+ },
+ {
+  "page": "exec",
+  "zh": "触发战利品掉落",
+  "en": "Trigger Loot Drop",
+  "kind": "function",
+  "target": "triggerLootDrop",
+  "sig": "triggerLootDrop(dropperEntity: Entity, lootType: LootType): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置战利品掉落内容",
+  "en": "Set Loot Drop Content",
+  "kind": "function",
+  "target": "setLootDropContent",
+  "sig": "setLootDropContent<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(dropperEntity: Entity, lootDropDictionary: Dict<K, V>): void"
+ },
+ {
+  "page": "exec",
+  "zh": "增加掉落物组件道具数量",
+  "en": "Increase Loot Component Item Quantity",
+  "kind": "function",
+  "target": "increaseLootComponentItemQuantity",
+  "sig": "increaseLootComponentItemQuantity(lootEntity: Entity, itemConfigID: ConfigId, increaseValue: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "增加掉落物组件货币数量",
+  "en": "Increase Loot Component Currency Quantity",
+  "kind": "function",
+  "target": "increaseLootComponentCurrencyQuantity",
+  "sig": "increaseLootComponentCurrencyQuantity(lootEntity: Entity, currencyConfigID: ConfigId, increaseValue: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置小地图缩放",
+  "en": "Set Mini-Map Zoom",
+  "kind": "function",
+  "target": "setMiniMapZoom",
+  "sig": "setMiniMapZoom(targetPlayer: Entity, zoomDimensions: float): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置小地图标识生效状态",
+  "en": "Set Mini-Map Marker Activation Status",
+  "kind": "function",
+  "target": "setMiniMapMarkerActivationStatus",
+  "sig": "setMiniMapMarkerActivationStatus(targetEntity: Entity, miniMapMarkerIDList: int[], active: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置可见小地图标识的玩家列表",
+  "en": "Set Player List for Visible Mini-Map Markers",
+  "kind": "function",
+  "target": "setPlayerListForVisibleMiniMapMarkers",
+  "sig": "setPlayerListForVisibleMiniMapMarkers(targetEntity: Entity, miniMapMarkerID: int, playerList: Entity[]): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置追踪小地图标识的玩家列表",
+  "en": "Set Player List for Tracking Mini-Map Markers",
+  "kind": "function",
+  "target": "setPlayerListForTrackingMiniMapMarkers",
+  "sig": "setPlayerListForTrackingMiniMapMarkers(targetEntity: Entity, miniMapMarkerID: int, playerList: Entity[]): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置小地图标识的玩家标记",
+  "en": "Set Player Markers on the Mini-Map",
+  "kind": "function",
+  "target": "setPlayerMarkersOnTheMiniMap",
+  "sig": "setPlayerMarkersOnTheMiniMap(targetEntity: Entity, miniMapMarkerID: int, correspondingPlayerEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "切换自定义地图",
+  "en": "Switch Custom Maps",
+  "kind": "function",
+  "target": "switchCustomMaps",
+  "sig": "switchCustomMaps(targetPlayer: Entity, mapConfigID: ConfigId, displayMap: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "切换造物巡逻模板",
+  "en": "Switch Creation Patrol Template",
+  "kind": "function",
+  "target": "switchCreationPatrolTemplate",
+  "sig": "switchCreationPatrolTemplate(creationEntity: Entity, patrolTemplateID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "以整数设置玩家排行榜分数",
+  "en": "Set Player Leaderboard Score as an Integer",
+  "kind": "function",
+  "target": "setPlayerLeaderboardScoreAsAnInteger",
+  "sig": "setPlayerLeaderboardScoreAsAnInteger(playerIDList: int[], leaderboardScore: int, leaderboardID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "以浮点数设置玩家排行榜分数",
+  "en": "Set Player Leaderboard Score as a Float",
+  "kind": "function",
+  "target": "setPlayerLeaderboardScoreAsAFloat",
+  "sig": "setPlayerLeaderboardScoreAsAFloat(playerIDList: int[], leaderboardScore: float, leaderboardID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置成就进度计数",
+  "en": "Set Achievement Progress Tally",
+  "kind": "function",
+  "target": "setAchievementProgressTally",
+  "sig": "setAchievementProgressTally(setEntity: Entity, achievementID: int, progressTally: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "增加成就进度计数",
+  "en": "Increase Achievement Progress Tally",
+  "kind": "function",
+  "target": "increaseAchievementProgressTally",
+  "sig": "increaseAchievementProgressTally(changeEntity: Entity, achievementID: int, progressTallyIncreaseValue: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置扫描标签的规则",
+  "en": "Set Scan Tag Rules",
+  "kind": "function",
+  "target": "setScanTagRules",
+  "sig": "setScanTagRules(targetEntity: Entity, ruleType: ScanTagRuleType): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置扫描组件的生效扫描标签序号",
+  "en": "Set Scan Component's Active Scan Tag ID",
+  "kind": "function",
+  "target": "setScanComponentsActiveScanTagID",
+  "sig": "setScanComponentsActiveScanTagID(targetEntity: Entity, scanTagID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家逃跑合法性",
+  "en": "Set Player Escape Validity",
+  "kind": "function",
+  "target": "setPlayerEscapeValidity",
+  "sig": "setPlayerEscapeValidity(playerEntity: Entity, valid: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家段位变化分数",
+  "en": "Set Player Rank Score Change",
+  "kind": "function",
+  "target": "setPlayerRankScoreChange",
+  "sig": "setPlayerRankScoreChange(playerEntity: Entity, settlementStatus: RankSettlementStatus, scoreChange: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "切换玩家竞技段位生效的计分组",
+  "en": "Switch the Scoring Group that Affects Player's Competitive Rank",
+  "kind": "function",
+  "target": "switchTheScoringGroupThatAffectsPlayersCompetitiveRank",
+  "sig": "switchTheScoringGroupThatAffectsPlayersCompetitiveRank(playerEntity: Entity, scoreGroupID: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活/关闭实体布设组",
+  "en": "Activate/Disable Entity Deployment Group",
+  "kind": "function",
+  "target": "activateDisableEntityDeploymentGroup",
+  "sig": "activateDisableEntityDeploymentGroup(entityDeploymentGroupIndex: int, activate: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置聊天频道开关",
+  "en": "Set Chat Channel Switch",
+  "kind": "function",
+  "target": "setChatChannelSwitch",
+  "sig": "setChatChannelSwitch(channelIndex: int, voiceOverSwitch: bool, textSwitch: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家频道权限",
+  "en": "Set Player Channel Permissions",
+  "kind": "function",
+  "target": "setPlayerChannelPermissions",
+  "sig": "setPlayerChannelPermissions(playerGUID: GUID, channelIndex: int, join: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家当前频道",
+  "en": "Set Player's Current Channel",
+  "kind": "function",
+  "target": "setPlayersCurrentChannel",
+  "sig": "setPlayersCurrentChannel(playerGUID: GUID, channelIndexList: int[]): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家聊天语音范围",
+  "en": "Set Voice Chat Scope",
+  "kind": "function",
+  "target": "setVoiceChatScope",
+  "sig": "setVoiceChatScope(targetPlayer: Entity, channelList: int[], effectiveRange: int, limitScope: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家聊天文字权限",
+  "en": "Set Text Chat Permissions",
+  "kind": "function",
+  "target": "setTextChatPermissions",
+  "sig": "setTextChatPermissions(targetPlayer: Entity, channelList: int[], limitPermissions: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家聊天语音权限",
+  "en": "Set Voice Chat Permissions",
+  "kind": "function",
+  "target": "setVoiceChatPermissions",
+  "sig": "setVoiceChatPermissions(targetPlayer: Entity, channelList: int[], restrictVoiceChatSpeak: bool, restrictVoiceChatListen: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "消耗礼盒",
+  "en": "Consume Gift Box",
+  "kind": "function",
+  "target": "consumeGiftBox",
+  "sig": "consumeGiftBox(playerEntity: Entity, giftBoxIndex: int, consumptionQuantity: int): bool"
+ },
+ {
+  "page": "exec",
+  "zh": "打开礼盒界面",
+  "en": "Open Gift Box Interface",
+  "kind": "function",
+  "target": "openGiftBoxInterface",
+  "sig": "openGiftBoxInterface(playerEntity: Entity, giftBoxIndex: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活/关闭寻路阻挡功能",
+  "en": "Enable/Disable Pathfinding Obstacle Feature",
+  "kind": "function",
+  "target": "enableDisablePathfindingObstacleFeature",
+  "sig": "enableDisablePathfindingObstacleFeature(targetEntity: Entity, activate: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活/关闭寻路阻挡",
+  "en": "Enable/Disable Pathfinding Obstacle",
+  "kind": "function",
+  "target": "enableDisablePathfindingObstacle",
+  "sig": "enableDisablePathfindingObstacle(targetEntity: Entity, pathfindingObstacleID: int, activate: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活/关闭光标碰撞盒",
+  "en": "Activate/Disable Cursor Collision Box",
+  "kind": "function",
+  "target": "activateDisableCursorCollisionBox",
+  "sig": "activateDisableCursorCollisionBox(targetEntity: Entity, collisionBoxID: int, activate: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置复杂造物的预设状态值",
+  "en": "Set the Preset Status Value of the Complex Creation",
+  "kind": "function",
+  "target": "setThePresetStatusValueOfTheComplexCreation",
+  "sig": "setThePresetStatusValueOfTheComplexCreation(targetEntity: Entity, presetStatusIndex: int, presetStatusValue: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "关闭悬浮交互页",
+  "en": "Close Floating Interaction Page",
+  "kind": "function",
+  "target": "closeFloatingInteractionPage",
+  "sig": "closeFloatingInteractionPage(playerEntity: Entity, floatingInteractionPageIndex: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "更新悬浮交互页列表数据",
+  "en": "Update Floating Interaction Page List Data",
+  "kind": "function",
+  "target": "updateFloatingInteractionPageListData",
+  "sig": "updateFloatingInteractionPageListData(playerEntity: Entity, listIndex: int, visibleListItem: int[], selectFirstItemByDefault: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "唤起悬浮交互页",
+  "en": "Show Floating Interaction Page",
+  "kind": "function",
+  "target": "showFloatingInteractionPage",
+  "sig": "showFloatingInteractionPage<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(playerEntity: Entity, floatingInteractionPageIndex: int, initializeListData: Dict<K, V>): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置任务计数",
+  "en": "Set Task Count",
+  "kind": "function",
+  "target": "setTaskCount",
+  "sig": "setTaskCount(playerEntity: Entity, questIndex: int, taskCount: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "增加任务计数",
+  "en": "Increase Task Count",
+  "kind": "function",
+  "target": "increaseTaskCount",
+  "sig": "increaseTaskCount(playerEntity: Entity, questIndex: int, taskCountIncreasedBy: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家离开操控运动器",
+  "en": "Set Player to Leave Control Motion Device",
+  "kind": "function",
+  "target": "setPlayerToLeaveControlMotionDevice",
+  "sig": "setPlayerToLeaveControlMotionDevice(playerEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家跟随操控运动器",
+  "en": "Set Player to Follow Control Motion Device",
+  "kind": "function",
+  "target": "setPlayerToFollowControlMotionDevice",
+  "sig": "setPlayerToFollowControlMotionDevice(playerEntity: Entity, controlMotionDeviceEntity: Entity): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家激活操控运动器",
+  "en": "Set Player to Activate Control Motion Device",
+  "kind": "function",
+  "target": "setPlayerToActivateControlMotionDevice",
+  "sig": "setPlayerToActivateControlMotionDevice(playerEntity: Entity, controlMotionDeviceEntityList: Entity[]): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家光标是否常驻",
+  "en": "Set Player's Cursor to Always Visible",
+  "kind": "function",
+  "target": "setPlayersCursorToAlwaysVisible",
+  "sig": "setPlayersCursorToAlwaysVisible(playerEntity: Entity, alwaysShowCursor: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家光标点击可选取目标",
+  "en": "Enable Player's Cursor to Click Selectable Targets",
+  "kind": "function",
+  "target": "enablePlayersCursorToClickSelectableTargets",
+  "sig": "enablePlayersCursorToClickSelectableTargets(playerEntity: Entity, cursorClickableLayerFilterID: int, maxSelectableTargets: int): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置玩家光标是否穿透UI控件",
+  "en": "Set Player's Cursor to Click Through UI Controls",
+  "kind": "function",
+  "target": "setPlayersCursorToClickThroughUIControls",
+  "sig": "setPlayersCursorToClickThroughUIControls(playerEntity: Entity, clickThroughUIControls: bool): void"
+ },
+ {
+  "page": "flow",
+  "zh": "双分支",
+  "en": "Double Branch",
+  "kind": "native",
+  "target": "if (cond) { ... } else { ... }"
+ },
+ {
+  "page": "flow",
+  "zh": "多分支",
+  "en": "Multiple Branches",
+  "kind": "native",
+  "target": "switch (expr) { case 1: ...; default: ... }（仅整数或字符串）"
+ },
+ {
+  "page": "query",
+  "zh": "获取局部变量",
+  "en": "Get Local Variable",
+  "kind": "native",
+  "target": "let x: T = initial;（读取直接使用变量 x）"
+ },
+ {
+  "page": "query",
+  "zh": "查询对局游玩方式及人数",
+  "en": "Query Game Mode and Player Number",
+  "kind": "function",
+  "target": "queryGameModeAndPlayerNumber",
+  "sig": "queryGameModeAndPlayerNumber(): QueryGameModeAndPlayerNumberResult"
+ },
+ {
+  "page": "query",
+  "zh": "获取随机浮点数",
+  "en": "Get Random Floating Point Number",
+  "kind": "implemented",
+  "target": "getRandomFloatingPointNumber",
+  "sig": "getRandomFloatingPointNumber(lowerLimit: float, upperLimit: float): float"
+ },
+ {
+  "page": "query",
+  "zh": "权重随机",
+  "en": "Weighted Random",
+  "kind": "implemented",
+  "target": "weightedRandom",
+  "sig": "weightedRandom(weightList: int[]): int"
+ },
+ {
+  "page": "query",
+  "zh": "圆周率",
+  "en": "Pi (π)",
+  "kind": "implemented",
+  "target": "pi",
+  "sig": "pi(): float"
+ },
+ {
+  "page": "query",
+  "zh": "三维向量：零向量",
+  "en": "3D Vector: Zero Vector",
+  "kind": "implemented",
+  "target": "_3dVectorZeroVector",
+  "sig": "_3dVectorZeroVector(): Vec3"
+ },
+ {
+  "page": "query",
+  "zh": "三维向量：上方",
+  "en": "3D Vector: Up",
+  "kind": "implemented",
+  "target": "_3dVectorUp",
+  "sig": "_3dVectorUp(): Vec3"
+ },
+ {
+  "page": "query",
+  "zh": "三维向量：下方",
+  "en": "3D Vector: Down",
+  "kind": "implemented",
+  "target": "_3dVectorDown",
+  "sig": "_3dVectorDown(): Vec3"
+ },
+ {
+  "page": "query",
+  "zh": "三维向量：左侧",
+  "en": "3D Vector: Left",
+  "kind": "implemented",
+  "target": "_3dVectorLeft",
+  "sig": "_3dVectorLeft(): Vec3"
+ },
+ {
+  "page": "query",
+  "zh": "三维向量：右侧",
+  "en": "3D Vector: Right",
+  "kind": "implemented",
+  "target": "_3dVectorRight",
+  "sig": "_3dVectorRight(): Vec3"
+ },
+ {
+  "page": "query",
+  "zh": "三维向量：前方",
+  "en": "3D Vector: Forward",
+  "kind": "implemented",
+  "target": "_3dVectorForward",
+  "sig": "_3dVectorForward(): Vec3"
+ },
+ {
+  "page": "query",
+  "zh": "三维向量：后方",
+  "en": "3D Vector: Backward",
+  "kind": "implemented",
+  "target": "_3dVectorBackward",
+  "sig": "_3dVectorBackward(): Vec3"
+ },
+ {
+  "page": "query",
+  "zh": "获取随机整数",
+  "en": "Get Random Integer",
+  "kind": "implemented",
+  "target": "getRandomInteger",
+  "sig": "getRandomInteger(lowerLimit: int, upperLimit: int): int"
+ },
+ {
+  "page": "query",
+  "zh": "查询时间戳（UTC+0时区）",
+  "en": "Query Timestamp (UTC+0)",
+  "kind": "function",
+  "target": "queryTimestampUTC",
+  "sig": "queryTimestampUTC(): int"
+ },
+ {
+  "page": "query",
+  "zh": "查询服务器时区",
+  "en": "Query Server Time Zone",
+  "kind": "function",
+  "target": "queryServerTimeZone",
+  "sig": "queryServerTimeZone(): int"
+ },
+ {
+  "page": "query",
+  "zh": "列表是否包含该值",
+  "en": "List Includes This Value",
+  "kind": "implemented",
+  "target": "listIncludesThisValue",
+  "sig": "listIncludesThisValue<T extends NodeValue = NodeValue>(list: T[], value: T): bool"
+ },
+ {
+  "page": "query",
+  "zh": "查找列表并返回值的序号",
+  "en": "Search List and Return Value ID",
+  "kind": "function",
+  "target": "searchListAndReturnValueID",
+  "sig": "searchListAndReturnValueID<T extends NodeValue = NodeValue>(targetList: T[], value: T): int[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取列表对应值",
+  "en": "Get Corresponding Value From List",
+  "kind": "implemented",
+  "target": "getCorrespondingValueFromList",
+  "sig": "getCorrespondingValueFromList<T extends NodeValue = NodeValue>(list: T[], id: int): T"
+ },
+ {
+  "page": "query",
+  "zh": "获取列表长度",
+  "en": "Get List Length",
+  "kind": "implemented",
+  "target": "getListLength",
+  "sig": "getListLength<T extends NodeValue = NodeValue>(list: T[]): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取列表最大值",
+  "en": "Get Maximum Value from List",
+  "kind": "implemented",
+  "target": "getMaximumValueFromList",
+  "sig": "getMaximumValueFromList<T extends NodeValue = NodeValue>(list: T[]): T"
+ },
+ {
+  "page": "query",
+  "zh": "获取列表最小值",
+  "en": "Get Minimum Value From List",
+  "kind": "implemented",
+  "target": "getMinimumValueFromList",
+  "sig": "getMinimumValueFromList<T extends NodeValue = NodeValue>(list: T[]): T"
+ },
+ {
+  "page": "query",
+  "zh": "获取自定义变量",
+  "en": "Get Custom Variable",
+  "kind": "function",
+  "target": "getCustomVariable",
+  "sig": "getCustomVariable<T extends NodeValue = NodeValue>(targetEntity: Entity, variableName: str): T"
+ },
+ {
+  "page": "query",
+  "zh": "获取节点图变量",
+  "en": "Get Node Graph Variable",
+  "kind": "function",
+  "target": "getNodeGraphVariable",
+  "sig": "getNodeGraphVariable<T extends NodeValue = NodeValue>(variableName: str): T"
+ },
+ {
+  "page": "query",
+  "zh": "查询自定义变量快照",
+  "en": "Query Custom Variable Snapshot",
+  "kind": "function",
+  "target": "queryCustomVariableSnapshot",
+  "sig": "queryCustomVariableSnapshot<T extends NodeValue = NodeValue>(customVariableComponentSnapshot: CustomVariableSnapshot, variableName: str): T"
+ },
+ {
+  "page": "query",
+  "zh": "获取预设状态",
+  "en": "Get Preset Status",
+  "kind": "function",
+  "target": "getPresetStatus",
+  "sig": "getPresetStatus(targetEntity: Entity, presetStatusIndex: int): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取自身实体",
+  "en": "Get Self Entity",
+  "kind": "function",
+  "target": "getSelfEntity",
+  "sig": "getSelfEntity(): Entity"
+ },
+ {
+  "page": "query",
+  "zh": "以GUID查询实体",
+  "en": "Query Entity by GUID",
+  "kind": "function",
+  "target": "queryEntityByGUID",
+  "sig": "queryEntityByGUID(guid: GUID): Entity"
+ },
+ {
+  "page": "query",
+  "zh": "以实体查询GUID",
+  "en": "Query GUID by Entity",
+  "kind": "function",
+  "target": "queryGUIDByEntity",
+  "sig": "queryGUIDByEntity(entity: Entity): GUID"
+ },
+ {
+  "page": "query",
+  "zh": "获取实体位置与旋转",
+  "en": "Get Entity Location and Rotation",
+  "kind": "function",
+  "target": "getEntityLocationAndRotation",
+  "sig": "getEntityLocationAndRotation(targetEntity: Entity): GetEntityLocationAndRotationResult"
+ },
+ {
+  "page": "query",
+  "zh": "获取实体类型",
+  "en": "Get Entity Type",
+  "kind": "function",
+  "target": "getEntityType",
+  "sig": "getEntityType(targetEntity: Entity): EntityType"
+ },
+ {
+  "page": "query",
+  "zh": "获取场上所有实体",
+  "en": "Get All Entities on the Field",
+  "kind": "function",
+  "target": "getAllEntitiesOnTheField",
+  "sig": "getAllEntitiesOnTheField(): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取场上指定类型实体",
+  "en": "Get Specified Type of Entities on the Field",
+  "kind": "function",
+  "target": "getSpecifiedTypeOfEntitiesOnTheField",
+  "sig": "getSpecifiedTypeOfEntitiesOnTheField(entityType: EntityType): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取场上指定元件ID的实体",
+  "en": "Get Entities With Specified Prefab on the Field",
+  "kind": "function",
+  "target": "getEntitiesWithSpecifiedPrefabOnTheField",
+  "sig": "getEntitiesWithSpecifiedPrefabOnTheField(prefabID: PrefabId): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取指定类型的实体列表",
+  "en": "Get Entity List by Specified Type",
+  "kind": "function",
+  "target": "getEntityListBySpecifiedType",
+  "sig": "getEntityListBySpecifiedType(targetEntityList: Entity[], entityType: EntityType): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取指定元件ID的实体列表",
+  "en": "Get Entity List by Specified Prefab ID",
+  "kind": "function",
+  "target": "getEntityListBySpecifiedPrefabID",
+  "sig": "getEntityListBySpecifiedPrefabID(targetEntityList: Entity[], prefabID: PrefabId): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取指定阵营的实体列表",
+  "en": "Get Entity List by Specified Faction",
+  "kind": "function",
+  "target": "getEntityListBySpecifiedFaction",
+  "sig": "getEntityListBySpecifiedFaction(targetEntityList: Entity[], faction: Faction): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取指定范围的实体列表",
+  "en": "Get Entity List by Specified Range",
+  "kind": "function",
+  "target": "getEntityListBySpecifiedRange",
+  "sig": "getEntityListBySpecifiedRange(targetEntityList: Entity[], centerPoint: Vec3, radius: float): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "查询实体是否在场",
+  "en": "Query If Entity Is on the Field",
+  "kind": "function",
+  "target": "queryIfEntityIsOnTheField",
+  "sig": "queryIfEntityIsOnTheField(targetEntity: Entity): bool"
+ },
+ {
+  "page": "query",
+  "zh": "获取物件属性",
+  "en": "Get Object Attribute",
+  "kind": "function",
+  "target": "getObjectAttribute",
+  "sig": "getObjectAttribute(objectEntity: Entity): GetObjectAttributeResult"
+ },
+ {
+  "page": "query",
+  "zh": "获取实体向前向量",
+  "en": "Get Entity Forward Vector",
+  "kind": "function",
+  "target": "getEntityForwardVector",
+  "sig": "getEntityForwardVector(targetEntity: Entity): Vec3"
+ },
+ {
+  "page": "query",
+  "zh": "获取实体向右向量",
+  "en": "Get Entity Right Vector",
+  "kind": "function",
+  "target": "getEntityRightVector",
+  "sig": "getEntityRightVector(targetEntity: Entity): Vec3"
+ },
+ {
+  "page": "query",
+  "zh": "获取实体向上向量",
+  "en": "Get Entity Upward Vector",
+  "kind": "function",
+  "target": "getEntityUpwardVector",
+  "sig": "getEntityUpwardVector(targetEntity: Entity): Vec3"
+ },
+ {
+  "page": "query",
+  "zh": "查询角色当前移动速度",
+  "en": "Query Character's Current Movement SPD",
+  "kind": "function",
+  "target": "queryCharactersCurrentMovementSPD",
+  "sig": "queryCharactersCurrentMovementSPD(characterEntity: Entity): QueryCharactersCurrentMovementSPDResult"
+ },
+ {
+  "page": "query",
+  "zh": "获取角色属性",
+  "en": "Get Character Attribute",
+  "kind": "function",
+  "target": "getCharacterAttribute",
+  "sig": "getCharacterAttribute(targetEntity: Entity): GetCharacterAttributeResult"
+ },
+ {
+  "page": "query",
+  "zh": "获取拥有者实体",
+  "en": "Get Owner Entity",
+  "kind": "function",
+  "target": "getOwnerEntity",
+  "sig": "getOwnerEntity(targetEntity: Entity): Entity"
+ },
+ {
+  "page": "query",
+  "zh": "获取实体拥有的实体列表",
+  "en": "Get List of Entities Owned by the Entity",
+  "kind": "function",
+  "target": "getListOfEntitiesOwnedByTheEntity",
+  "sig": "getListOfEntitiesOwnedByTheEntity(targetEntity: Entity): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取实体进阶属性",
+  "en": "Get Entity Advanced Attribute",
+  "kind": "function",
+  "target": "getEntityAdvancedAttribute",
+  "sig": "getEntityAdvancedAttribute(targetEntity: Entity): GetEntityAdvancedAttributeResult"
+ },
+ {
+  "page": "query",
+  "zh": "获取实体元素属性",
+  "en": "Get Entity Elemental Attribute",
+  "kind": "function",
+  "target": "getEntityElementalAttribute",
+  "sig": "getEntityElementalAttribute(targetEntity: Entity): GetEntityElementalAttributeResult"
+ },
+ {
+  "page": "query",
+  "zh": "查询实体的元素附着状态",
+  "en": "Check Entity's Elemental Effect Status",
+  "kind": "function",
+  "target": "checkEntitysElementalEffectStatus",
+  "sig": "checkEntitysElementalEffectStatus(targetEntity: Entity): CheckEntitysElementalEffectStatusResult"
+ },
+ {
+  "page": "query",
+  "zh": "获取模型颜色和材质",
+  "en": "Get Model Color & Material",
+  "kind": "function",
+  "target": "getModelColorAndMaterial",
+  "sig": "getModelColorAndMaterial(targetEntity: Entity): GetModelColorAndMaterialResult"
+ },
+ {
+  "page": "query",
+  "zh": "查询游戏已进行时间",
+  "en": "Query Game Time Elapsed",
+  "kind": "function",
+  "target": "queryGameTimeElapsed",
+  "sig": "queryGameTimeElapsed(): int"
+ },
+ {
+  "page": "query",
+  "zh": "查询当前环境时间",
+  "en": "Query Current Environment Time",
+  "kind": "function",
+  "target": "queryCurrentEnvironmentTime",
+  "sig": "queryCurrentEnvironmentTime(): QueryCurrentEnvironmentTimeResult"
+ },
+ {
+  "page": "query",
+  "zh": "查询实体阵营",
+  "en": "Query Entity Faction",
+  "kind": "function",
+  "target": "queryEntityFaction",
+  "sig": "queryEntityFaction(targetEntity: Entity): Faction"
+ },
+ {
+  "page": "query",
+  "zh": "查询阵营是否敌对",
+  "en": "Query If Faction Is Hostile",
+  "kind": "function",
+  "target": "queryIfFactionIsHostile",
+  "sig": "queryIfFactionIsHostile(faction1: Faction, faction2: Faction): bool"
+ },
+ {
+  "page": "query",
+  "zh": "获取在场玩家实体列表",
+  "en": "Get List of Player Entities on the Field",
+  "kind": "function",
+  "target": "getListOfPlayerEntitiesOnTheField",
+  "sig": "getListOfPlayerEntitiesOnTheField(): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取指定玩家所有角色实体",
+  "en": "Get All Character Entities of Specified Player",
+  "kind": "function",
+  "target": "getAllCharacterEntitiesOfSpecifiedPlayer",
+  "sig": "getAllCharacterEntitiesOfSpecifiedPlayer(playerEntity: Entity): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取角色归属的玩家实体",
+  "en": "Get Player Entity to Which the Character Belongs",
+  "kind": "function",
+  "target": "getPlayerEntityToWhichTheCharacterBelongs",
+  "sig": "getPlayerEntityToWhichTheCharacterBelongs(characterEntity: Entity): Entity"
+ },
+ {
+  "page": "query",
+  "zh": "获取玩家剩余复苏次数",
+  "en": "Get Player Remaining Revives",
+  "kind": "function",
+  "target": "getPlayerRemainingRevives",
+  "sig": "getPlayerRemainingRevives(playerEntity: Entity): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取玩家复苏耗时",
+  "en": "Get Player Revive Time",
+  "kind": "function",
+  "target": "getPlayerReviveTime",
+  "sig": "getPlayerReviveTime(playerEntity: Entity): int"
+ },
+ {
+  "page": "query",
+  "zh": "查询玩家角色是否全部倒下",
+  "en": "Query If All Player Characters Are Down",
+  "kind": "function",
+  "target": "queryIfAllPlayerCharactersAreDown",
+  "sig": "queryIfAllPlayerCharactersAreDown(playerEntity: Entity): bool"
+ },
+ {
+  "page": "query",
+  "zh": "根据玩家序号获取玩家GUID",
+  "en": "Get Player GUID by Player ID",
+  "kind": "function",
+  "target": "getPlayerGUIDByPlayerID",
+  "sig": "getPlayerGUIDByPlayerID(playerID: int): GUID"
+ },
+ {
+  "page": "query",
+  "zh": "根据玩家GUID获取玩家序号",
+  "en": "Get Player ID by Player GUID",
+  "kind": "function",
+  "target": "getPlayerIDByPlayerGUID",
+  "sig": "getPlayerIDByPlayerGUID(playerGUID: GUID): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取玩家昵称",
+  "en": "Get Player Nickname",
+  "kind": "function",
+  "target": "getPlayerNickname",
+  "sig": "getPlayerNickname(playerEntity: Entity): str"
+ },
+ {
+  "page": "query",
+  "zh": "获得玩家客户端输入设备类型",
+  "en": "Get Player Client Input Device Type",
+  "kind": "function",
+  "target": "getPlayerClientInputDeviceType",
+  "sig": "getPlayerClientInputDeviceType(playerEntity: Entity): InputDeviceType"
+ },
+ {
+  "page": "query",
+  "zh": "查询经典模式角色编号",
+  "en": "Check Classic Mode Character ID",
+  "kind": "function",
+  "target": "checkClassicModeCharacterID",
+  "sig": "checkClassicModeCharacterID(targetCharacter: Entity): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取指定玩家的前台角色",
+  "en": "Get Active Character of Specified Player",
+  "kind": "function",
+  "target": "getActiveCharacterOfSpecifiedPlayer",
+  "sig": "getActiveCharacterOfSpecifiedPlayer(playerEntity: Entity): Entity"
+ },
+ {
+  "page": "query",
+  "zh": "获取跟随运动器的目标",
+  "en": "Get Follow Motion Device Target",
+  "kind": "function",
+  "target": "getFollowMotionDeviceTarget",
+  "sig": "getFollowMotionDeviceTarget(targetEntity: Entity): GetFollowMotionDeviceTargetResult"
+ },
+ {
+  "page": "query",
+  "zh": "获取全局计时器当前时间",
+  "en": "Get Current Global Timer Time",
+  "kind": "function",
+  "target": "getCurrentGlobalTimerTime",
+  "sig": "getCurrentGlobalTimerTime(targetEntity: Entity, timerName: str): float"
+ },
+ {
+  "page": "query",
+  "zh": "获取玩家当前界面布局",
+  "en": "Get Player's Current UI Layout",
+  "kind": "function",
+  "target": "getPlayersCurrentUILayout",
+  "sig": "getPlayersCurrentUILayout(playerEntity: Entity): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取造物当前目标",
+  "en": "Get Creation's Current Target",
+  "kind": "function",
+  "target": "getCreationsCurrentTarget",
+  "sig": "getCreationsCurrentTarget(creationEntity: Entity): Entity"
+ },
+ {
+  "page": "query",
+  "zh": "获取造物属性",
+  "en": "Get Creation Attribute",
+  "kind": "function",
+  "target": "getCreationAttribute",
+  "sig": "getCreationAttribute(creationEntity: Entity): GetCreationAttributeResult"
+ },
+ {
+  "page": "query",
+  "zh": "获取默认模式的造物仇恨列表",
+  "en": "Get Aggro List of Creation in Default Mode",
+  "kind": "function",
+  "target": "getAggroListOfCreationInDefaultMode",
+  "sig": "getAggroListOfCreationInDefaultMode(creationEntity: Entity): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "查询玩家职业",
+  "en": "Query Player Class",
+  "kind": "function",
+  "target": "queryPlayerClass",
+  "sig": "queryPlayerClass(playerEntity: Entity): ConfigId"
+ },
+ {
+  "page": "query",
+  "zh": "查询玩家职业的等级",
+  "en": "Query Player Class Level",
+  "kind": "function",
+  "target": "queryPlayerClassLevel",
+  "sig": "queryPlayerClassLevel(playerEntity: Entity, classConfigID: ConfigId): int"
+ },
+ {
+  "page": "query",
+  "zh": "查询角色技能",
+  "en": "Query Character Skill",
+  "kind": "function",
+  "target": "queryCharacterSkill",
+  "sig": "queryCharacterSkill(characterEntity: Entity, characterSkillSlot: SkillSlot): ConfigId"
+ },
+ {
+  "page": "query",
+  "zh": "以技能实例ID查询技能配置ID",
+  "en": "Query Skill Config ID by Skill Instance ID",
+  "kind": "function",
+  "target": "querySkillConfigIDBySkillInstanceID",
+  "sig": "querySkillConfigIDBySkillInstanceID(characterEntity: Entity, skillInstanceID: int): ConfigId"
+ },
+ {
+  "page": "query",
+  "zh": "以技能配置ID查询所有技能实例ID",
+  "en": "Query All Skill Instance IDs by Skill Config ID",
+  "kind": "function",
+  "target": "queryAllSkillInstanceIDsBySkillConfigID",
+  "sig": "queryAllSkillInstanceIDsBySkillConfigID(characterEntity: Entity, skillConfigID: ConfigId): int[]"
+ },
+ {
+  "page": "query",
+  "zh": "以技能槽位查询所有技能实例ID",
+  "en": "Query All Skill Instance IDs by Skill Slot",
+  "kind": "function",
+  "target": "queryAllSkillInstanceIDsBySkillSlot",
+  "sig": "queryAllSkillInstanceIDsBySkillSlot(characterEntity: Entity, skillSlot: SkillSlot): int[]"
+ },
+ {
+  "page": "query",
+  "zh": "以技能槽位和技能配置ID查询技能实例ID",
+  "en": "Query Skill Instance ID by Skill Slot and Skill Config ID",
+  "kind": "function",
+  "target": "querySkillInstanceIDBySkillSlotAndSkillConfigID",
+  "sig": "querySkillInstanceIDBySkillSlotAndSkillConfigID(characterEntity: Entity, skillSlot: SkillSlot, skillConfigID: ConfigId): int"
+ },
+ {
+  "page": "query",
+  "zh": "查询技能属性组值",
+  "en": "Query Skill Attribute Group Value",
+  "kind": "function",
+  "target": "querySkillAttributeGroupValue",
+  "sig": "querySkillAttributeGroupValue(characterEntity: Entity, skillGroupConfigID: ConfigId): float"
+ },
+ {
+  "page": "query",
+  "zh": "查询实体是否具有单位状态",
+  "en": "Query If Entity Has Unit Status",
+  "kind": "function",
+  "target": "queryIfEntityHasUnitStatus",
+  "sig": "queryIfEntityHasUnitStatus(targetEntity: Entity, unitStatusConfigID: ConfigId): bool"
+ },
+ {
+  "page": "query",
+  "zh": "根据槽位序号查询单位状态层数",
+  "en": "Query Unit Status Stacks by Slot ID",
+  "kind": "function",
+  "target": "queryUnitStatusStacksBySlotID",
+  "sig": "queryUnitStatusStacksBySlotID(queryTargetEntity: Entity, unitStatusConfigID: ConfigId, slotID: int): int"
+ },
+ {
+  "page": "query",
+  "zh": "根据槽位序号查询单位状态施加者",
+  "en": "Query Unit Status Applier by Slot ID",
+  "kind": "function",
+  "target": "queryUnitStatusApplierBySlotID",
+  "sig": "queryUnitStatusApplierBySlotID(queryTargetEntity: Entity, unitStatusConfigID: ConfigId, slotID: int): Entity"
+ },
+ {
+  "page": "query",
+  "zh": "查询单位状态的槽位序号列表",
+  "en": "List of Slot IDs Querying Unit Status",
+  "kind": "function",
+  "target": "listOfSlotIDsQueryingUnitStatus",
+  "sig": "listOfSlotIDsQueryingUnitStatus(queryTargetEntity: Entity, unitStatusConfigID: ConfigId): int[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取实体单位标签列表",
+  "en": "Get Entity Unit Tag List",
+  "kind": "function",
+  "target": "getEntityUnitTagList",
+  "sig": "getEntityUnitTagList(targetEntity: Entity): int[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取单位标签的实体列表",
+  "en": "Get Entity List by Unit Tag",
+  "kind": "function",
+  "target": "getEntityListByUnitTag",
+  "sig": "getEntityListByUnitTag(unitTagIndex: int): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "查询指定实体的仇恨值",
+  "en": "Query the Aggro Value of the Specified Entity",
+  "kind": "function",
+  "target": "queryTheAggroValueOfTheSpecifiedEntity",
+  "sig": "queryTheAggroValueOfTheSpecifiedEntity(queryTarget: Entity, aggroOwner: Entity): int"
+ },
+ {
+  "page": "query",
+  "zh": "查询指定实体的仇恨倍率",
+  "en": "Query the Aggro Multiplier of the Specified Entity",
+  "kind": "function",
+  "target": "queryTheAggroMultiplierOfTheSpecifiedEntity",
+  "sig": "queryTheAggroMultiplierOfTheSpecifiedEntity(queryTarget: Entity): float"
+ },
+ {
+  "page": "query",
+  "zh": "查询全局仇恨转移倍率",
+  "en": "Query Global Aggro Transfer Multiplier",
+  "kind": "function",
+  "target": "queryGlobalAggroTransferMultiplier",
+  "sig": "queryGlobalAggroTransferMultiplier(): float"
+ },
+ {
+  "page": "query",
+  "zh": "获取指定实体的仇恨目标",
+  "en": "Get the Aggro Target of the Specified Entity",
+  "kind": "function",
+  "target": "getTheAggroTargetOfTheSpecifiedEntity",
+  "sig": "getTheAggroTargetOfTheSpecifiedEntity(aggroOwner: Entity): Entity"
+ },
+ {
+  "page": "query",
+  "zh": "获取目标所在仇恨列表的拥有者列表",
+  "en": "Get List of Owners Who Have the Target in Their Aggro List",
+  "kind": "function",
+  "target": "getListOfOwnersWhoHaveTheTargetInTheirAggroList",
+  "sig": "getListOfOwnersWhoHaveTheTargetInTheirAggroList(queryTarget: Entity): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取以目标为仇恨目标的拥有者列表",
+  "en": "Get List of Owners That Have the Target As Their Aggro Target",
+  "kind": "function",
+  "target": "getListOfOwnersThatHaveTheTargetAsTheirAggroTarget",
+  "sig": "getListOfOwnersThatHaveTheTargetAsTheirAggroTarget(targetEntity: Entity): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取指定实体的仇恨列表",
+  "en": "Get the Aggro List of the Specified Entity",
+  "kind": "function",
+  "target": "getTheAggroListOfTheSpecifiedEntity",
+  "sig": "getTheAggroListOfTheSpecifiedEntity(targetEntity: Entity): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "查询指定实体是否已入战",
+  "en": "Query if Specified Entity Is in Combat",
+  "kind": "function",
+  "target": "queryIfSpecifiedEntityIsInCombat",
+  "sig": "queryIfSpecifiedEntityIsInCombat(queryTarget: Entity): bool"
+ },
+ {
+  "page": "query",
+  "zh": "获取指定路径点信息",
+  "en": "Get Specified Waypoint Info",
+  "kind": "function",
+  "target": "getSpecifiedWaypointInfo",
+  "sig": "getSpecifiedWaypointInfo(pathIndex: int, pathWaypointID: int): GetSpecifiedWaypointInfoResult"
+ },
+ {
+  "page": "query",
+  "zh": "获得全局路径的路点个数",
+  "en": "Get the Number of Waypoints in the Global Path",
+  "kind": "function",
+  "target": "getTheNumberOfWaypointsInTheGlobalPath",
+  "sig": "getTheNumberOfWaypointsInTheGlobalPath(pathIndex: int): int"
+ },
+ {
+  "page": "query",
+  "zh": "查询预设点位置旋转",
+  "en": "Query Preset Point Position Rotation",
+  "kind": "function",
+  "target": "queryPresetPointPositionRotation",
+  "sig": "queryPresetPointPositionRotation(pointIndex: int): QueryPresetPointPositionRotationResult"
+ },
+ {
+  "page": "query",
+  "zh": "以单位标签获取预设点位列表",
+  "en": "Get Preset Point List by Unit Tag",
+  "kind": "function",
+  "target": "getPresetPointListByUnitTag",
+  "sig": "getPresetPointListByUnitTag(unitTagID: int): int[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取玩家结算排名数值",
+  "en": "Get Player Settlement Ranking Value",
+  "kind": "function",
+  "target": "getPlayerSettlementRankingValue",
+  "sig": "getPlayerSettlementRankingValue(playerEntity: Entity): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取玩家结算成功状态",
+  "en": "Get Player Settlement Success Status",
+  "kind": "function",
+  "target": "getPlayerSettlementSuccessStatus",
+  "sig": "getPlayerSettlementSuccessStatus(playerEntity: Entity): SettlementStatus"
+ },
+ {
+  "page": "query",
+  "zh": "获取阵营结算排名数值",
+  "en": "Get Faction Settlement Ranking Value",
+  "kind": "function",
+  "target": "getFactionSettlementRankingValue",
+  "sig": "getFactionSettlementRankingValue(faction: Faction): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取阵营结算成功状态",
+  "en": "Get Faction Settlement Success Status",
+  "kind": "function",
+  "target": "getFactionSettlementSuccessStatus",
+  "sig": "getFactionSettlementSuccessStatus(faction: Faction): SettlementStatus"
+ },
+ {
+  "page": "query",
+  "zh": "以键查询字典值",
+  "en": "Query Dictionary Value by Key",
+  "kind": "function",
+  "target": "queryDictionaryValueByKey",
+  "sig": "queryDictionaryValueByKey<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(dictionary: Dict<K, V>, key: K): V"
+ },
+ {
+  "page": "query",
+  "zh": "查询字典是否包含特定键",
+  "en": "Query If Dictionary Contains Specific Key",
+  "kind": "implemented",
+  "target": "queryIfDictionaryContainsSpecificKey",
+  "sig": "queryIfDictionaryContainsSpecificKey<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(dictionary: Dict<K, V>, key: K): bool"
+ },
+ {
+  "page": "query",
+  "zh": "查询字典是否包含特定值",
+  "en": "Query If Dictionary Contains Specific Value",
+  "kind": "implemented",
+  "target": "queryIfDictionaryContainsSpecificValue",
+  "sig": "queryIfDictionaryContainsSpecificValue<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(dictionary: Dict<K, V>, value: V): bool"
+ },
+ {
+  "page": "query",
+  "zh": "获取字典中键组成的列表",
+  "en": "Get List of Keys from Dictionary",
+  "kind": "implemented",
+  "target": "getListOfKeysFromDictionary",
+  "sig": "getListOfKeysFromDictionary<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(dictionary: Dict<K, V>): K[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取字典中值组成的列表",
+  "en": "Get List of Values from Dictionary",
+  "kind": "implemented",
+  "target": "getListOfValuesFromDictionary",
+  "sig": "getListOfValuesFromDictionary<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(dictionary: Dict<K, V>): V[]"
+ },
+ {
+  "page": "query",
+  "zh": "查询字典长度",
+  "en": "Query Dictionary's Length",
+  "kind": "implemented",
+  "target": "queryDictionarysLength",
+  "sig": "queryDictionarysLength<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(dictionary: Dict<K, V>): int"
+ },
+ {
+  "page": "query",
+  "zh": "查询自定义商店商品出售列表",
+  "en": "Query Custom Shop Item Sales List",
+  "kind": "function",
+  "target": "queryCustomShopItemSalesList",
+  "sig": "queryCustomShopItemSalesList(shopOwnerEntity: Entity, shopID: int): int[]"
+ },
+ {
+  "page": "query",
+  "zh": "查询背包商店物品出售列表",
+  "en": "Query Inventory Shop Item Sales List",
+  "kind": "function",
+  "target": "queryInventoryShopItemSalesList",
+  "sig": "queryInventoryShopItemSalesList(shopOwnerEntity: Entity, shopID: int): ConfigId[]"
+ },
+ {
+  "page": "query",
+  "zh": "查询商店收购物品列表",
+  "en": "Query Shop Purchase Item List",
+  "kind": "function",
+  "target": "queryShopPurchaseItemList",
+  "sig": "queryShopPurchaseItemList(shopOwnerEntity: Entity, shopID: int): ConfigId[]"
+ },
+ {
+  "page": "query",
+  "zh": "查询自定义商店商品出售信息",
+  "en": "Query Custom Shop Item Sales Info",
+  "kind": "function",
+  "target": "queryCustomShopItemSalesInfo",
+  "sig": "queryCustomShopItemSalesInfo<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(shopOwnerEntity: Entity, shopID: int, shopItemID: int): QueryCustomShopItemSalesInfoResult<K, V>"
+ },
+ {
+  "page": "query",
+  "zh": "查询背包商店商品出售信息",
+  "en": "Query Inventory Shop Item Sales Info",
+  "kind": "function",
+  "target": "queryInventoryShopItemSalesInfo",
+  "sig": "queryInventoryShopItemSalesInfo<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(shopOwnerEntity: Entity, shopID: int, itemConfigID: ConfigId): QueryInventoryShopItemSalesInfoResult<K, V>"
+ },
+ {
+  "page": "query",
+  "zh": "查询商店物品收购信息",
+  "en": "Query Shop Item Purchase Info",
+  "kind": "function",
+  "target": "queryShopItemPurchaseInfo",
+  "sig": "queryShopItemPurchaseInfo<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(shopOwnerEntity: Entity, shopID: int, itemConfigID: ConfigId): QueryShopItemPurchaseInfoResult<K, V>"
+ },
+ {
+  "page": "query",
+  "zh": "获取装备词条列表",
+  "en": "Get Equipment Affix List",
+  "kind": "function",
+  "target": "getEquipmentAffixList",
+  "sig": "getEquipmentAffixList(equipmentIndex: int): int[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取装备词条配置ID",
+  "en": "Get Equipment Affix Config ID",
+  "kind": "function",
+  "target": "getEquipmentAffixConfigID",
+  "sig": "getEquipmentAffixConfigID(equipmentIndex: int, affixID: int): ConfigId"
+ },
+ {
+  "page": "query",
+  "zh": "获取装备词条数值",
+  "en": "Get Equipment Affix Value",
+  "kind": "function",
+  "target": "getEquipmentAffixValue",
+  "sig": "getEquipmentAffixValue(equipmentIndex: int, affixID: int): float"
+ },
+ {
+  "page": "query",
+  "zh": "查询装备标签列表",
+  "en": "Query Equipment Tag List",
+  "kind": "function",
+  "target": "queryEquipmentTagList",
+  "sig": "queryEquipmentTagList(equipmentIndex: int): ConfigId[]"
+ },
+ {
+  "page": "query",
+  "zh": "根据装备索引查询装备配置ID",
+  "en": "Query Equipment Config ID by Equipment ID",
+  "kind": "function",
+  "target": "queryEquipmentConfigIDByEquipmentID",
+  "sig": "queryEquipmentConfigIDByEquipmentID(equipmentIndex: int): ConfigId"
+ },
+ {
+  "page": "query",
+  "zh": "获取指定装备栏位的装备索引",
+  "en": "Get the Equipment Index of the Specified Equipment Slot",
+  "kind": "function",
+  "target": "getTheEquipmentIndexOfTheSpecifiedEquipmentSlot",
+  "sig": "getTheEquipmentIndexOfTheSpecifiedEquipmentSlot(targetEntity: Entity, row: int, column: int): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取背包容量",
+  "en": "Get Inventory Capacity",
+  "kind": "function",
+  "target": "getInventoryCapacity",
+  "sig": "getInventoryCapacity(inventoryOwnerEntity: Entity): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取背包道具数量",
+  "en": "Get Inventory Item Quantity",
+  "kind": "function",
+  "target": "getInventoryItemQuantity",
+  "sig": "getInventoryItemQuantity(inventoryOwnerEntity: Entity, itemConfigID: ConfigId): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取背包货币数量",
+  "en": "Get Inventory Currency Quantity",
+  "kind": "function",
+  "target": "getInventoryCurrencyQuantity",
+  "sig": "getInventoryCurrencyQuantity(inventoryOwnerEntity: Entity, currencyConfigID: ConfigId): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取背包所有基础道具",
+  "en": "Get all basic items from Inventory",
+  "kind": "function",
+  "target": "getAllBasicItemsFromInventory",
+  "sig": "getAllBasicItemsFromInventory<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(inventoryOwnerEntity: Entity): Dict<K, V>"
+ },
+ {
+  "page": "query",
+  "zh": "获取背包所有货币",
+  "en": "Get All Currency From Inventory",
+  "kind": "function",
+  "target": "getAllCurrencyFromInventory",
+  "sig": "getAllCurrencyFromInventory<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(inventoryOwnerEntity: Entity): Dict<K, V>"
+ },
+ {
+  "page": "query",
+  "zh": "获取背包所有装备",
+  "en": "Get all equipment from Inventory",
+  "kind": "function",
+  "target": "getAllEquipmentFromInventory",
+  "sig": "getAllEquipmentFromInventory(inventoryOwnerEntity: Entity): int[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取掉落物组件道具数量",
+  "en": "Get Loot Component Item Quantity",
+  "kind": "function",
+  "target": "getLootComponentItemQuantity",
+  "sig": "getLootComponentItemQuantity(lootEntity: Entity, itemConfigID: ConfigId): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取掉落物组件货币数量",
+  "en": "Get Loot Component Currency Quantity",
+  "kind": "function",
+  "target": "getLootComponentCurrencyQuantity",
+  "sig": "getLootComponentCurrencyQuantity(lootEntity: Entity, currencyConfigID: ConfigId): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取掉落物组件所有道具",
+  "en": "Get All Items from Loot Component",
+  "kind": "function",
+  "target": "getAllItemsFromLootComponent",
+  "sig": "getAllItemsFromLootComponent<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(dropperEntity: Entity): Dict<K, V>"
+ },
+ {
+  "page": "query",
+  "zh": "获取掉落物组件所有货币",
+  "en": "Get All Currency from Loot Component",
+  "kind": "function",
+  "target": "getAllCurrencyFromLootComponent",
+  "sig": "getAllCurrencyFromLootComponent<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(dropperEntity: Entity): Dict<K, V>"
+ },
+ {
+  "page": "query",
+  "zh": "获取掉落物组件所有装备",
+  "en": "Get All Equipment from Loot Component",
+  "kind": "function",
+  "target": "getAllEquipmentFromLootComponent",
+  "sig": "getAllEquipmentFromLootComponent(lootEntity: Entity): int[]"
+ },
+ {
+  "page": "query",
+  "zh": "获取碰撞触发器内所有实体",
+  "en": "Get All Entities Within the Collision Trigger",
+  "kind": "function",
+  "target": "getAllEntitiesWithinTheCollisionTrigger",
+  "sig": "getAllEntitiesWithinTheCollisionTrigger(targetEntity: Entity, triggerID: int): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "查询指定小地图标识信息",
+  "en": "Query Specified Mini-Map Marker Information",
+  "kind": "function",
+  "target": "querySpecifiedMiniMapMarkerInformation",
+  "sig": "querySpecifiedMiniMapMarkerInformation(targetEntity: Entity, miniMapMarkerID: int): QuerySpecifiedMiniMapMarkerInformationResult"
+ },
+ {
+  "page": "query",
+  "zh": "获取实体的小地图标识状态",
+  "en": "Get Entity's Mini-Map Marker Status",
+  "kind": "function",
+  "target": "getEntitysMiniMapMarkerStatus",
+  "sig": "getEntitysMiniMapMarkerStatus(targetEntity: Entity): GetEntitysMiniMapMarkerStatusResult"
+ },
+ {
+  "page": "query",
+  "zh": "获取当前造物的巡逻模板",
+  "en": "Get Current Creation's Patrol Template",
+  "kind": "function",
+  "target": "getCurrentCreationsPatrolTemplate",
+  "sig": "getCurrentCreationsPatrolTemplate(creationEntity: Entity): GetCurrentCreationsPatrolTemplateResult"
+ },
+ {
+  "page": "query",
+  "zh": "查询成就是否完成",
+  "en": "Query If Achievement Is Completed",
+  "kind": "function",
+  "target": "queryIfAchievementIsCompleted",
+  "sig": "queryIfAchievementIsCompleted(targetEntity: Entity, achievementID: int): bool"
+ },
+ {
+  "page": "query",
+  "zh": "获取当前生效的扫描标签配置ID",
+  "en": "Get the Currently Active Scan Tag Config ID",
+  "kind": "function",
+  "target": "getTheCurrentlyActiveScanTagConfigID",
+  "sig": "getTheCurrentlyActiveScanTagConfigID(targetEntity: Entity): ConfigId"
+ },
+ {
+  "page": "query",
+  "zh": "获取玩家段位变化分数",
+  "en": "Get Player Rank Score Change",
+  "kind": "function",
+  "target": "getPlayerRankScoreChange",
+  "sig": "getPlayerRankScoreChange(playerEntity: Entity, settlementStatus: RankSettlementStatus): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取玩家段位信息",
+  "en": "Get Player Ranking Info",
+  "kind": "function",
+  "target": "getPlayerRankingInfo",
+  "sig": "getPlayerRankingInfo(playerEntity: Entity): GetPlayerRankingInfoResult"
+ },
+ {
+  "page": "query",
+  "zh": "获取玩家逃跑合法性",
+  "en": "Get Player Escape Validity",
+  "kind": "function",
+  "target": "getPlayerEscapeValidity",
+  "sig": "getPlayerEscapeValidity(playerEntity: Entity): bool"
+ },
+ {
+  "page": "query",
+  "zh": "查询当前激活的实体布设组列表",
+  "en": "Get Currently Active Entity Deployment Groups",
+  "kind": "function",
+  "target": "getCurrentlyActiveEntityDeploymentGroups",
+  "sig": "getCurrentlyActiveEntityDeploymentGroups(): int[]"
+ },
+ {
+  "page": "query",
+  "zh": "查询对应礼盒数量",
+  "en": "Query Corresponding Gift Box Quantity",
+  "kind": "function",
+  "target": "queryCorrespondingGiftBoxQuantity",
+  "sig": "queryCorrespondingGiftBoxQuantity(playerEntity: Entity, giftBoxIndex: int): int"
+ },
+ {
+  "page": "query",
+  "zh": "查询对应华丽演绎礼盒消耗数量",
+  "en": "Query Corresponding Gift Box Consumption",
+  "kind": "function",
+  "target": "queryCorrespondingGiftBoxConsumption",
+  "sig": "queryCorrespondingGiftBoxConsumption(playerEntity: Entity, giftBoxIndex: int): int"
+ },
+ {
+  "page": "query",
+  "zh": "获取复杂造物的预设状态值",
+  "en": "Get the Preset Status Value of the Complex Creation",
+  "kind": "function",
+  "target": "getThePresetStatusValueOfTheComplexCreation",
+  "sig": "getThePresetStatusValueOfTheComplexCreation(targetEntity: Entity, presetStatusIndex: int): int"
+ },
+ {
+  "page": "query",
+  "zh": "查询指定任务计数",
+  "en": "Query Specified Task Count",
+  "kind": "function",
+  "target": "querySpecifiedTaskCount",
+  "sig": "querySpecifiedTaskCount(playerEntity: Entity, questIndex: int): int"
+ },
+ {
+  "page": "query",
+  "zh": "查询指定任务是否完成",
+  "en": "Query If Specified Task is Completed",
+  "kind": "function",
+  "target": "queryIfSpecifiedTaskIsCompleted",
+  "sig": "queryIfSpecifiedTaskIsCompleted(playerEntity: Entity, questIndex: int): bool"
+ },
+ {
+  "page": "query",
+  "zh": "查询玩家当前激活操控运动器列表",
+  "en": "Query Player's Currently Activated Control Motion Device List",
+  "kind": "function",
+  "target": "queryPlayersCurrentlyActivatedControlMotionDeviceList",
+  "sig": "queryPlayersCurrentlyActivatedControlMotionDeviceList(playerEntity: Entity): Entity[]"
+ },
+ {
+  "page": "query",
+  "zh": "查询玩家当前跟随操控运动器",
+  "en": "Query Player's Followed Control Motion Device",
+  "kind": "function",
+  "target": "queryPlayersFollowedControlMotionDevice",
+  "sig": "queryPlayersFollowedControlMotionDevice(playerEntity: Entity): Entity"
+ },
+ {
+  "page": "query",
+  "zh": "查询操控运动器当前运动参数",
+  "en": "Query Control Motion Device's Current Movement Parameters",
+  "kind": "function",
+  "target": "queryControlMotionDevicesCurrentMovementParameters",
+  "sig": "queryControlMotionDevicesCurrentMovementParameters(controlMotionDevice: Entity): QueryControlMotionDevicesCurrentMovementParametersResult"
+ },
+ {
+  "page": "query",
+  "zh": "查询玩家是否订阅",
+  "en": "Check Whether Player Has Subscribed",
+  "kind": "function",
+  "target": "checkWhetherPlayerHasSubscribed",
+  "sig": "checkWhetherPlayerHasSubscribed(playerEntity: Entity): bool"
+ },
+ {
+  "page": "query",
+  "zh": "查询玩家光标是否激活",
+  "en": "Check Whether Player Cursor Is Active",
+  "kind": "function",
+  "target": "checkWhetherPlayerCursorIsActive",
+  "sig": "checkWhetherPlayerCursorIsActive(playerEntity: Entity): bool"
+ },
+ {
+  "page": "operation",
+  "zh": "是否相等",
+  "en": "Equal",
+  "kind": "implemented",
+  "target": "equal",
+  "sig": "equal<T extends NodeValue = NodeValue>(input1: T, input2: T): bool"
+ },
+ {
+  "page": "operation",
+  "zh": "拼装列表",
+  "en": "Assembly List",
+  "kind": "native",
+  "target": "const list: T[] = [a, b, c];"
+ },
+ {
+  "page": "operation",
+  "zh": "数据类型转换",
+  "en": "Data Type Conversion",
+  "kind": "implemented",
+  "target": "dataTypeConversion",
+  "sig": "dataTypeConversion(input, to)"
+ },
+ {
+  "page": "operation",
+  "zh": "枚举是否相等",
+  "en": "Enumerations Equal",
+  "kind": "implemented",
+  "target": "enumerationsEqual",
+  "sig": "enumerationsEqual<T extends NodeValue = NodeValue>(enumeration1: T, enumeration2: T): bool"
+ },
+ {
+  "page": "operation",
+  "zh": "拆分三维向量",
+  "en": "Split 3D Vector",
+  "kind": "implemented",
+  "target": "split3DVector",
+  "sig": "split3DVector(_3dVector: Vec3): Split3DVectorResult"
+ },
+ {
+  "page": "operation",
+  "zh": "三维向量加法",
+  "en": "3D Vector Addition",
+  "kind": "implemented",
+  "target": "_3dVectorAddition",
+  "sig": "_3dVectorAddition(_3dVector1: Vec3, _3dVector2: Vec3): Vec3"
+ },
+ {
+  "page": "operation",
+  "zh": "三维向量减法",
+  "en": "3D Vector Subtraction",
+  "kind": "implemented",
+  "target": "_3dVectorSubtraction",
+  "sig": "_3dVectorSubtraction(_3dVector1: Vec3, _3dVector2: Vec3): Vec3"
+ },
+ {
+  "page": "operation",
+  "zh": "三维向量缩放",
+  "en": "3D Vector Zoom",
+  "kind": "implemented",
+  "target": "_3dVectorZoom",
+  "sig": "_3dVectorZoom(_3dVector: Vec3, zoomMultiplier: float): Vec3"
+ },
+ {
+  "page": "operation",
+  "zh": "三维向量夹角",
+  "en": "3D Vector Angle",
+  "kind": "implemented",
+  "target": "_3dVectorAngle",
+  "sig": "_3dVectorAngle(_3dVector1: Vec3, _3dVector2: Vec3): float"
+ },
+ {
+  "page": "operation",
+  "zh": "三维向量归一化",
+  "en": "3D Vector Normalization",
+  "kind": "implemented",
+  "target": "_3dVectorNormalization",
+  "sig": "_3dVectorNormalization(_3dVector: Vec3): Vec3"
+ },
+ {
+  "page": "operation",
+  "zh": "加法运算",
+  "en": "Addition",
+  "kind": "implemented",
+  "target": "addition",
+  "sig": "addition<T extends Num = Num>(a: T, b: T): T"
+ },
+ {
+  "page": "operation",
+  "zh": "减法运算",
+  "en": "Subtraction",
+  "kind": "implemented",
+  "target": "subtraction",
+  "sig": "subtraction<T extends Num = Num>(a: T, b: T): T"
+ },
+ {
+  "page": "operation",
+  "zh": "乘法运算",
+  "en": "Multiplication",
+  "kind": "implemented",
+  "target": "multiplication",
+  "sig": "multiplication<T extends Num = Num>(a: T, b: T): T"
+ },
+ {
+  "page": "operation",
+  "zh": "除法运算",
+  "en": "Division",
+  "kind": "implemented",
+  "target": "division",
+  "sig": "division<T extends Num = Num>(a: T, b: T): T"
+ },
+ {
+  "page": "operation",
+  "zh": "模运算",
+  "en": "Modulo Operation",
+  "kind": "implemented",
+  "target": "moduloOperation",
+  "sig": "moduloOperation(a: int, b: int): int"
+ },
+ {
+  "page": "operation",
+  "zh": "幂运算",
+  "en": "Exponentiation",
+  "kind": "implemented",
+  "target": "exponentiation",
+  "sig": "exponentiation<T extends Num = Num>(base: T, exponent: T): T"
+ },
+ {
+  "page": "operation",
+  "zh": "取较大值",
+  "en": "Take Larger Value",
+  "kind": "implemented",
+  "target": "takeLargerValue",
+  "sig": "takeLargerValue<T extends Num = Num>(input1: T, input2: T): T"
+ },
+ {
+  "page": "operation",
+  "zh": "取较小值",
+  "en": "Take Smaller Value",
+  "kind": "implemented",
+  "target": "takeSmallerValue",
+  "sig": "takeSmallerValue<T extends Num = Num>(input1: T, input2: T): T"
+ },
+ {
+  "page": "operation",
+  "zh": "对数运算",
+  "en": "Logarithm Operation",
+  "kind": "implemented",
+  "target": "logarithmOperation",
+  "sig": "logarithmOperation(realNumber: float, base: float): float"
+ },
+ {
+  "page": "operation",
+  "zh": "绝对值运算",
+  "en": "Absolute Value Operation",
+  "kind": "implemented",
+  "target": "absoluteValueOperation",
+  "sig": "absoluteValueOperation<T extends Num = Num>(input: T): T"
+ },
+ {
+  "page": "operation",
+  "zh": "取符号运算",
+  "en": "Sign Operation",
+  "kind": "implemented",
+  "target": "signOperation",
+  "sig": "signOperation<T extends Num = Num>(input: T): T"
+ },
+ {
+  "page": "operation",
+  "zh": "三维向量模运算",
+  "en": "3D Vector Modulo Operation",
+  "kind": "implemented",
+  "target": "_3dVectorModuloOperation",
+  "sig": "_3dVectorModuloOperation(_3dVector: Vec3): float"
+ },
+ {
+  "page": "operation",
+  "zh": "算术平方根运算",
+  "en": "Arithmetic Square Root Operation",
+  "kind": "implemented",
+  "target": "arithmeticSquareRootOperation",
+  "sig": "arithmeticSquareRootOperation(input: float): float"
+ },
+ {
+  "page": "operation",
+  "zh": "范围限制运算",
+  "en": "Range Limiting Operation",
+  "kind": "implemented",
+  "target": "rangeLimitingOperation",
+  "sig": "rangeLimitingOperation<T extends Num = Num>(input: T, lowerLimit: T, upperLimit: T): T"
+ },
+ {
+  "page": "operation",
+  "zh": "取整数运算",
+  "en": "Round to Integer Operation",
+  "kind": "implemented",
+  "target": "roundToIntegerOperation",
+  "sig": "roundToIntegerOperation(input: float, roundingMode: RoundingMode): int"
+ },
+ {
+  "page": "operation",
+  "zh": "创建三维向量",
+  "en": "Create 3D Vector",
+  "kind": "implemented",
+  "target": "create3DVector",
+  "sig": "create3DVector(xComponent: float, yComponent: float, zComponent: float): Vec3"
+ },
+ {
+  "page": "operation",
+  "zh": "逻辑与运算",
+  "en": "Logical AND Operation",
+  "kind": "implemented",
+  "target": "logicalANDOperation",
+  "sig": "logicalANDOperation(input1: bool, input2: bool): bool"
+ },
+ {
+  "page": "operation",
+  "zh": "逻辑或运算",
+  "en": "Logical OR Operation",
+  "kind": "implemented",
+  "target": "logicalOROperation",
+  "sig": "logicalOROperation(input1: bool, input2: bool): bool"
+ },
+ {
+  "page": "operation",
+  "zh": "逻辑异或运算",
+  "en": "Logical XOR Operation",
+  "kind": "implemented",
+  "target": "logicalXOROperation",
+  "sig": "logicalXOROperation(input1: bool, input2: bool): bool"
+ },
+ {
+  "page": "operation",
+  "zh": "逻辑非运算",
+  "en": "Logical NOT Operation",
+  "kind": "implemented",
+  "target": "logicalNOTOperation",
+  "sig": "logicalNOTOperation(input: bool): bool"
+ },
+ {
+  "page": "operation",
+  "zh": "数值小于",
+  "en": "Less Than",
+  "kind": "implemented",
+  "target": "lessThan",
+  "sig": "lessThan<T extends Num = Num>(leftValue: T, rightValue: T): bool"
+ },
+ {
+  "page": "operation",
+  "zh": "数值小于等于",
+  "en": "Less Than or Equal To",
+  "kind": "implemented",
+  "target": "lessThanOrEqualTo",
+  "sig": "lessThanOrEqualTo<T extends Num = Num>(leftValue: T, rightValue: T): bool"
+ },
+ {
+  "page": "operation",
+  "zh": "数值大于",
+  "en": "Greater Than",
+  "kind": "implemented",
+  "target": "greaterThan",
+  "sig": "greaterThan<T extends Num = Num>(leftValue: T, rightValue: T): bool"
+ },
+ {
+  "page": "operation",
+  "zh": "数值大于等于",
+  "en": "Greater Than or Equal To",
+  "kind": "implemented",
+  "target": "greaterThanOrEqualTo",
+  "sig": "greaterThanOrEqualTo<T extends Num = Num>(leftValue: T, rightValue: T): bool"
+ },
+ {
+  "page": "operation",
+  "zh": "两坐标点距离",
+  "en": "Distance Between Two Coordinate Points",
+  "kind": "implemented",
+  "target": "distanceBetweenTwoCoordinatePoints",
+  "sig": "distanceBetweenTwoCoordinatePoints(coordinatePoint1: Vec3, coordinatePoint2: Vec3): float"
+ },
+ {
+  "page": "operation",
+  "zh": "正弦函数",
+  "en": "Sine Function",
+  "kind": "implemented",
+  "target": "sineFunction",
+  "sig": "sineFunction(radian: float): float"
+ },
+ {
+  "page": "operation",
+  "zh": "余弦函数",
+  "en": "Cosine Function",
+  "kind": "implemented",
+  "target": "cosineFunction",
+  "sig": "cosineFunction(radian: float): float"
+ },
+ {
+  "page": "operation",
+  "zh": "正切函数",
+  "en": "Tangent Function",
+  "kind": "implemented",
+  "target": "tangentFunction",
+  "sig": "tangentFunction(radian: float): float"
+ },
+ {
+  "page": "operation",
+  "zh": "反正弦函数",
+  "en": "Arcsine Function",
+  "kind": "implemented",
+  "target": "arcsineFunction",
+  "sig": "arcsineFunction(input: float): float"
+ },
+ {
+  "page": "operation",
+  "zh": "反余弦函数",
+  "en": "Arccosine Function",
+  "kind": "implemented",
+  "target": "arccosineFunction",
+  "sig": "arccosineFunction(input: float): float"
+ },
+ {
+  "page": "operation",
+  "zh": "反正切函数",
+  "en": "Arctangent Function",
+  "kind": "implemented",
+  "target": "arctangentFunction",
+  "sig": "arctangentFunction(input: float): float"
+ },
+ {
+  "page": "operation",
+  "zh": "三维向量旋转",
+  "en": "3D Vector Rotation",
+  "kind": "implemented",
+  "target": "_3dVectorRotation",
+  "sig": "_3dVectorRotation(rotate: Vec3, rotated3DVector: Vec3): Vec3"
+ },
+ {
+  "page": "operation",
+  "zh": "方向向量转旋转",
+  "en": "Direction Vector to Rotation",
+  "kind": "implemented",
+  "target": "directionVectorToRotation",
+  "sig": "directionVectorToRotation(forwardVector: Vec3, upwardVector: Vec3): Vec3"
+ },
+ {
+  "page": "operation",
+  "zh": "三维向量内积",
+  "en": "3D Vector Dot Product",
+  "kind": "implemented",
+  "target": "_3dVectorDotProduct",
+  "sig": "_3dVectorDotProduct(_3dVector1: Vec3, _3dVector2: Vec3): float"
+ },
+ {
+  "page": "operation",
+  "zh": "三维向量外积",
+  "en": "3D Vector Cross Product",
+  "kind": "implemented",
+  "target": "_3dVectorCrossProduct",
+  "sig": "_3dVectorCrossProduct(_3dVector1: Vec3, _3dVector2: Vec3): Vec3"
+ },
+ {
+  "page": "operation",
+  "zh": "弧度转角度",
+  "en": "Radians to Degrees",
+  "kind": "implemented",
+  "target": "radiansToDegrees",
+  "sig": "radiansToDegrees(radianValue: float): float"
+ },
+ {
+  "page": "operation",
+  "zh": "角度转弧度",
+  "en": "Degrees to Radians",
+  "kind": "implemented",
+  "target": "degreesToRadians",
+  "sig": "degreesToRadians(angleValue: float): float"
+ },
+ {
+  "page": "operation",
+  "zh": "根据时间戳计算格式化时间",
+  "en": "Calculate Formatted Time From Timestamp",
+  "kind": "implemented",
+  "target": "calculateFormattedTimeFromTimestamp",
+  "sig": "calculateFormattedTimeFromTimestamp(timestamp: int): CalculateFormattedTimeFromTimestampResult"
+ },
+ {
+  "page": "operation",
+  "zh": "根据格式化时间计算时间戳",
+  "en": "Calculate Timestamp From Formatted Time",
+  "kind": "implemented",
+  "target": "calculateTimestampFromFormattedTime",
+  "sig": "calculateTimestampFromFormattedTime(year: int, month: int, day: int, hour: int, minute: int, second: int): int"
+ },
+ {
+  "page": "operation",
+  "zh": "根据时间戳计算星期几",
+  "en": "Calculate Day of the Week From Timestamp",
+  "kind": "implemented",
+  "target": "calculateDayOfTheWeekFromTimestamp",
+  "sig": "calculateDayOfTheWeekFromTimestamp(timestamp: int): int"
+ },
+ {
+  "page": "operation",
+  "zh": "左移运算",
+  "en": "Left Shift Operation",
+  "kind": "implemented",
+  "target": "leftShiftOperation",
+  "sig": "leftShiftOperation(value: int, leftShiftCount: int): int"
+ },
+ {
+  "page": "operation",
+  "zh": "右移运算",
+  "en": "Right Shift Operation",
+  "kind": "implemented",
+  "target": "rightShiftOperation",
+  "sig": "rightShiftOperation(value: int, rightShiftCount: int): int"
+ },
+ {
+  "page": "operation",
+  "zh": "按位与",
+  "en": "Bitwise AND",
+  "kind": "implemented",
+  "target": "bitwiseAND",
+  "sig": "bitwiseAND(value1: int, value2: int): int"
+ },
+ {
+  "page": "operation",
+  "zh": "按位或",
+  "en": "Bitwise OR",
+  "kind": "implemented",
+  "target": "bitwiseOR",
+  "sig": "bitwiseOR(value1: int, value2: int): int"
+ },
+ {
+  "page": "operation",
+  "zh": "按位异或",
+  "en": "XOR (Exclusive OR)",
+  "kind": "implemented",
+  "target": "xorExclusiveOR",
+  "sig": "xorExclusiveOR(value1: int, value2: int): int"
+ },
+ {
+  "page": "operation",
+  "zh": "按位取补",
+  "en": "Bitwise Complement",
+  "kind": "implemented",
+  "target": "bitwiseComplement",
+  "sig": "bitwiseComplement(value: int): int"
+ },
+ {
+  "page": "operation",
+  "zh": "按位写入",
+  "en": "Write by bit",
+  "kind": "implemented",
+  "target": "writeByBit",
+  "sig": "writeByBit(writtenValue: int, writeValue: int, writeStartingPosition: int, writeEndPosition: int): int"
+ },
+ {
+  "page": "operation",
+  "zh": "按位读出",
+  "en": "Read by bit",
+  "kind": "implemented",
+  "target": "readByBit",
+  "sig": "readByBit(value: int, readStartingPosition: int, readEndPosition: int): int"
+ },
+ {
+  "page": "operation",
+  "zh": "拼装字典",
+  "en": "Assembly Dictionary",
+  "kind": "implemented",
+  "target": "assemblyDictionary",
+  "sig": "assemblyDictionary<K extends DictKey, V extends NodeValue>(...pairs: [key: K, value: V][]): Dict<K, V>"
+ },
+ {
+  "page": "operation",
+  "zh": "建立字典",
+  "en": "Create Dictionary",
+  "kind": "implemented",
+  "target": "createDictionary",
+  "sig": "createDictionary<K extends DictKey = DictKey, V extends NodeValue = NodeValue>(keyList: K[], valueList: V[]): Dict<K, V>"
+ },
+ {
+  "page": "operation",
+  "zh": "拼装结构体",
+  "en": "Assemble Structure",
+  "kind": "native",
+  "target": "const s: MyStruct = { field1: v1, field2: v2 };（结构体用 interface 声明）"
+ },
+ {
+  "page": "operation",
+  "zh": "拆分结构体",
+  "en": "Split Structure",
+  "kind": "native",
+  "target": "const { field1, field2 } = s;"
+ }
+]

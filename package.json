@@ -1,0 +1,8 @@
+{
+  "name": "pseudo-node-graph",
+  "version": "1.0.0",
+  "private": true,
+  "description": "千星奇域 服务端节点图 强类型伪代码 API 库（TypeScript 声明）",
+  "scripts": { "gen": "python3 tools/gen.py", "check": "tsc --noEmit -p .", "coverage": "python3 tools/coverage.py" },
+  "devDependencies": { "typescript": "^5.6.0" }
+}
