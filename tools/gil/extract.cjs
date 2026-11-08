@@ -7,6 +7,7 @@
 //   variable-checks.json
 //     undefined  - get/set custom variable with a literal name that no entity defines: created dynamically at run time,
 //                  so it is NOT synced to clients (observed 2026-11-08), and a typo silently makes a new variable
+//     saveVariables - 局内存档变量 (editor-assigned names like 1_chip_1, not in the exported variable lists)
 //     mismatches - literal name whose value pin type differs from the defined type
 //     emptyNames - get/set without a name (neither literal, connection nor composite input)
 // With graph ids or a name fragment, also prints those graphs (non-default pins only).
@@ -86,25 +87,28 @@ for (const s of [4, 5, 8]) for (const e of (m(d.fields, s) || []).filter(x => x.
 }
 const defined = new Map();
 for (const e of entities) for (const x of e.variables) { if (!defined.has(x.name)) defined.set(x.name, new Set()); defined.get(x.name).add(x.type); }
-const SET = 22, GET = 50, undefinedNames = {}, mismatches = [], emptyNames = [];
+// 局内存档变量: names are assigned by the editor from the active save template (1_chip_1, 1_chip_2 ...) and are not in the
+// exported variable lists (creator, 2026-11-08), so they are reported separately instead of as undefined.
+const SET = 22, GET = 50, SAVE = /^\d+_chip_\d+$/, undefinedNames = {}, saveNames = {}, mismatches = [], emptyNames = [];
 for (const g of graphs) for (const n of g.nodes) if (n.type === SET || n.type === GET) {
   const name = n.pins.find(p => p.kind === 3 && p.index === 1);
   const val = n.pins.find(p => p.kind === (n.type === SET ? 3 : 4) && p.index === (n.type === SET ? 2 : 0));
   const external = g.ports.some(p => p['1'] && p['1']['1'] === 3 && p['2'] === n.id && p['3'] && p['3']['1'] === 3 && (p['3']['2'] || 0) === 1);
   if (!external && !(name && name.connections.length) && !(name && name.literal)) emptyNames.push({ graph: g.id, node: n.id });
   if (!(name && name.literal)) continue;
+  if (SAVE.test(name.literal)) { (saveNames[name.literal] = saveNames[name.literal] || []).push({ graph: g.id, node: n.id, op: n.type === SET ? 'set' : 'get' }); continue; }
   if (!defined.has(name.literal)) (undefinedNames[name.literal] = undefinedNames[name.literal] || []).push({ graph: g.id, node: n.id, op: n.type === SET ? 'set' : 'get' });
   else if (val && val.type && !defined.get(name.literal).has(val.type)) mismatches.push({ graph: g.id, node: n.id, name: name.literal, actual: val.type, declared: [...defined.get(name.literal)] });
 }
 fs.writeFileSync(path.join(dir, 'graphs.json'), JSON.stringify(graphs, null, 1));
 fs.writeFileSync(path.join(dir, 'definitions.json'), JSON.stringify(definitions, null, 1));
 fs.writeFileSync(path.join(dir, 'entities.json'), JSON.stringify(entities, null, 1));
-fs.writeFileSync(path.join(dir, 'variable-checks.json'), JSON.stringify({ undefined: undefinedNames, mismatches, emptyNames }, null, 1));
+fs.writeFileSync(path.join(dir, 'variable-checks.json'), JSON.stringify({ undefined: undefinedNames, saveVariables: saveNames, mismatches, emptyNames }, null, 1));
 const unnamed = {};
 for (const g of graphs) for (const n of g.nodes) if (n.name === '?') unnamed[n.type] = (unnamed[n.type] || 0) + 1;
 console.log(JSON.stringify({
   graphs: graphs.length, nodes: graphs.reduce((s, g) => s + g.nodes.length, 0), composites: definitions.length, entities: entities.length,
-  definedVariables: defined.size, undefinedVariableNames: Object.keys(undefinedNames).length, typeMismatches: mismatches.length, emptyNames: emptyNames.length, unnamedTypes: unnamed,
+  definedVariables: defined.size, undefinedVariableNames: Object.keys(undefinedNames).length, saveVariableNames: Object.keys(saveNames).length, typeMismatches: mismatches.length, emptyNames: emptyNames.length, unnamedTypes: unnamed,
 }));
 for (const g of graphs.filter(g => selected.includes('' + g.id) || (selected.length && g.name && g.name.includes(selected[0])))) {
   console.log('GRAPH', g.id, g.name, 'PORTS', JSON.stringify(g.ports));

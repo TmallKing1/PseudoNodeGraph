@@ -215,7 +215,7 @@ for (d,slug,cz,ce),xs in files.items():
   src=src.replace('E.E.','E.')
   open(path,'w').write(hdr+'/* eslint-disable */\n'+imp+'\n'+src+'\n')
   idx.append(f"export * from './{d}/{slug}';")
-open(os.path.join(ROOT,'src','index.ts'),'w').write("export * from './core/types';\nexport * from './core/enums';\nexport * from './core/signals';\n"+'\n'.join(idx)+'\n')
+open(os.path.join(ROOT,'src','index.ts'),'w').write("export * from './core/types';\nexport * from './core/enums';\nexport * from './core/signals';\nexport * from './core/variables';\nexport * from './core/composite';\n"+'\n'.join(idx)+'\n')
 json.dump(COVER,open(os.path.join(ROOT,'coverage.json'),'w'),ensure_ascii=False,indent=1)
 json.dump(TODO,open(os.path.join(ROOT,'tools','todo_auto.json'),'w'),ensure_ascii=False,indent=1)
 c=collections.Counter((x['page'],x['kind']) for x in COVER); print(c, len(COVER))

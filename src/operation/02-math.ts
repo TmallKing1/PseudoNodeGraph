@@ -126,7 +126,9 @@ export function _3dVectorNormalization(_3dVector: Vec3): Vec3 {
  * @returns 结果（结果：泛型）
  */
 export function addition<T extends Num = Num>(a: T, b: T): T {
-  return ((a as number) + (b as number)) as T;
+  // 两数都为整数时按 32 位有符号整数回绕（2147483647 + 1 → -2147483648，用户实测 2026-11-08）；伪代码无法区分 int/float
+  const r = (a as number) + (b as number);
+  return (Number.isInteger(a) && Number.isInteger(b) ? r | 0 : r) as T;
 }
 
 /**
@@ -141,7 +143,9 @@ export function addition<T extends Num = Num>(a: T, b: T): T {
  * @returns 结果（结果：泛型）
  */
 export function subtraction<T extends Num = Num>(a: T, b: T): T {
-  return ((a as number) - (b as number)) as T;
+  // 两数都为整数时按 32 位有符号整数回绕（2147483647 + 1 → -2147483648，用户实测 2026-11-08）；伪代码无法区分 int/float
+  const r = (a as number) - (b as number);
+  return (Number.isInteger(a) && Number.isInteger(b) ? r | 0 : r) as T;
 }
 
 /**
@@ -156,7 +160,8 @@ export function subtraction<T extends Num = Num>(a: T, b: T): T {
  * @returns 结果（结果：泛型）
  */
 export function multiplication<T extends Num = Num>(a: T, b: T): T {
-  return ((a as number) * (b as number)) as T;
+  // 两数都为整数时按 32 位有符号整数回绕（2147483647 + 1 → -2147483648，用户实测 2026-11-08）；伪代码无法区分 int/float
+  return (Number.isInteger(a) && Number.isInteger(b) ? Math.imul(a as number, b as number) : (a as number) * (b as number)) as T;
 }
 
 /**
@@ -176,7 +181,10 @@ export function division<T extends Num = Num>(a: T, b: T): T {
   // 整数除法返回整除结果；除数为0时结果为0（伪代码无法区分 int/float，两个整数时按整除处理）
   if ((b as number) === 0) return 0 as T;
   const r = (a as number) / (b as number);
-  return (Number.isInteger(a) && Number.isInteger(b) ? Math.trunc(r) : r) as T;
+  if (!(Number.isInteger(a) && Number.isInteger(b))) return r as T;
+  // 文档：-2147483648 ÷ -1 = 0（越界结果按默认值）；整除的截断方向未实测，此处向零截断
+  if (r > 2147483647) return 0 as T;
+  return Math.trunc(r) as T;
 }
 
 /**
@@ -191,7 +199,9 @@ export function division<T extends Num = Num>(a: T, b: T): T {
  * @returns 结果（结果：整数）
  */
 export function moduloOperation(a: int, b: int): int {
-  return a % b; // 输入1为被除数（负数取模规则文档未说明，见 TODO.md）
+  // 输入1为被除数。除数为 0 时出参为默认值 0（节点图没有非法值，执行失败返回默认值）；负数取模规则未实测，此处结果符号随被除数（见 待确认.md）
+  if (b === 0) return 0;
+  return a % b;
 }
 
 /**
@@ -730,7 +740,7 @@ export interface CalculateFormattedTimeFromTimestampResult {
  * @returns CalculateFormattedTimeFromTimestampResult（多出参，见接口字段）
  */
 export function calculateFormattedTimeFromTimestamp(timestamp: int): CalculateFormattedTimeFromTimestampResult {
-  // 时间戳单位为秒；时区按 UTC+0 计算（服务器时区影响见 TODO.md）
+  // 时间戳单位为秒，按 UTC+0 计算；需要 UTC+X 本地时间时先给时间戳加 X×3600（用户实测 2026-11-08：查询时间戳(UTC+0) + 8×3600 = 1794151017 → 2026-11-08 15:16:57）
   const d = new Date(timestamp * 1000);
   return { year: d.getUTCFullYear(), month: d.getUTCMonth() + 1, day: d.getUTCDate(), hour: d.getUTCHours(), minute: d.getUTCMinutes(), second: d.getUTCSeconds() } as any;
 }
@@ -765,7 +775,7 @@ export function calculateTimestampFromFormattedTime(year: int, month: int, day: 
  * @returns 星期（星期：整数）
  */
 export function calculateDayOfTheWeekFromTimestamp(timestamp: int): int {
-  // 星期日返回 0 还是 7 文档未说明，此处 1~7（周一=1），见 TODO.md
+  // 1~7，周一=1、星期日=7（用户实测 2026-11-08）
   const w = new Date(timestamp * 1000).getUTCDay();
   return w === 0 ? 7 : w;
 }
