@@ -39,12 +39,12 @@ for (const file of arg('export')) for (const g of JSON.parse(fs.readFileSync(fil
 }
 for (const file of arg('identities')) for (const [id, zh] of Object.entries(JSON.parse(fs.readFileSync(file, 'utf8')).types || {})) name(entry(+id), zh, 'user-provided');
 // Creator checks (2026-11-08): the dictionary names of the entries absent from the latest export match the editor;
-// the editor now calls 模运算 「余运算」. Types 1 and 6 are named from how they are wired in the 大富豪 export
-// (1: one string input, placed after 终止定时器 to log a timeout; 6: exec out wired to a loop's 中断 input) - inferred.
+// the editor now calls 模运算 「余运算」. Types 1 and 6 were named from how they are wired in the 大富豪 export
+// (1: one string input, placed after 终止定时器 to log a timeout; 6: exec out wired to a loop's 中断 input), then checked in the editor.
 const CREATOR_VERIFIED = [316, 382, 383, 521, 750], EDITOR_NAMES = { 208: '余运算' }, INFERRED = { 1: '打印字符串', 6: '跳出循环' };
 for (const id of CREATOR_VERIFIED) if (types.has(id)) types.get(id).sources.push('creator-verified');
 for (const [id, zh] of Object.entries(EDITOR_NAMES)) if (types.has(+id)) types.get(+id).editorName = zh;
-for (const [id, zh] of Object.entries(INFERRED)) if (types.has(+id) && !types.get(+id).zhName) name(types.get(+id), zh, 'inferred-from-wiring');
+for (const [id, zh] of Object.entries(INFERRED)) if (types.has(+id) && !types.get(+id).zhName) { name(types.get(+id), zh, 'inferred-from-wiring'); types.get(+id).sources.push('creator-verified'); }
 for (const e of types.values()) {
   const doc = e.zhName && (byZh.get(e.zhName) || byZh.get(ALIASES[e.zhName]));
   if (e.zhName && ALIASES[e.zhName]) e.docName = ALIASES[e.zhName];

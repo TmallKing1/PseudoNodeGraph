@@ -20,7 +20,8 @@
    "typeId": 1,
    "sources": [
     "export-observed",
-    "inferred-from-wiring"
+    "inferred-from-wiring",
+    "creator-verified"
    ],
    "exportInstances": 1,
    "zhName": "打印字符串",
@@ -126,7 +127,8 @@
    "typeId": 6,
    "sources": [
     "export-observed",
-    "inferred-from-wiring"
+    "inferred-from-wiring",
+    "creator-verified"
    ],
    "exportInstances": 2,
    "zhName": "跳出循环",
