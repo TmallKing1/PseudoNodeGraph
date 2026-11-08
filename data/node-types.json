@@ -4,7 +4,7 @@
  "sources": {
   "logic": "logic-graphs.json",
   "export": [
-   "review-1108c/graphs.json"
+   "g3/graphs.json"
   ],
   "identities": [
    "node-identities.json"
@@ -12,16 +12,21 @@
  },
  "counts": {
   "types": 143,
-  "named": 141,
-  "withFunction": 141
+  "named": 143,
+  "withFunction": 143
  },
  "types": [
   {
    "typeId": 1,
    "sources": [
-    "export-observed"
+    "export-observed",
+    "inferred-from-wiring"
    ],
-   "exportInstances": 1
+   "exportInstances": 1,
+   "zhName": "打印字符串",
+   "fn": "printString",
+   "mapping": "function",
+   "page": "exec"
   },
   {
    "typeId": 2,
@@ -120,9 +125,14 @@
   {
    "typeId": 6,
    "sources": [
-    "export-observed"
+    "export-observed",
+    "inferred-from-wiring"
    ],
-   "exportInstances": 2
+   "exportInstances": 2,
+   "zhName": "跳出循环",
+   "fn": "break;",
+   "mapping": "native",
+   "page": "exec"
   },
   {
    "typeId": 7,
@@ -388,7 +398,7 @@
      "type": 8
     }
    ],
-   "exportInstances": 388,
+   "exportInstances": 389,
    "fn": "getCustomVariable",
    "mapping": "function",
    "page": "query"
@@ -1709,6 +1719,7 @@
    "instances": 7,
    "pins": [],
    "exportInstances": 7,
+   "editorName": "余运算",
    "fn": "moduloOperation",
    "mapping": "implemented",
    "page": "operation"
@@ -2550,7 +2561,8 @@
   {
    "typeId": 316,
    "sources": [
-    "community-dictionary"
+    "community-dictionary",
+    "creator-verified"
    ],
    "zhName": "界面控件组触发时",
    "instances": 1,
@@ -2638,7 +2650,8 @@
   {
    "typeId": 382,
    "sources": [
-    "community-dictionary"
+    "community-dictionary",
+    "creator-verified"
    ],
    "zhName": "切换当前界面布局",
    "instances": 4,
@@ -2663,7 +2676,8 @@
   {
    "typeId": 383,
    "sources": [
-    "community-dictionary"
+    "community-dictionary",
+    "creator-verified"
    ],
    "zhName": "激活控件组库内界面控件组",
    "instances": 11,
@@ -2861,7 +2875,8 @@
   {
    "typeId": 521,
    "sources": [
-    "community-dictionary"
+    "community-dictionary",
+    "creator-verified"
    ],
    "zhName": "移除控件组库内界面控件组",
    "instances": 8,
@@ -3631,7 +3646,8 @@
   {
    "typeId": 750,
    "sources": [
-    "community-dictionary"
+    "community-dictionary",
+    "creator-verified"
    ],
    "zhName": "根据玩家序号获取玩家GUID",
    "instances": 4,

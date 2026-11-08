@@ -182,7 +182,7 @@ export function division<T extends Num = Num>(a: T, b: T): T {
   if ((b as number) === 0) return 0 as T;
   const r = (a as number) / (b as number);
   if (!(Number.isInteger(a) && Number.isInteger(b))) return r as T;
-  // 文档：-2147483648 ÷ -1 = 0（越界结果按默认值）；整除的截断方向未实测，此处向零截断
+  // 文档：-2147483648 ÷ -1 = 0（越界结果按默认值）；整除向零截断（实测 2026-11-08：-7 ÷ 2 = -3）
   if (r > 2147483647) return 0 as T;
   return Math.trunc(r) as T;
 }
@@ -199,7 +199,7 @@ export function division<T extends Num = Num>(a: T, b: T): T {
  * @returns 结果（结果：整数）
  */
 export function moduloOperation(a: int, b: int): int {
-  // 输入1为被除数。除数为 0 时出参为默认值 0（节点图没有非法值，执行失败返回默认值）；负数取模规则未实测，此处结果符号随被除数（见 待确认.md）
+  // 输入1为被除数。除数为 0 时出参为默认值 0（节点图没有非法值，执行失败返回默认值）；结果符号随被除数（实测 2026-11-08：-7 % 3 = -1，7 % -3 = 1）。编辑器当前把这个节点叫「余运算」
   if (b === 0) return 0;
   return a % b;
 }

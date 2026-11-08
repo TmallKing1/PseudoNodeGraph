@@ -14,12 +14,13 @@ export type ConversionTarget = 'bool' | 'int' | 'float' | 'str';
  * | 布尔值 | 字符串 | "True" / "False" |
  * | 浮点数 | 整数 | 四舍五入：2.5 → 3，-1.31 → -1，0.0 → 0 |
  * | 浮点数 | 字符串 | 至多 6 位有效数字：2.5 → "2.5"，-1.317524 → "-1.31752" |
- * | 三维向量 | 字符串 | 各分量保留 1 位小数（不是四舍五入）：{1.05, 2.3, 3} → "{1.0,2.3,3.0}" |
+ * | 三维向量 | 字符串 | 各分量四舍五入到 1 位小数（分量是单精度浮点数）：{1.051, -1.051, 1.99} → "{1.1,-1.1,2.0}"，{1.05, -1.05, 1.99} → "{1.0,-1.0,2.0}" |
  * | 阵营 | 字符串 | 阵营ID |
  *
  * 其余组合在编辑器中不可选；这里用重载表达，非法组合会被 tsc 拒绝。
  * 伪代码中整数与浮点数都是 number，无法区分，故 number 源可选 bool/int/float/str 四种目标（请按引脚实际类型选择）。
- * 实现说明：三维向量格式为 "{1.0,2.3,3.0}"（用户实测 2026-11-08：逗号后无空格，1 位小数且不是四舍五入）；截断方式未实测，此处向零截断。
+ * 实现说明：三维向量格式为 "{1.0,2.3,3.0}"，逗号后无空格（调试器实测 2026-11-08）。分量按单精度存储，1.05 实际是 1.04999995…，
+ * 所以四舍五入后是 1.0（官方示例 1.05 → "1.0" 也是这个原因）；实现先 Math.fround 再保留 1 位小数。
  * 浮点数→整数的 .5 负数情况（-2.5）文档未说明，此处按远离零取整。
  * 实体→字符串 依赖运行时ID，伪代码中返回实体对象上的 runtimeId 字段（若有）。
  */
@@ -42,7 +43,7 @@ export function dataTypeConversion(input: unknown, to: ConversionTarget): unknow
   }
   const o = input as { x?: number; y?: number; z?: number; runtimeId?: number };
   if (typeof o.x === 'number' && typeof o.y === 'number' && typeof o.z === 'number') {
-    const f = (n: number) => (Math.trunc(n * 10) / 10).toFixed(1);
+    const f = (n: number) => Math.fround(n).toFixed(1);
     return S(['{', [f(o.x), f(o.y), f(o.z)].join(','), '}'].join(''));
   }
   return S(String(o.runtimeId ?? input));
