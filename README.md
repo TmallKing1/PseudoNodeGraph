@@ -28,6 +28,8 @@
 ```
 PseudoNodeGraph/
 ├─ README.md            本文件
+├─ EXPERIENCE.md        实践经验：运行上限、变量同步、局部变量、复合节点、信号、启动顺序、编辑器工作流（附证据级别）
+├─ 待确认.md            尚未实机证实 / 互相冲突的结论，及新存档验证办法
 ├─ TODO.md              待实现清单（无法建模/文档不清的编辑器特性）
 ├─ COVERAGE.md          覆盖率报告 + 全部 487 个节点 → 标识符 对照表
 ├─ coverage.json        同上（机器可读）
@@ -37,14 +39,19 @@ PseudoNodeGraph/
 │  ├─ core/types.ts     基础类型（Entity、GUID、int、float、Vec3、Dict…）
 │  ├─ core/enums.ts     枚举
 │  ├─ core/signals.ts   信号注册表 SignalRegistry
+│  ├─ core/variables.ts 自定义变量 / 节点图变量注册表（getVar / setVar …）
+│  ├─ core/composite.ts 复合节点（defineComposite）
 │  ├─ events/NN-*.ts    事件节点（按文档分类，一类一个文件，共 28 个）
 │  ├─ execution/NN-*.ts 执行节点（55 个文件）
 │  ├─ query/NN-*.ts     查询节点（38 个文件）
 │  └─ operation/NN-*.ts 运算节点（4 个文件）
 ├─ examples/example.ts  示例伪代码（参与类型检查）
 ├─ examples/signals.ts  信号示例（cw_save）
+├─ examples/variables.ts / composite.ts  变量登记、复合节点示例
+├─ data/node-types.json 编辑器节点类型码 → 中文节点名 → 本库函数（143 种内置节点）
 ├─ tests/negative.ts    负面用例：非法写法必须被 tsc 拒绝（@ts-expect-error）
-└─ tools/               生成器与校验脚本（parse.py → align.py → gen.py → coverage.py）
+├─ tools/               生成器与校验脚本（parse.py → align.py → gen.py → coverage.py）
+└─ tools/gil/           导出文件工具：read（.gil/.gia/调试日志解码）、extract、dump、lint、build-node-types；格式见 FORMAT.md
 ```
 文件名中的 `NN` 是文档中的分类序号，名字取自英文分类名（如 `execution/25-skills.ts` = 执行节点 / 二十五、技能）。
 
@@ -117,6 +124,38 @@ sendSignal('cw_save', { revision: 3, chunks: [str('a')] });
 ```
 完整示例见 `examples/signals.ts`，负面用例见 `tests/negative.ts`。
 
+## 自定义变量与节点图变量（2026-11-08 新增）
+原有 `getCustomVariable<T>(e, str(name))` 保持不变；需要名字与类型关联时，把编辑器里定义的变量登记到注册表（与 `SignalRegistry` 同样的声明合并）：
+```ts
+declare module '../src/core/variables' {
+  interface CustomVariableRegistry { countdown: int; roundState: RoundState }
+  interface NodeGraphVariableRegistry { dirty: bool }
+}
+const left = getVar(player, 'countdown');          // int；未登记 / 拼错的名字 tsc 报错
+setVar(player, 'countdown', left - 1, false);      // “是否触发事件”必须显式给出
+```
+注意：**只有在编辑器里定义的变量才会同步给客户端**，动态创建的不会（EXPERIENCE.md B 节）。
+
+## 复合节点（2026-11-08 新增）
+`defineComposite<入口, 执行出口名, 数据出口>((input, flow) => { ... })`：数据入口是求值函数（`input.v()`，读一次求值一次），
+执行出口是可选回调（`flow.done?.()`），函数正常返回 = 完成出口。复合里的局部变量**不会**在每次调用时重置，见 `src/core/composite.ts` 与 `examples/composite.ts`。
+
+## 类型系统管不到的编辑器规则
+以下规则 `tsc` 检查不了，用 `node tools/gil/lint.cjs <伪代码目录>` 检查：
+- 主图之间不能互相调用（只能共用复合，或发信号）；
+- 发送信号的参数必须在发送节点上用对象字面量一次拼齐（信号数据不能整体存放或跨复合传递）；
+- 局部变量不能是字典或结构体（结构体结果直接接到引脚；结构体 interface 可加 `/** @struct */` 让 lint 识别）；
+- 结构体最多 50 个字段。
+
+## 实际项目的伪代码写法
+大富豪项目（200 余张图）的做法，供参考：
+- 把本库原样放进项目 `vendor/`，`import * as NG from '../vendor/PseudoNodeGraph/src'`；项目自己的信号、变量登记、结构体放在 `support/`。
+- 一张编辑器图一个文件；从导出转写的图：`nN()` = 节点 #N 的执行体，`qN_P()` = #N 数据出引脚 P 的惰性求值，`eventInN(ev)` = 事件入口，
+  复合是工厂 `G<id>(input, flow)`；转写规则见 `tools/gil/FORMAT.md` §4。
+- 只能在编辑器里确定的值写成 `declare const …` 并标注 `/** UNRESOLVED 原因 */`，不要填 0。
+- 辅助函数各展开为固定的原生节点，并在注释里写明展开方式。
+- 改编辑器之前先导出 `.gil`，用 `tools/gil` 解码核对节点编号（编号以每份导出为准），再写改线表；`extract.cjs` 的 `variable-checks.json` 会列出没在编辑器定义的变量。
+
 ## 数据类型转换
 `dataTypeConversion(input, to)`，`to` 为目标类型标签 `'bool' | 'int' | 'float' | 'str'`（对应编辑器中为输出引脚选择的类型），有真实实现。
 允许的组合（非法组合 tsc 报错）：整数→布尔值/浮点数/字符串；浮点数→整数（四舍五入）/字符串（至多 6 位有效数字）；布尔值→整数/字符串（"True"/"False"）；
@@ -168,5 +207,12 @@ onAttacked((ev) => {                         // 事件节点【受到攻击时�
 npm install            # 安装 typescript
 npx tsc --noEmit -p .  # 类型检查（当前 0 错误）
 python3 tools/gen.py && python3 tools/coverage.py   # 由 tools/aligned.json 重新生成 src/ 与 COVERAGE.md
+```
+导出文件工具（Node.js，无额外依赖；lint 需要 typescript）：
+```bash
+node tools/gil/read.cjs 关卡.gil out/             # 解码并逐字节校验
+node tools/gil/extract.cjs out/关卡.decoded.json   # 节点图、复合、实体、变量检查
+node tools/gil/dump.cjs out/graphs.json <图id>     # 打印一张图
+node tools/gil/lint.cjs <伪代码目录>               # 编辑器规则检查
 ```
 覆盖：5 个页面共 **487** 个节点（中英文各 487），全部覆盖：476 个函数（其中 80 个有真实实现）+ 11 个原生语法映射。详见 `COVERAGE.md`。
