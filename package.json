@@ -3,6 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "description": "千星奇域 服务端节点图 强类型伪代码 API 库（TypeScript 声明）",
-  "scripts": { "gen": "python3 tools/gen.py", "check": "tsc --noEmit -p .", "coverage": "python3 tools/coverage.py" },
-  "devDependencies": { "typescript": "^5.6.0" }
+  "scripts": {
+    "gen": "python3 tools/gen.py",
+    "check": "tsc --noEmit -p .",
+    "coverage": "python3 tools/coverage.py",
+    "gil:read": "node tools/gil/read.cjs",
+    "gil:extract": "node tools/gil/extract.cjs",
+    "gil:dump": "node tools/gil/dump.cjs",
+    "lint": "node tools/gil/lint.cjs",
+    "node-types": "node tools/gil/build-node-types.cjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
 }

@@ -1,0 +1,4722 @@
+{
+ "generated": "2026-11-08",
+ "note": "Built-in node type codes as stored in .gil exports (node field 2/5). zhName from a community node dictionary, user reports or both; fn from coverage.json (mapping \"native\" = written as TS syntax). Pin lists come from one export and use the editor's pin kinds (1 exec in, 2 exec out, 3 data in, 4 data out, 5 signal-name selector) and pin type codes (tools/gil/FORMAT.md). Evidence: inferred unless noted.",
+ "sources": {
+  "logic": "logic-graphs.json",
+  "export": [
+   "review-1108c/graphs.json"
+  ],
+  "identities": [
+   "node-identities.json"
+  ]
+ },
+ "counts": {
+  "types": 143,
+  "named": 141,
+  "withFunction": 141
+ },
+ "types": [
+  {
+   "typeId": 1,
+   "sources": [
+    "export-observed"
+   ],
+   "exportInstances": 1
+  },
+  {
+   "typeId": 2,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "双分支",
+   "instances": 475,
+   "pins": [
+    {
+     "kind": 2,
+     "index": 0,
+     "name": "是",
+     "type": 0
+    },
+    {
+     "kind": 2,
+     "index": 1,
+     "name": "否",
+     "type": 0
+    },
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "条件",
+     "type": 4
+    }
+   ],
+   "exportInstances": 541,
+   "fn": "if (cond) { ... } else { ... }",
+   "mapping": "native",
+   "page": "flow"
+  },
+  {
+   "typeId": 3,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "多分支",
+   "instances": 79,
+   "pins": [
+    {
+     "kind": 2,
+     "index": 0,
+     "name": "默认",
+     "type": 0
+    },
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "控制表达式",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "判断参数",
+     "type": 8
+    }
+   ],
+   "kernelId": 4,
+   "exportInstances": 81,
+   "fn": "switch (expr) { case 1: ...; default: ... }（仅整数或字符串）",
+   "mapping": "native",
+   "page": "flow"
+  },
+  {
+   "typeId": 5,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "有限循环",
+   "instances": 2,
+   "pins": [
+    {
+     "kind": 2,
+     "index": 0,
+     "name": "循环体",
+     "type": 0
+    },
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "循环起始值",
+     "type": 3
+    }
+   ],
+   "exportInstances": 4,
+   "fn": "for (let i = start; i <= end; i++) { ... }（闭区间，见文档）",
+   "mapping": "native",
+   "page": "exec"
+  },
+  {
+   "typeId": 6,
+   "sources": [
+    "export-observed"
+   ],
+   "exportInstances": 2
+  },
+  {
+   "typeId": 7,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取随机浮点数",
+   "instances": 8,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "下限",
+     "type": 5
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "上限",
+     "type": 5
+    }
+   ],
+   "exportInstances": 8,
+   "fn": "getRandomFloatingPointNumber",
+   "mapping": "implemented",
+   "page": "query"
+  },
+  {
+   "typeId": 9,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "拆分三维向量",
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "fn": "split3DVector",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 10,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "三维向量加法",
+   "instances": 3,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "三维向量2",
+     "type": 12
+    }
+   ],
+   "exportInstances": 3,
+   "fn": "_3dVectorAddition",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 12,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "三维向量缩放",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "三维向量",
+     "type": 12
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "_3dVectorZoom",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 14,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "是否相等",
+   "kernelId": 370,
+   "instances": 183,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "输入1",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "输入2",
+     "type": 1
+    }
+   ],
+   "exportInstances": 240,
+   "fn": "equal",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 18,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取局部变量",
+   "kernelId": 2661,
+   "instances": 115,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "初始值",
+     "type": 3
+    },
+    {
+     "kind": 4,
+     "index": 1,
+     "name": "值",
+     "type": 3
+    }
+   ],
+   "exportInstances": 144,
+   "fn": "let x: T = initial;（读取直接使用变量 x）",
+   "mapping": "native",
+   "page": "query"
+  },
+  {
+   "typeId": 19,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "设置局部变量",
+   "kernelId": 2679,
+   "instances": 139,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "局部变量",
+     "type": 16
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "值",
+     "type": 3
+    }
+   ],
+   "exportInstances": 169,
+   "fn": "let x: T = value; x = newValue;",
+   "mapping": "native",
+   "page": "exec"
+  },
+  {
+   "typeId": 22,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "设置自定义变量",
+   "kernelId": 28,
+   "instances": 178,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "变量名",
+     "type": 6
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "变量值",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 4,
+     "name": "是否触发事件",
+     "type": 4
+    }
+   ],
+   "exportInstances": 282,
+   "fn": "setCustomVariable",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 36,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "自定义变量变化时",
+   "instances": 7,
+   "pins": [
+    {
+     "kind": 4,
+     "index": 3,
+     "name": "变化前值",
+     "type": 3
+    },
+    {
+     "kind": 4,
+     "index": 4,
+     "name": "变化后值",
+     "type": 3
+    }
+   ],
+   "kernelId": 43,
+   "exportInstances": 7,
+   "fn": "onCustomVariableChanges",
+   "mapping": "function",
+   "page": "event"
+  },
+  {
+   "typeId": 50,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取自定义变量",
+   "kernelId": 57,
+   "instances": 271,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "变量名",
+     "type": 6
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "变量值",
+     "type": 8
+    }
+   ],
+   "exportInstances": 388,
+   "fn": "getCustomVariable",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 71,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "实体创建时",
+   "instances": 3,
+   "pins": [],
+   "exportInstances": 3,
+   "fn": "onEntityIsCreated",
+   "mapping": "function",
+   "page": "event"
+  },
+  {
+   "typeId": 72,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "实体移除/销毁时",
+   "instances": 2,
+   "pins": [],
+   "exportInstances": 2,
+   "fn": "onEntityIsRemovedDestroyed",
+   "mapping": "function",
+   "page": "event"
+  },
+  {
+   "typeId": 73,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取自身实体",
+   "instances": 192,
+   "pins": [],
+   "exportInstances": 173,
+   "fn": "getSelfEntity",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 75,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "以GUID查询实体",
+   "instances": 23,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "GUID",
+     "type": 2
+    }
+   ],
+   "exportInstances": 19,
+   "fn": "queryEntityByGUID",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 76,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "以实体查询GUID",
+   "instances": 3,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "实体",
+     "type": 1
+    }
+   ],
+   "exportInstances": 3,
+   "fn": "queryGUIDByEntity",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 77,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "结算关卡",
+   "instances": 2,
+   "pins": [],
+   "exportInstances": 2,
+   "fn": "settleStage",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 79,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "启动定时器",
+   "instances": 7,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "定时器名称",
+     "type": 6
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "是否循环",
+     "type": 4
+    },
+    {
+     "kind": 3,
+     "index": 3,
+     "name": "定时器序列",
+     "type": 10
+    }
+   ],
+   "exportInstances": 7,
+   "fn": "startTimer",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 82,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "终止定时器",
+   "instances": 7,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "定时器名称",
+     "type": 6
+    }
+   ],
+   "exportInstances": 10,
+   "fn": "stopTimer",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 83,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "定时器触发时",
+   "instances": 11,
+   "pins": [],
+   "exportInstances": 12,
+   "fn": "onTimerIsTriggered",
+   "mapping": "function",
+   "page": "event"
+  },
+  {
+   "typeId": 99,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取实体位置与旋转",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "getEntityLocationAndRotation",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 100,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "拼接列表",
+   "kernelId": 0,
+   "instances": 22,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标列表",
+     "type": 13
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "接入的列表",
+     "type": 13
+    }
+   ],
+   "exportInstances": 38,
+   "fn": "concatenateList",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 107,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "清除列表",
+   "instances": 19,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "列表",
+     "type": 8
+    }
+   ],
+   "kernelId": 0,
+   "exportInstances": 33,
+   "fn": "clearList",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 114,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "列表是否包含该值",
+   "instances": 23,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "列表",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "值",
+     "type": 3
+    }
+   ],
+   "kernelId": 116,
+   "exportInstances": 28,
+   "fn": "listIncludesThisValue",
+   "mapping": "implemented",
+   "page": "query"
+  },
+  {
+   "typeId": 121,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "查找列表并返回值的序号",
+   "instances": 20,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标列表",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "值",
+     "type": 3
+    }
+   ],
+   "kernelId": 123,
+   "exportInstances": 24,
+   "fn": "searchListAndReturnValueID",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 128,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取列表对应值",
+   "instances": 138,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "列表",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "序号",
+     "type": 3
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "值",
+     "type": 3
+    }
+   ],
+   "kernelId": 130,
+   "exportInstances": 144,
+   "fn": "getCorrespondingValueFromList",
+   "mapping": "implemented",
+   "page": "query"
+  },
+  {
+   "typeId": 135,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "对列表插入值",
+   "kernelId": 0,
+   "instances": 23,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "列表",
+     "type": 26
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "插入序号",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "插入值",
+     "type": 25
+    }
+   ],
+   "exportInstances": 23,
+   "fn": "insertValueIntoList",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 142,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取列表长度",
+   "kernelId": 144,
+   "instances": 105,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "列表",
+     "type": 13
+    }
+   ],
+   "exportInstances": 105,
+   "fn": "getListLength",
+   "mapping": "implemented",
+   "page": "query"
+  },
+  {
+   "typeId": 149,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取列表最大值",
+   "kernelId": 2648,
+   "instances": 2,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "列表",
+     "type": 8
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "最大值",
+     "type": 3
+    }
+   ],
+   "exportInstances": 2,
+   "fn": "getMaximumValueFromList",
+   "mapping": "implemented",
+   "page": "query"
+  },
+  {
+   "typeId": 151,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取列表最小值",
+   "kernelId": 2646,
+   "instances": 4,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "列表",
+     "type": 8
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "最小值",
+     "type": 3
+    }
+   ],
+   "exportInstances": 4,
+   "fn": "getMinimumValueFromList",
+   "mapping": "implemented",
+   "page": "query"
+  },
+  {
+   "typeId": 153,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "对列表移除值",
+   "instances": 8,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "列表",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "移除序号",
+     "type": 3
+    }
+   ],
+   "kernelId": 0,
+   "exportInstances": 6,
+   "fn": "removeValueFromList",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 160,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "对列表修改值",
+   "instances": 5,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "列表",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "序号",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "值",
+     "type": 3
+    }
+   ],
+   "kernelId": 161,
+   "exportInstances": 5,
+   "docName": "对列表设置值",
+   "fn": "setListValue",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 167,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "列表排序",
+   "instances": 5,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "列表",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "排序方式",
+     "type": 14
+    }
+   ],
+   "exportInstances": 3,
+   "fn": "listSorting",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 169,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "拼装列表",
+   "kernelId": 0,
+   "instances": 82,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "Input0",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "0",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "1",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 3,
+     "name": "2",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 4,
+     "name": "3",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 5,
+     "name": "4",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 6,
+     "name": "5",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 7,
+     "name": "6",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 8,
+     "name": "7",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 9,
+     "name": "8",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 10,
+     "name": "9",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 11,
+     "name": "10",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 12,
+     "name": "11",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 13,
+     "name": "12",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 14,
+     "name": "13",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 15,
+     "name": "14",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 16,
+     "name": "15",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 17,
+     "name": "16",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 18,
+     "name": "17",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 19,
+     "name": "18",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 20,
+     "name": "19",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 21,
+     "name": "20",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 22,
+     "name": "21",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 23,
+     "name": "22",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 24,
+     "name": "23",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 25,
+     "name": "24",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 26,
+     "name": "25",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 27,
+     "name": "26",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 28,
+     "name": "27",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 29,
+     "name": "28",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 30,
+     "name": "29",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 31,
+     "name": "30",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 32,
+     "name": "31",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 33,
+     "name": "32",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 34,
+     "name": "33",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 35,
+     "name": "34",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 36,
+     "name": "35",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 37,
+     "name": "36",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 38,
+     "name": "37",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 39,
+     "name": "38",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 40,
+     "name": "39",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 41,
+     "name": "40",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 42,
+     "name": "41",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 43,
+     "name": "42",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 44,
+     "name": "43",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 45,
+     "name": "44",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 46,
+     "name": "45",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 47,
+     "name": "46",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 48,
+     "name": "47",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 49,
+     "name": "48",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 50,
+     "name": "49",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 51,
+     "name": "50",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 52,
+     "name": "51",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 53,
+     "name": "52",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 54,
+     "name": "53",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 55,
+     "name": "54",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 56,
+     "name": "55",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 57,
+     "name": "56",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 58,
+     "name": "57",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 59,
+     "name": "58",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 60,
+     "name": "59",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 61,
+     "name": "60",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 62,
+     "name": "61",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 63,
+     "name": "62",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 64,
+     "name": "63",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 65,
+     "name": "64",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 66,
+     "name": "65",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 67,
+     "name": "66",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 68,
+     "name": "67",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 69,
+     "name": "68",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 70,
+     "name": "69",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 71,
+     "name": "70",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 72,
+     "name": "71",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 73,
+     "name": "72",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 74,
+     "name": "73",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 75,
+     "name": "74",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 76,
+     "name": "75",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 77,
+     "name": "76",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 78,
+     "name": "77",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 79,
+     "name": "78",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 80,
+     "name": "79",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 81,
+     "name": "80",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 82,
+     "name": "81",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 83,
+     "name": "82",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 84,
+     "name": "83",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 85,
+     "name": "84",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 86,
+     "name": "85",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 87,
+     "name": "86",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 88,
+     "name": "87",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 89,
+     "name": "88",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 90,
+     "name": "89",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 91,
+     "name": "90",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 92,
+     "name": "91",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 93,
+     "name": "92",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 94,
+     "name": "93",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 95,
+     "name": "94",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 96,
+     "name": "95",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 97,
+     "name": "96",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 98,
+     "name": "97",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 99,
+     "name": "98",
+     "type": 25
+    },
+    {
+     "kind": 3,
+     "index": 100,
+     "name": "99",
+     "type": 25
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "列表",
+     "type": 26
+    }
+   ],
+   "exportInstances": 85,
+   "fn": "const list: T[] = [a, b, c];",
+   "mapping": "native",
+   "page": "operation"
+  },
+  {
+   "typeId": 180,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "数据类型转换",
+   "kernelId": 185,
+   "instances": 28,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "输入",
+     "type": 3
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "输出",
+     "type": 6
+    }
+   ],
+   "exportInstances": 28,
+   "fn": "dataTypeConversion",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 190,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "转发事件",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "forwardingEvent",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 200,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "加法运算",
+   "instances": 42,
+   "pins": [
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "结果",
+     "type": 3
+    }
+   ],
+   "kernelId": 201,
+   "exportInstances": 44,
+   "fn": "addition",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 202,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "减法运算",
+   "instances": 64,
+   "pins": [
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "结果",
+     "type": 3
+    }
+   ],
+   "kernelId": 203,
+   "exportInstances": 64,
+   "fn": "subtraction",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 204,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "乘法运算",
+   "instances": 24,
+   "pins": [
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "结果",
+     "type": 3
+    }
+   ],
+   "kernelId": 205,
+   "exportInstances": 24,
+   "fn": "multiplication",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 206,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "除法运算",
+   "instances": 6,
+   "pins": [
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "结果",
+     "type": 3
+    }
+   ],
+   "kernelId": 207,
+   "exportInstances": 6,
+   "fn": "division",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 208,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "模运算",
+   "instances": 7,
+   "pins": [],
+   "exportInstances": 7,
+   "fn": "moduloOperation",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 209,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "幂运算",
+   "kernelId": 210,
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "底数",
+     "type": 5
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "指数",
+     "type": 5
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "结果",
+     "type": 5
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "exponentiation",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 211,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "取较大值",
+   "instances": 5,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "输入1",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "输入2",
+     "type": 3
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "较大值",
+     "type": 3
+    }
+   ],
+   "exportInstances": 5,
+   "fn": "takeLargerValue",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 213,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "取较小值",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "输入1",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "输入2",
+     "type": 3
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "较小值",
+     "type": 3
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "takeSmallerValue",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 216,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "绝对值运算",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "输入",
+     "type": 3
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "结果",
+     "type": 3
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "absoluteValueOperation",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 218,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "取符号运算",
+   "instances": 3,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "输入",
+     "type": 3
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "结果",
+     "type": 3
+    }
+   ],
+   "kernelId": 219,
+   "exportInstances": 3,
+   "fn": "signOperation",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 221,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "算术平方根运算",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "输入",
+     "type": 5
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "arithmeticSquareRootOperation",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 222,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "范围限制运算",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "输入",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "下限",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "上限",
+     "type": 3
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "结果",
+     "type": 3
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "rangeLimitingOperation",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 224,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "取整数运算",
+   "instances": 5,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "输入",
+     "type": 5
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "取整方式",
+     "type": 14
+    }
+   ],
+   "exportInstances": 5,
+   "fn": "roundToIntegerOperation",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 225,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "创建三维向量",
+   "instances": 7,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "X分量",
+     "type": 5
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "Y分量",
+     "type": 5
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "Z分量",
+     "type": 5
+    }
+   ],
+   "exportInstances": 7,
+   "fn": "create3DVector",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 226,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "逻辑与运算",
+   "instances": 71,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "输入1",
+     "type": 4
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "输入2",
+     "type": 4
+    }
+   ],
+   "exportInstances": 91,
+   "fn": "logicalANDOperation",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 227,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "逻辑或运算",
+   "instances": 48,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "输入1",
+     "type": 4
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "输入2",
+     "type": 4
+    }
+   ],
+   "exportInstances": 64,
+   "fn": "logicalOROperation",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 229,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "逻辑非运算",
+   "instances": 17,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "输入",
+     "type": 4
+    }
+   ],
+   "exportInstances": 38,
+   "fn": "logicalNOTOperation",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 230,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "数值小于",
+   "instances": 13,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "左值",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "右值",
+     "type": 3
+    }
+   ],
+   "exportInstances": 15,
+   "fn": "lessThan",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 231,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "数值小于等于",
+   "instances": 40,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "左值",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "右值",
+     "type": 3
+    }
+   ],
+   "kernelId": 236,
+   "exportInstances": 43,
+   "fn": "lessThanOrEqualTo",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 232,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "数值大于",
+   "instances": 19,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "左值",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "右值",
+     "type": 3
+    }
+   ],
+   "kernelId": 237,
+   "exportInstances": 20,
+   "fn": "greaterThan",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 233,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "数值大于等于",
+   "instances": 24,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "左值",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "右值",
+     "type": 3
+    }
+   ],
+   "exportInstances": 27,
+   "fn": "greaterThanOrEqualTo",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 248,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取在场玩家实体列表",
+   "instances": 2,
+   "pins": [],
+   "exportInstances": 6,
+   "fn": "getListOfPlayerEntitiesOnTheField",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 252,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "创建元件",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "元件ID",
+     "type": 21
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "位置",
+     "type": 12
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "旋转",
+     "type": 12
+    },
+    {
+     "kind": 3,
+     "index": 5,
+     "name": "是否覆写等级",
+     "type": 4
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "createPrefab",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 257,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取随机整数",
+   "instances": 3,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "下限",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "上限",
+     "type": 3
+    }
+   ],
+   "exportInstances": 3,
+   "fn": "getRandomInteger",
+   "mapping": "implemented",
+   "page": "query"
+  },
+  {
+   "typeId": 258,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取指定玩家所有角色实体",
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "fn": "getAllCharacterEntitiesOfSpecifiedPlayer",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 259,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取角色归属的玩家实体",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "角色实体",
+     "type": 1
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "getPlayerEntityToWhichTheCharacterBelongs",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 260,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取实体类型",
+   "instances": 2,
+   "pins": [],
+   "exportInstances": 2,
+   "fn": "getEntityType",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 288,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "传送玩家",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "玩家实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "目标位置",
+     "type": 12
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "目标旋转",
+     "type": 12
+    }
+   ],
+   "exportInstances": 1,
+   "docName": "传送玩家(超限)",
+   "fn": "teleportPlayer",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 297,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "添加单位状态",
+   "instances": 5,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "施加者实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "施加目标实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "单位状态配置ID",
+     "type": 20
+    },
+    {
+     "kind": 3,
+     "index": 3,
+     "name": "施加层数",
+     "type": 3
+    }
+   ],
+   "exportInstances": 7,
+   "fn": "addUnitStatus",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 300,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "单位状态变更时",
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 2,
+   "fn": "onUnitStatusChanges",
+   "mapping": "function",
+   "page": "event"
+  },
+  {
+   "typeId": 301,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "移除单位状态",
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "fn": "removeUnitStatus",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 308,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "激活/关闭模型显示",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "是否激活",
+     "type": 4
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "activateDisableModelDisplay",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 310,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取全局计时器当前时间",
+   "instances": 3,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "计时器名称",
+     "type": 6
+    }
+   ],
+   "exportInstances": 3,
+   "fn": "getCurrentGlobalTimerTime",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 311,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "启动全局计时器",
+   "instances": 4,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "计时器名称",
+     "type": 6
+    }
+   ],
+   "exportInstances": 4,
+   "fn": "startGlobalTimer",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 313,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "终止全局计时器",
+   "instances": 7,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "计时器名称",
+     "type": 6
+    }
+   ],
+   "exportInstances": 7,
+   "fn": "stopGlobalTimer",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 314,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "修改全局计时器",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "变化值",
+     "type": 5
+    }
+   ],
+   "exportInstances": 1,
+   "docName": "增加全局计时器的值",
+   "fn": "increaseGlobalTimerValue",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 315,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "全局计时器触发时",
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "fn": "onGlobalTimerIsTriggered",
+   "mapping": "function",
+   "page": "event"
+  },
+  {
+   "typeId": 316,
+   "sources": [
+    "community-dictionary"
+   ],
+   "zhName": "界面控件组触发时",
+   "instances": 1,
+   "pins": [],
+   "fn": "onUiControlGroupIsTriggered",
+   "mapping": "function",
+   "page": "event"
+  },
+  {
+   "typeId": 323,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "设置节点图变量",
+   "kernelId": 2900,
+   "instances": 9,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "变量名",
+     "type": 6
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "变量值",
+     "type": 27
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "是否触发事件",
+     "type": 4
+    }
+   ],
+   "exportInstances": 9,
+   "fn": "setNodeGraphVariable",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 337,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取节点图变量",
+   "kernelId": 344,
+   "instances": 45,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "变量名",
+     "type": 6
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "变量值",
+     "type": 27
+    }
+   ],
+   "exportInstances": 42,
+   "fn": "getNodeGraphVariable",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 381,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取造物属性",
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "fn": "getCreationAttribute",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 382,
+   "sources": [
+    "community-dictionary"
+   ],
+   "zhName": "切换当前界面布局",
+   "instances": 4,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标玩家",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "布局索引",
+     "type": 3
+    }
+   ],
+   "fn": "switchCurrentInterfaceLayout",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 383,
+   "sources": [
+    "community-dictionary"
+   ],
+   "zhName": "激活控件组库内界面控件组",
+   "instances": 11,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标玩家",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "界面控件组索引",
+     "type": 3
+    }
+   ],
+   "fn": "activateUIControlGroupInControlGroupLibrary",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 384,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "修改界面布局内界面控件状态",
+   "instances": 9,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标玩家",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "界面控件索引",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "显示状态",
+     "type": 14
+    }
+   ],
+   "exportInstances": 3,
+   "docName": "设置界面控件(组)状态",
+   "fn": "setUIControlGroupStatus",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 391,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "更改玩家当前职业等级",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "等级",
+     "type": 3
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "changePlayersCurrentClassLevel",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 474,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "三维向量旋转",
+   "instances": 2,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "旋转",
+     "type": 12
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "被旋转的三维向量",
+     "type": 12
+    }
+   ],
+   "exportInstances": 2,
+   "fn": "_3dVectorRotation",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 475,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "枚举是否相等",
+   "kernelId": 776,
+   "instances": 27,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "枚举1",
+     "type": 14
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "枚举2",
+     "type": 14
+    }
+   ],
+   "exportInstances": 27,
+   "fn": "enumerationsEqual",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 507,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "查询实体是否在场",
+   "instances": 18,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    }
+   ],
+   "exportInstances": 19,
+   "fn": "queryIfEntityIsOnTheField",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 508,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "查询实体是否具有单位状态",
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "fn": "queryIfEntityHasUnitStatus",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 509,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "列表迭代循环",
+   "kernelId": 513,
+   "instances": 2,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "迭代列表",
+     "type": 8
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "迭代值",
+     "type": 3
+    }
+   ],
+   "exportInstances": 5,
+   "fn": "for (const item of list) { ... }",
+   "mapping": "native",
+   "page": "exec"
+  },
+  {
+   "typeId": 521,
+   "sources": [
+    "community-dictionary"
+   ],
+   "zhName": "移除控件组库内界面控件组",
+   "instances": 8,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标玩家",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "界面控件组索引",
+     "type": 3
+    }
+   ],
+   "fn": "removeInterfaceControlGroupFromControlGroupLibrary",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 580,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取物件属性",
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "fn": "getObjectAttribute",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 595,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "启动/暂停玩家背景音乐",
+   "instances": 2,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "是否恢复",
+     "type": 4
+    }
+   ],
+   "exportInstances": 2,
+   "fn": "startPausePlayerBackgroundMusic",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 597,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "修改玩家背景音乐",
+   "instances": 3,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "背景音乐索引",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "开始时间",
+     "type": 5
+    },
+    {
+     "kind": 3,
+     "index": 3,
+     "name": "结束时间",
+     "type": 5
+    },
+    {
+     "kind": 3,
+     "index": 4,
+     "name": "音量",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 5,
+     "name": "是否循环播放",
+     "type": 4
+    },
+    {
+     "kind": 3,
+     "index": 6,
+     "name": "循环播放间隔",
+     "type": 5
+    },
+    {
+     "kind": 3,
+     "index": 7,
+     "name": "播放速度",
+     "type": 5
+    },
+    {
+     "kind": 3,
+     "index": 8,
+     "name": "是否允许渐入渐出",
+     "type": 4
+    }
+   ],
+   "exportInstances": 3,
+   "docName": "设置玩家背景音乐",
+   "fn": "setPlayerBackgroundMusic",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 598,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "玩家播放单次2D音效",
+   "instances": 6,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "音效资产索引",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "音量",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 3,
+     "name": "播放速度",
+     "type": 5
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "playerPlaysOneShot2DSoundEffect",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 645,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "设置成就进度计数",
+   "instances": 3,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "设置实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "成就序号",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "进度计数",
+     "type": 3
+    }
+   ],
+   "exportInstances": 3,
+   "fn": "setAchievementProgressTally",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 646,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "变更成就进度计数",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "进度计数变更值",
+     "type": 3
+    }
+   ],
+   "exportInstances": 1,
+   "docName": "增加成就进度计数",
+   "fn": "increaseAchievementProgressTally",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 647,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "设置玩家结算计分板展示数据",
+   "instances": 3,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "设置实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "数据顺序",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "数据名称",
+     "type": 6
+    },
+    {
+     "kind": 3,
+     "index": 3,
+     "name": "数据值",
+     "type": 3
+    }
+   ],
+   "kernelId": 649,
+   "exportInstances": 3,
+   "fn": "setPlayerSettlementScoreboardDataDisplay",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 650,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "设置玩家结算排名数值",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "玩家实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "排名数值",
+     "type": 3
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "setPlayerSettlementRankingValue",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 652,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "设置玩家结算成功状态",
+   "instances": 4,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "玩家实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "结算状态",
+     "type": 14
+    }
+   ],
+   "exportInstances": 4,
+   "fn": "setPlayerSettlementSuccessStatus",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 659,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "设置玩家段位变化分数",
+   "instances": 3,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "玩家实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "结算状态",
+     "type": 14
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "变化分数",
+     "type": 3
+    }
+   ],
+   "exportInstances": 3,
+   "fn": "setPlayerRankScoreChange",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 661,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "设置玩家逃跑合法性",
+   "instances": 3,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "玩家实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "是否合法",
+     "type": 4
+    }
+   ],
+   "exportInstances": 3,
+   "fn": "setPlayerEscapeValidity",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 663,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "切换玩家竞技段位生效的计分组",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "玩家实体",
+     "type": 1
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "计分组序号",
+     "type": 3
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "switchTheScoringGroupThatAffectsPlayersCompetitiveRank",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 675,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取装备词条列表",
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "fn": "getEquipmentAffixList",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 676,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取装备词条配置ID",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "词条序号",
+     "type": 3
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "getEquipmentAffixConfigID",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 677,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取装备词条数值",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "词条序号",
+     "type": 3
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "getEquipmentAffixValue",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 686,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "修改背包道具数量",
+   "instances": 2,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "道具配置ID",
+     "type": 20
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "变更值",
+     "type": 3
+    }
+   ],
+   "exportInstances": 2,
+   "docName": "增加背包道具数量",
+   "fn": "increaseInventoryItemQuantity",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 688,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "修改背包货币数量",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "变更值",
+     "type": 3
+    }
+   ],
+   "exportInstances": 1,
+   "docName": "增加背包货币数量",
+   "fn": "increaseInventoryCurrencyQuantity",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 690,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取背包道具数量",
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "fn": "getInventoryItemQuantity",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 691,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取背包货币数量",
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "fn": "getInventoryCurrencyQuantity",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 697,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "损失生命",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "生命损失量",
+     "type": 5
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "是否致命",
+     "type": 4
+    },
+    {
+     "kind": 3,
+     "index": 3,
+     "name": "是否可被无敌抵挡",
+     "type": 4
+    },
+    {
+     "kind": 3,
+     "index": 4,
+     "name": "是否可被锁定生命值抵挡",
+     "type": 4
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "hpLoss",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 698,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "直接恢复生命",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "恢复量",
+     "type": 5
+    },
+    {
+     "kind": 3,
+     "index": 3,
+     "name": "是否忽略恢复量调整",
+     "type": 4
+    },
+    {
+     "kind": 3,
+     "index": 4,
+     "name": "产生仇恨的倍率",
+     "type": 5
+    },
+    {
+     "kind": 3,
+     "index": 5,
+     "name": "产生仇恨的增量",
+     "type": 5
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "recoverHPDirectly",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 723,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取背包所有装备",
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "fn": "getAllEquipmentFromInventory",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 733,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "背包内道具被使用时",
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "fn": "onItemsInTheInventoryAreUsed",
+   "mapping": "function",
+   "page": "event"
+  },
+  {
+   "typeId": 738,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取角色属性",
+   "instances": 3,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    }
+   ],
+   "exportInstances": 3,
+   "fn": "getCharacterAttribute",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 743,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "随机卡牌选择器选择列表",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "列表",
+     "type": 8
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "randomDeckSelectorSelectionList",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 744,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取拥有者实体",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "目标实体",
+     "type": 1
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "getOwnerEntity",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 746,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "根据槽位序号查询单位状态层数",
+   "instances": 2,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "槽位序号",
+     "type": 3
+    }
+   ],
+   "exportInstances": 2,
+   "fn": "queryUnitStatusStacksBySlotID",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 748,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "查询单位状态的槽位序号列表",
+   "instances": 2,
+   "pins": [],
+   "exportInstances": 2,
+   "fn": "listOfSlotIDsQueryingUnitStatus",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 749,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "根据装备索引查询装备配置ID",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "装备索引",
+     "type": 3
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "queryEquipmentConfigIDByEquipmentID",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 750,
+   "sources": [
+    "community-dictionary"
+   ],
+   "zhName": "根据玩家序号获取玩家GUID",
+   "instances": 4,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "玩家序号",
+     "type": 3
+    }
+   ],
+   "fn": "getPlayerGUIDByPlayerID",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 751,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "根据玩家GUID获取玩家序号",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "玩家GUID",
+     "type": 2
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "getPlayerIDByPlayerGUID",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 752,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "根据时间戳计算格式化时间",
+   "instances": 1,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "时间戳",
+     "type": 3
+    }
+   ],
+   "exportInstances": 1,
+   "fn": "calculateFormattedTimeFromTimestamp",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 756,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "查询服务器时区",
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "fn": "queryServerTimeZone",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 766,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "查询对局游玩方式及人数",
+   "instances": 3,
+   "pins": [],
+   "exportInstances": 3,
+   "fn": "queryGameModeAndPlayerNumber",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 767,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取玩家昵称",
+   "instances": 2,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "玩家实体",
+     "type": 1
+    }
+   ],
+   "exportInstances": 2,
+   "fn": "getPlayerNickname",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 768,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获得玩家客户端输入设备类型",
+   "instances": 4,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "玩家实体",
+     "type": 1
+    }
+   ],
+   "exportInstances": 4,
+   "fn": "getPlayerClientInputDeviceType",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 818,
+   "sources": [
+    "export-observed",
+    "user-provided"
+   ],
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "zhName": "设置玩家镜头跟随实体",
+   "fn": "setPlayerCameraToFollowEntity",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 824,
+   "sources": [
+    "export-observed",
+    "user-provided"
+   ],
+   "instances": 12,
+   "pins": [],
+   "exportInstances": 5,
+   "zhName": "关闭悬浮交互页",
+   "fn": "closeFloatingInteractionPage",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 825,
+   "sources": [
+    "export-observed",
+    "user-provided"
+   ],
+   "instances": 16,
+   "pins": [],
+   "exportInstances": 8,
+   "zhName": "更新悬浮交互页列表数据",
+   "fn": "updateFloatingInteractionPageListData",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 826,
+   "sources": [
+    "user-provided"
+   ],
+   "instances": 2,
+   "pins": [],
+   "zhName": "悬浮交互页操作触发时",
+   "fn": "onFloatingInteractionPageIsTriggered",
+   "mapping": "function",
+   "page": "event"
+  },
+  {
+   "typeId": 828,
+   "sources": [
+    "export-observed",
+    "user-provided"
+   ],
+   "instances": 10,
+   "pins": [],
+   "exportInstances": 1,
+   "zhName": "唤起悬浮交互页",
+   "fn": "showFloatingInteractionPage",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 833,
+   "sources": [
+    "user-provided"
+   ],
+   "kernelId": 0,
+   "instances": 1,
+   "pins": [],
+   "zhName": "更新消息队列",
+   "fn": "refreshNotificationQueue",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 846,
+   "sources": [
+    "export-observed",
+    "user-provided"
+   ],
+   "instances": 1,
+   "pins": [],
+   "exportInstances": 1,
+   "zhName": "设置玩家光标是否常驻",
+   "fn": "setPlayersCursorToAlwaysVisible",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 948,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "对字典设置或新增键值对",
+   "kernelId": 990,
+   "instances": 7,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "字典",
+     "type": 27
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "键",
+     "type": 2
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "值",
+     "type": 6
+    }
+   ],
+   "exportInstances": 7,
+   "fn": "setOrAddKeyValuePairsToDictionary",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 1158,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "以键查询字典值",
+   "kernelId": 1198,
+   "instances": 25,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "字典",
+     "type": 27
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "键",
+     "type": 3
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "值",
+     "type": 8
+    }
+   ],
+   "exportInstances": 20,
+   "fn": "queryDictionaryValueByKey",
+   "mapping": "function",
+   "page": "query"
+  },
+  {
+   "typeId": 1298,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "以键对字典移除键值对",
+   "kernelId": 1320,
+   "instances": 3,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "字典",
+     "type": 27
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "键",
+     "type": 3
+    }
+   ],
+   "exportInstances": 3,
+   "fn": "removeKeyValuePairsFromDictionaryByKey",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 1368,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "查询字典是否包含特定键",
+   "kernelId": 3542,
+   "instances": 25,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "字典",
+     "type": 27
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "键",
+     "type": 2
+    }
+   ],
+   "exportInstances": 24,
+   "fn": "queryIfDictionaryContainsSpecificKey",
+   "mapping": "implemented",
+   "page": "query"
+  },
+  {
+   "typeId": 1508,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "获取字典中键组成的列表",
+   "kernelId": 1530,
+   "instances": 2,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "字典",
+     "type": 27
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "键列表",
+     "type": 8
+    }
+   ],
+   "exportInstances": 2,
+   "fn": "getListOfKeysFromDictionary",
+   "mapping": "implemented",
+   "page": "query"
+  },
+  {
+   "typeId": 1648,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "查询字典长度",
+   "kernelId": 1670,
+   "instances": 2,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "字典",
+     "type": 27
+    }
+   ],
+   "exportInstances": 2,
+   "fn": "queryDictionarysLength",
+   "mapping": "implemented",
+   "page": "query"
+  },
+  {
+   "typeId": 1718,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "清空字典",
+   "kernelId": 1740,
+   "instances": 3,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "字典",
+     "type": 27
+    }
+   ],
+   "exportInstances": 3,
+   "fn": "clearDictionary",
+   "mapping": "function",
+   "page": "exec"
+  },
+  {
+   "typeId": 1788,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "拼装字典",
+   "kernelId": 1840,
+   "instances": 10,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "len",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "键0",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 2,
+     "name": "值0",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 3,
+     "name": "键1",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 4,
+     "name": "值1",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 5,
+     "name": "键2",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 6,
+     "name": "值2",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 7,
+     "name": "键3",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 8,
+     "name": "值3",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 9,
+     "name": "键4",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 10,
+     "name": "值4",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 11,
+     "name": "键5",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 12,
+     "name": "值5",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 13,
+     "name": "键6",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 14,
+     "name": "值6",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 15,
+     "name": "键7",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 16,
+     "name": "值7",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 17,
+     "name": "键8",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 18,
+     "name": "值8",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 19,
+     "name": "键9",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 20,
+     "name": "值9",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 21,
+     "name": "键10",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 22,
+     "name": "值10",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 23,
+     "name": "键11",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 24,
+     "name": "值11",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 25,
+     "name": "键12",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 26,
+     "name": "值12",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 27,
+     "name": "键13",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 28,
+     "name": "值13",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 29,
+     "name": "键14",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 30,
+     "name": "值14",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 31,
+     "name": "键15",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 32,
+     "name": "值15",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 33,
+     "name": "键16",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 34,
+     "name": "值16",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 35,
+     "name": "键17",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 36,
+     "name": "值17",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 37,
+     "name": "键18",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 38,
+     "name": "值18",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 39,
+     "name": "键19",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 40,
+     "name": "值19",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 41,
+     "name": "键20",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 42,
+     "name": "值20",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 43,
+     "name": "键21",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 44,
+     "name": "值21",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 45,
+     "name": "键22",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 46,
+     "name": "值22",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 47,
+     "name": "键23",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 48,
+     "name": "值23",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 49,
+     "name": "键24",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 50,
+     "name": "值24",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 51,
+     "name": "键25",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 52,
+     "name": "值25",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 53,
+     "name": "键26",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 54,
+     "name": "值26",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 55,
+     "name": "键27",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 56,
+     "name": "值27",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 57,
+     "name": "键28",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 58,
+     "name": "值28",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 59,
+     "name": "键29",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 60,
+     "name": "值29",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 61,
+     "name": "键30",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 62,
+     "name": "值30",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 63,
+     "name": "键31",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 64,
+     "name": "值31",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 65,
+     "name": "键32",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 66,
+     "name": "值32",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 67,
+     "name": "键33",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 68,
+     "name": "值33",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 69,
+     "name": "键34",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 70,
+     "name": "值34",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 71,
+     "name": "键35",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 72,
+     "name": "值35",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 73,
+     "name": "键36",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 74,
+     "name": "值36",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 75,
+     "name": "键37",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 76,
+     "name": "值37",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 77,
+     "name": "键38",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 78,
+     "name": "值38",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 79,
+     "name": "键39",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 80,
+     "name": "值39",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 81,
+     "name": "键40",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 82,
+     "name": "值40",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 83,
+     "name": "键41",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 84,
+     "name": "值41",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 85,
+     "name": "键42",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 86,
+     "name": "值42",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 87,
+     "name": "键43",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 88,
+     "name": "值43",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 89,
+     "name": "键44",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 90,
+     "name": "值44",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 91,
+     "name": "键45",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 92,
+     "name": "值45",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 93,
+     "name": "键46",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 94,
+     "name": "值46",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 95,
+     "name": "键47",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 96,
+     "name": "值47",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 97,
+     "name": "键48",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 98,
+     "name": "值48",
+     "type": 8
+    },
+    {
+     "kind": 3,
+     "index": 99,
+     "name": "键49",
+     "type": 3
+    },
+    {
+     "kind": 3,
+     "index": 100,
+     "name": "值49",
+     "type": 8
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "字典",
+     "type": 27
+    }
+   ],
+   "exportInstances": 2,
+   "fn": "assemblyDictionary",
+   "mapping": "implemented",
+   "page": "operation"
+  },
+  {
+   "typeId": 1938,
+   "sources": [
+    "community-dictionary",
+    "export-observed"
+   ],
+   "zhName": "对字典按值排序",
+   "kernelId": 2706,
+   "instances": 7,
+   "pins": [
+    {
+     "kind": 3,
+     "index": 0,
+     "name": "字典",
+     "type": 27
+    },
+    {
+     "kind": 3,
+     "index": 1,
+     "name": "排序方式",
+     "type": 14
+    },
+    {
+     "kind": 4,
+     "index": 0,
+     "name": "键列表",
+     "type": 13
+    },
+    {
+     "kind": 4,
+     "index": 1,
+     "name": "值列表",
+     "type": 8
+    }
+   ],
+   "exportInstances": 7,
+   "fn": "sortDictionaryByValue",
+   "mapping": "function",
+   "page": "exec"
+  }
+ ]
+}
