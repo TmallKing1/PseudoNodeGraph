@@ -46,7 +46,11 @@ export type PrefabId = Brand<number, 'PrefabId'>;
 export type Faction = Brand<number, 'Faction'>;
 /** 自定义变量快照（节点图类型：自定义变量快照） */
 export type CustomVariableSnapshot = Brand<object, 'CustomVariableSnapshot'>;
-/** 局部变量（节点图类型：局部变量）。【获取局部变量】/【设置局部变量】节点的句柄；伪代码中请直接使用 let 变量 */
+/**
+ * 局部变量（节点图类型：局部变量）。【获取局部变量】/【设置局部变量】节点的句柄；伪代码中请直接使用 let 变量。
+ * 实践（EXPERIENCE.md C 节）：按节点实例区分，只在事件节点收到事件时重置（复合被同一事件多次调用时不重置）；
+ * 不能是字典或结构体；【获取局部变量】出参 0 是句柄、出参 1 是值。
+ */
 export type LocalVariable = Brand<object, 'LocalVariable'>;
 
 /** 三维向量（节点图类型：三维向量）。坐标/方向/欧拉角（单位：度，X 俯仰、Y 偏航、Z 翻滚） */
@@ -84,3 +88,5 @@ export type Dict<K extends DictKey = DictKey, V = NodeValue> = Map<K, V>;
  * 【拼装结构体】= 对象字面量，【拆分结构体】= 解构，【修改结构体】= 字段赋值。
  */
 export type Struct = Record<string, NodeValue>;
+// 实践（EXPERIENCE.md F 节）：一个结构体最多 50 个字段；interface 的字段顺序与名字以编辑器 / 导出为准
+// （编辑器里实际字段名可能与设计不同，客户端按名字读取时尤其要核对）。tools/gil/lint.cjs 检查字段数。
