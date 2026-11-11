@@ -57,8 +57,9 @@ export declare function recoverHP(targetEntity: Entity, recoveryAmount: float, a
  * @param canBeBlockedByInvincibility 为“是”时，如果目标已经通过单位状态设置为了无敌，则损失生命不生效（是否可被无敌抵挡：布尔值）
  * @param canBeBlockedByLockedHP 为“是”时，如果目标已经通过单位状态设置为了锁定生命值，则损失生命不生效（是否可被锁定生命值抵挡：布尔值）
  * @param damagePopUpType 无跳字 普通跳字 暴击跳字（伤害跳字类型：枚举）
+ * @param initiatorEntity 该次损失生命的发起者，用于伤害归因。留空表示无来源（发起者实体：实体）
  */
-export declare function hpLoss(targetEntity: Entity, hpLoss: float, lethal: bool, canBeBlockedByInvincibility: bool, canBeBlockedByLockedHP: bool, damagePopUpType: E.DamagePopUpType): void;
+export declare function hpLoss(targetEntity: Entity, hpLoss: float, lethal: bool, canBeBlockedByInvincibility: bool, canBeBlockedByLockedHP: bool, damagePopUpType: E.DamagePopUpType, initiatorEntity: Entity): void;
 
 /**
  * 【直接恢复生命】 Recover HP Directly
@@ -76,3 +77,15 @@ export declare function hpLoss(targetEntity: Entity, hpLoss: float, lethal: bool
  * @param healingTagList 此次恢复行为的标签列表。在【发起恢复生命值】时以及【被恢复生命值时】事件中可以取出，用于判定一次特定的恢复行为（治疗标签列表：字符串列表）
  */
 export declare function recoverHPDirectly(recoverInitiatorEntity: Entity, recoverTargetEntity: Entity, recoveryAmount: float, ignoreRecoveryAmountAdjustment: bool, aggroGenerationMultiplier: float, aggroGenerationIncrement: float, healingTagList: str[]): void;
+
+/**
+ * 【切换战斗文字提示过滤模板】 Switch Combat Text Filter Template
+ * 分类：执行节点 / 十一、战斗（XI. Combat）
+ *
+ * 切换指定玩家的战斗文字提示过滤模板，切换后按新模板过滤该玩家的战斗文字提示信息
+ *
+ * @en Switches the specified player's Combat Text Filter template, then filters their combat text prompts according to the new template
+ * @param playerEntity 玩家实体（玩家实体：实体）
+ * @param combatTextTemplateID 战斗文字提示模板序号（战斗文字提示模板序号：整数）
+ */
+export declare function switchCombatTextFilterTemplate(playerEntity: Entity, combatTextTemplateID: int): void;

@@ -55,6 +55,10 @@ export interface GetCreationAttributeResult {
    * 当前受打断状态（当前受打断状态：枚举）
    */
   readonly currentInterruptStatus: E.InterruptStatus;
+  /**
+   * 造物重量（造物重量：浮点数）
+   */
+  readonly creationWeight: float;
 }
 /**
  * 【获取造物属性】 Get Creation Attribute

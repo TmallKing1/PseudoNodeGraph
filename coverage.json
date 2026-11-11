@@ -804,6 +804,22 @@
  },
  {
   "page": "exec",
+  "zh": "激活/关闭原生推挤碰撞",
+  "en": "Activate/Disable Native Push Collision",
+  "kind": "function",
+  "target": "activateDisableNativePushCollision",
+  "sig": "activateDisableNativePushCollision(creationEntity: Entity, nativePushCollisionID: int, activate: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "激活/关闭额外推挤碰撞",
+  "en": "Activate/Disable Extra Push Collision",
+  "kind": "function",
+  "target": "activateDisableExtraPushCollision",
+  "sig": "activateDisableExtraPushCollision(creationEntity: Entity, extraPushCollisionID: int, activate: bool): void"
+ },
+ {
+  "page": "exec",
   "zh": "激活/关闭碰撞触发器",
   "en": "Activate/Disable Collision Trigger",
   "kind": "function",
@@ -832,7 +848,7 @@
   "en": "HP Loss",
   "kind": "function",
   "target": "hpLoss",
-  "sig": "hpLoss(targetEntity: Entity, hpLoss: float, lethal: bool, canBeBlockedByInvincibility: bool, canBeBlockedByLockedHP: bool, damagePopUpType: DamagePopUpType): void"
+  "sig": "hpLoss(targetEntity: Entity, hpLoss: float, lethal: bool, canBeBlockedByInvincibility: bool, canBeBlockedByLockedHP: bool, damagePopUpType: DamagePopUpType, initiatorEntity: Entity): void"
  },
  {
   "page": "exec",
@@ -841,6 +857,14 @@
   "kind": "function",
   "target": "recoverHPDirectly",
   "sig": "recoverHPDirectly(recoverInitiatorEntity: Entity, recoverTargetEntity: Entity, recoveryAmount: float, ignoreRecoveryAmountAdjustment: bool, aggroGenerationMultiplier: float, aggroGenerationIncrement: float, healingTagList: str[]): void"
+ },
+ {
+  "page": "exec",
+  "zh": "切换战斗文字提示过滤模板",
+  "en": "Switch Combat Text Filter Template",
+  "kind": "function",
+  "target": "switchCombatTextFilterTemplate",
+  "sig": "switchCombatTextFilterTemplate(playerEntity: Entity, combatTextTemplateID: int): void"
  },
  {
   "page": "exec",
@@ -1257,6 +1281,22 @@
   "kind": "function",
   "target": "setSkillCDBasedOnMaximumCDPercentage",
   "sig": "setSkillCDBasedOnMaximumCDPercentage(targetEntity: Entity, characterSkillSlot: SkillSlot, ratioValue: float, limitMaximumCDTime: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置指定技能实例冷却",
+  "en": "Set CD for Specified Skill Instance",
+  "kind": "function",
+  "target": "setCDForSpecifiedSkillInstance",
+  "sig": "setCDForSpecifiedSkillInstance(targetEntity: Entity, skillInstanceID: int, cd: float, limitMaximumCDTime: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "增加指定技能实例冷却",
+  "en": "Increase CD for Specified Skill Instance",
+  "kind": "function",
+  "target": "increaseCDForSpecifiedSkillInstance",
+  "sig": "increaseCDForSpecifiedSkillInstance(targetEntity: Entity, skillInstanceID: int, cdIncreaseValue: float, limitMaximumCDTime: bool): void"
  },
  {
   "page": "exec",
@@ -2104,6 +2144,14 @@
   "kind": "function",
   "target": "setPlayersCursorToClickThroughUIControls",
   "sig": "setPlayersCursorToClickThroughUIControls(playerEntity: Entity, clickThroughUIControls: bool): void"
+ },
+ {
+  "page": "exec",
+  "zh": "设置造物扰动装置",
+  "en": "Set Creation Disruptor Device",
+  "kind": "function",
+  "target": "setCreationDisruptorDevice",
+  "sig": "setCreationDisruptorDevice(targetEntity: Entity, deviceIndex: int): void"
  },
  {
   "page": "flow",
@@ -3257,10 +3305,10 @@
  {
   "page": "query",
   "zh": "查询对应华丽演绎礼盒消耗数量",
-  "en": "Query Corresponding Gift Box Consumption",
+  "en": "Query Corresponding Gorgeous Performance Box Consumption Quantity",
   "kind": "function",
-  "target": "queryCorrespondingGiftBoxConsumption",
-  "sig": "queryCorrespondingGiftBoxConsumption(playerEntity: Entity, giftBoxIndex: int): int"
+  "target": "queryCorrespondingGorgeousPerformanceBoxConsumptionQuantity",
+  "sig": "queryCorrespondingGorgeousPerformanceBoxConsumptionQuantity(playerEntity: Entity, giftBoxIndex: int): int"
  },
  {
   "page": "query",
@@ -3439,8 +3487,8 @@
  },
  {
   "page": "operation",
-  "zh": "模运算",
-  "en": "Modulo Operation",
+  "zh": "余运算",
+  "en": "Modulo",
   "kind": "implemented",
   "target": "moduloOperation",
   "sig": "moduloOperation(a: int, b: int): int"

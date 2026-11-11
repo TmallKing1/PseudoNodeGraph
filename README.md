@@ -5,7 +5,7 @@
 让 AI Agent（或人）可以用“伪代码”描述节点图逻辑：每个节点 = 一个函数，类型检查器会帮你发现连线类型错误。
 写好的伪代码再由人或工具在编辑器中“连成”真正的节点图。**与客户端 Lua 无关。**
 
-数据来源（官方教程，2026-10-16 抓取，原始文件在 `/workspace/nodegraph-src/`）：
+数据来源（官方教程，2026-11-11 重新抓取，原始文件在 `/workspace/nodegraph-src-2026-11-11/`；2026-10-16 的上次抓取在 `/workspace/nodegraph-src/`）：
 
 | 页面 | 中文 | 英文 |
 |---|---|---|
@@ -31,7 +31,7 @@ PseudoNodeGraph/
 ├─ EXPERIENCE.md        实践经验：运行上限、变量同步、局部变量、复合节点、信号、启动顺序、编辑器工作流（附证据级别）
 ├─ 待确认.md            待实测问题的记录格式（2026-11-08 首批 28 项已全部确认）
 ├─ TODO.md              待实现清单（无法建模/文档不清的编辑器特性）
-├─ COVERAGE.md          覆盖率报告 + 全部 487 个节点 → 标识符 对照表
+├─ COVERAGE.md          覆盖率报告 + 全部 493 个节点 → 标识符 对照表
 ├─ coverage.json        同上（机器可读）
 ├─ package.json / tsconfig.json
 ├─ src/
@@ -42,7 +42,7 @@ PseudoNodeGraph/
 │  ├─ core/variables.ts 自定义变量 / 节点图变量注册表（getVar / setVar …）
 │  ├─ core/composite.ts 复合节点（defineComposite）
 │  ├─ events/NN-*.ts    事件节点（按文档分类，一类一个文件，共 28 个）
-│  ├─ execution/NN-*.ts 执行节点（55 个文件）
+│  ├─ execution/NN-*.ts 执行节点（56 个文件）
 │  ├─ query/NN-*.ts     查询节点（38 个文件）
 │  └─ operation/NN-*.ts 运算节点（4 个文件）
 ├─ examples/example.ts  示例伪代码（参与类型检查）
@@ -216,4 +216,4 @@ node tools/gil/extract.cjs out/关卡.decoded.json   # 节点图、复合、实�
 node tools/gil/dump.cjs out/graphs.json <图id>     # 打印一张图
 node tools/gil/lint.cjs <伪代码目录>               # 编辑器规则检查
 ```
-覆盖：5 个页面共 **487** 个节点（中英文各 487），全部覆盖：476 个函数（其中 80 个有真实实现）+ 11 个原生语法映射。详见 `COVERAGE.md`。
+覆盖：5 个页面共 **493** 个节点（中英文各 493），全部覆盖：482 个函数（其中 80 个有真实实现）+ 11 个原生语法映射。详见 `COVERAGE.md`。

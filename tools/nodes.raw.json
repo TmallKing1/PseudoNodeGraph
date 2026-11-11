@@ -811,6 +811,12 @@
         "是否暴击",
         "布尔值",
         ""
+       ],
+       [
+        "出参",
+        "受击等级",
+        "枚举",
+        ""
        ]
       ]
      ],
@@ -4051,6 +4057,18 @@
         "Elemental Attack Potency",
         "Floating Point Numbers",
         "Elemental Gauge in the Attack"
+       ],
+       [
+        "Output Parameter",
+        "CRIT Hit or Not",
+        "Boolean",
+        ""
+       ],
+       [
+        "Output Parameter",
+        "Hit Level",
+        "Enumeration",
+        ""
        ]
       ]
      ],
@@ -7855,6 +7873,82 @@
       ]
      ],
      "sub": []
+    },
+    {
+     "title": "5. 激活/关闭原生推挤碰撞",
+     "text": [
+      "节点功能",
+      "激活或关闭造物实体上对应序号的原生推挤碰撞",
+      "节点参数",
+      "[TABLE 0]"
+     ],
+     "tables": [
+      [
+       [
+        "参数类型",
+        "参数名",
+        "类型",
+        "说明"
+       ],
+       [
+        "入参",
+        "造物实体",
+        "实体",
+        "生效的造物实体"
+       ],
+       [
+        "入参",
+        "原生推挤碰撞序号",
+        "整数",
+        "原生推挤碰撞的标识。某些造物可能没有原生推挤碰撞，某些造物可能有多个原生推挤碰撞"
+       ],
+       [
+        "入参",
+        "是否激活",
+        "布尔值",
+        "是则为激活"
+       ]
+      ]
+     ],
+     "sub": []
+    },
+    {
+     "title": "6. 激活/关闭额外推挤碰撞",
+     "text": [
+      "节点功能",
+      "激活或关闭造物实体上对应序号的额外推挤碰撞",
+      "节点参数",
+      "[TABLE 0]"
+     ],
+     "tables": [
+      [
+       [
+        "参数类型",
+        "参数名",
+        "类型",
+        "说明"
+       ],
+       [
+        "入参",
+        "造物实体",
+        "实体",
+        "生效的造物实体"
+       ],
+       [
+        "入参",
+        "额外推挤碰撞序号",
+        "整数",
+        "额外推挤碰撞的标识"
+       ],
+       [
+        "入参",
+        "是否激活",
+        "布尔值",
+        "是则为激活"
+       ]
+      ]
+     ],
+     "sub": []
     }
    ]
   },
@@ -8082,6 +8176,12 @@
         "伤害跳字类型",
         "枚举",
         "无跳字 普通跳字 暴击跳字"
+       ],
+       [
+        "入参",
+        "发起者实体",
+        "实体",
+        "该次损失生命的发起者，用于伤害归因。留空表示无来源"
        ]
       ]
      ],
@@ -8144,6 +8244,38 @@
         "治疗标签列表",
         "字符串列表",
         "此次恢复行为的标签列表。在【发起恢复生命值】时以及【被恢复生命值时】事件中可以取出，用于判定一次特定的恢复行为"
+       ]
+      ]
+     ],
+     "sub": []
+    },
+    {
+     "title": "5. 切换战斗文字提示过滤模板",
+     "text": [
+      "节点功能",
+      "切换指定玩家的战斗文字提示过滤模板，切换后按新模板过滤该玩家的战斗文字提示信息",
+      "节点参数",
+      "[TABLE 0]"
+     ],
+     "tables": [
+      [
+       [
+        "参数类型",
+        "参数名",
+        "类型",
+        "说明"
+       ],
+       [
+        "入参",
+        "玩家实体",
+        "实体",
+        ""
+       ],
+       [
+        "入参",
+        "战斗文字提示模板序号",
+        "整数",
+        ""
        ]
       ]
      ],
@@ -10328,7 +10460,95 @@
      "sub": []
     },
     {
-     "title": "10. 绑定自定义技能实例到指定槽位",
+     "title": "10. 设置指定技能实例冷却",
+     "text": [
+      "节点功能",
+      "直接设置目标角色指定技能实例的冷却时间为指定值",
+      "节点参数",
+      "[TABLE 0]"
+     ],
+     "tables": [
+      [
+       [
+        "参数类型",
+        "参数名",
+        "类型",
+        "说明"
+       ],
+       [
+        "入参",
+        "目标实体",
+        "实体",
+        "生效的角色实体"
+       ],
+       [
+        "入参",
+        "技能实例ID",
+        "整数",
+        "技能实例的标识"
+       ],
+       [
+        "入参",
+        "冷却时间",
+        "浮点数",
+        "修改后的冷却时间为该输入值"
+       ],
+       [
+        "入参",
+        "是否限制最大冷却时间",
+        "布尔值",
+        "为“是”时，修改后的冷却时间不会超过技能配置的最大冷却时间"
+       ]
+      ]
+     ],
+     "sub": []
+    },
+    {
+     "title": "11. 增加指定技能实例冷却",
+     "text": [
+      "节点功能",
+      "增加目标角色指定技能实例的冷却时间；输入负数时会减少冷却时间",
+      "节点参数",
+      "[TABLE 0]"
+     ],
+     "tables": [
+      [
+       [
+        "参数类型",
+        "参数名",
+        "类型",
+        "说明"
+       ],
+       [
+        "入参",
+        "目标实体",
+        "实体",
+        "生效的角色实体"
+       ],
+       [
+        "入参",
+        "技能实例ID",
+        "整数",
+        "技能实例的标识"
+       ],
+       [
+        "入参",
+        "冷却时间增加值",
+        "浮点数",
+        "修改后的值为：原值+增加值"
+       ],
+       [
+        "入参",
+        "是否限制最大冷却时间",
+        "布尔值",
+        "为“是”时，修改后的冷却时间不会超过技能配置的最大冷却时间"
+       ]
+      ]
+     ],
+     "sub": []
+    },
+    {
+     "title": "12. 绑定自定义技能实例到指定槽位",
      "text": [
       "节点功能",
       "将指定的技能实例绑定到指定的技能槽位上",
@@ -10378,7 +10598,7 @@
      "sub": []
     },
     {
-     "title": "11. 解绑技能实例",
+     "title": "13. 解绑技能实例",
      "text": [
       "节点功能",
       "解绑角色实体上的指定技能实例",
@@ -10410,7 +10630,7 @@
      "sub": []
     },
     {
-     "title": "12. 解绑槽位上的所有技能实例",
+     "title": "14. 解绑槽位上的所有技能实例",
      "text": [
       "节点功能",
       "解绑角色实体上指定槽位的所有技能实例",
@@ -10448,7 +10668,7 @@
      "sub": []
     },
     {
-     "title": "13. 创建自定义技能实例",
+     "title": "15. 创建自定义技能实例",
      "text": [
       "节点功能",
       "用角色实体上指定技能配置ID对应的技能创建其技能实例",
@@ -10486,7 +10706,7 @@
      "sub": []
     },
     {
-     "title": "14. 销毁自定义技能实例",
+     "title": "16. 销毁自定义技能实例",
      "text": [
       "节点功能",
       "销毁角色实体上的指定技能实例",
@@ -10518,7 +10738,7 @@
      "sub": []
     },
     {
-     "title": "15. 施放指定槽位面板技能",
+     "title": "17. 施放指定槽位面板技能",
      "text": [
       "节点功能",
       "使角色实体施放其对应技能槽位当前处于前台的技能",
@@ -10557,7 +10777,7 @@
      "sub": []
     },
     {
-     "title": "16. 施放指定技能实例",
+     "title": "18. 施放指定技能实例",
      "text": [
       "节点功能",
       "使角色实体施放指定技能实例ID对应的技能",
@@ -14596,6 +14816,43 @@
      "sub": []
     }
    ]
+  },
+  {
+   "cat": "五十六、造物扰动装置",
+   "nodes": [
+    {
+     "title": "1. 设置造物扰动装置",
+     "text": [
+      "节点功能",
+      "通过序号修改目标实体上生效的造物扰动装置，若序号不存在，则该节点运行后造物扰动装置将不再生效",
+      "节点参数",
+      "[TABLE 0]"
+     ],
+     "tables": [
+      [
+       [
+        "参数类型",
+        "参数名",
+        "类型",
+        "说明"
+       ],
+       [
+        "入参",
+        "目标实体",
+        "实体",
+        "挂载造物扰动装置的实体"
+       ],
+       [
+        "入参",
+        "装置序号",
+        "整数",
+        "造物扰动装置的标识"
+       ]
+      ]
+     ],
+     "sub": []
+    }
+   ]
   }
  ],
  "exec.en-us": [
@@ -16176,6 +16433,82 @@
       ]
      ],
      "sub": []
+    },
+    {
+     "title": "5. Activate/Disable Native Push Collision",
+     "text": [
+      "Node Functions",
+      "Enables or disables the native push collision with the specified index on the creation entity",
+      "Node Parameters",
+      "[TABLE 0]"
+     ],
+     "tables": [
+      [
+       [
+        "Parameter Type",
+        "Parameter Name",
+        "Type",
+        "Description"
+       ],
+       [
+        "Input Parameter",
+        "Creation Entity",
+        "Entity",
+        "The creation entity this applies to"
+       ],
+       [
+        "Input Parameter",
+        "Native Push Collision ID",
+        "Integer",
+        "The Native Push Collision identifier. Some creations may have none, while others may have multiple Native Push Collisions"
+       ],
+       [
+        "Input Parameter",
+        "Activate",
+        "Boolean",
+        "If true, activates the Native Push Collision"
+       ]
+      ]
+     ],
+     "sub": []
+    },
+    {
+     "title": "6. Activate/Disable Extra Push Collision",
+     "text": [
+      "Node Functions",
+      "Enables or disables the extra push collision with the specified index on the creation entity",
+      "Node Parameters",
+      "[TABLE 0]"
+     ],
+     "tables": [
+      [
+       [
+        "Parameter Type",
+        "Parameter Name",
+        "Type",
+        "Description"
+       ],
+       [
+        "Input Parameter",
+        "Creation Entity",
+        "Entity",
+        "The creation entity this applies to"
+       ],
+       [
+        "Input Parameter",
+        "Extra Push Collision ID",
+        "Integer",
+        "The Extra Push Collision identifier"
+       ],
+       [
+        "Input Parameter",
+        "Activate",
+        "Boolean",
+        "If true, activates the Extra Push Collision"
+       ]
+      ]
+     ],
+     "sub": []
     }
    ]
   },
@@ -16459,6 +16792,38 @@
         "Healing Tag List",
         "String List",
         "The list of tags associated with this healing action. These can be accessed in the When HP Is Recovered and When Initiating HP Recovery events to identify a specific healing action"
+       ]
+      ]
+     ],
+     "sub": []
+    },
+    {
+     "title": "5. Switch Combat Text Filter Template",
+     "text": [
+      "Node Functions",
+      "Switches the specified player's Combat Text Filter template, then filters their combat text prompts according to the new template",
+      "Node Parameters",
+      "[TABLE 0]"
+     ],
+     "tables": [
+      [
+       [
+        "Parameter Type",
+        "Parameter Name",
+        "Type",
+        "Description"
+       ],
+       [
+        "Input Parameter",
+        "Player Entity",
+        "Entity",
+        ""
+       ],
+       [
+        "Input Parameter",
+        "Combat Text Template ID",
+        "Integer",
+        ""
        ]
       ]
      ],
@@ -18904,6 +19269,94 @@
         "Check Key Availability",
         "Boolean",
         "Yes: Cast only when the key is available No: Cast even if the key is not available"
+       ]
+      ]
+     ],
+     "sub": []
+    },
+    {
+     "title": "17. Set CD for Specified Skill Instance",
+     "text": [
+      "Node Functions",
+      "Directly sets the cooldown of the specified skill instance on the target character to the specified value",
+      "Node Parameters",
+      "[TABLE 0]"
+     ],
+     "tables": [
+      [
+       [
+        "Parameter Type",
+        "Parameter Name",
+        "Type",
+        "Description"
+       ],
+       [
+        "Input Parameter",
+        "Target Entity",
+        "Entity",
+        "The character entity this applies to"
+       ],
+       [
+        "Input Parameter",
+        "Skill Instance ID",
+        "Integer",
+        "The skill instance identifier"
+       ],
+       [
+        "Input Parameter",
+        "CD",
+        "Floating Point Number",
+        "The cooldown is set to this input value"
+       ],
+       [
+        "Input Parameter",
+        "Limit Maximum CD Time",
+        "Boolean",
+        "If true, the adjusted cooldown cannot exceed the maximum cooldown configured for the skill"
+       ]
+      ]
+     ],
+     "sub": []
+    },
+    {
+     "title": "18. Increase CD for Specified Skill Instance",
+     "text": [
+      "Node Functions",
+      "Increases the cooldown of the specified skill instance on the target character. A negative input reduces the cooldown",
+      "Node Parameters",
+      "[TABLE 0]"
+     ],
+     "tables": [
+      [
+       [
+        "Parameter Type",
+        "Parameter Name",
+        "Type",
+        "Description"
+       ],
+       [
+        "Input Parameter",
+        "Target Entity",
+        "Entity",
+        "The character entity this applies to"
+       ],
+       [
+        "Input Parameter",
+        "Skill Instance ID",
+        "Integer",
+        "The skill instance identifier"
+       ],
+       [
+        "Input Parameter",
+        "CD Increase Value",
+        "Floating Point Number",
+        "New value = Original value + Input value"
+       ],
+       [
+        "Input Parameter",
+        "Limit Maximum CD Time",
+        "Boolean",
+        "If true, the adjusted cooldown cannot exceed the maximum cooldown configured for the skill"
        ]
       ]
      ],
@@ -22912,6 +23365,43 @@
      "sub": []
     }
    ]
+  },
+  {
+   "cat": "LVI. Creation Disruptor Device",
+   "nodes": [
+    {
+     "title": "1. Set Creation Disruptor Device",
+     "text": [
+      "Node Functions",
+      "Changes which Creation Disruptor Device is active on the target entity based on the specified index. If the index does not exist, no Creation Disruptor Device will be active after this node runs",
+      "Node Parameters",
+      "[TABLE 0]"
+     ],
+     "tables": [
+      [
+       [
+        "Parameter Type",
+        "Parameter Name",
+        "Type",
+        "Description"
+       ],
+       [
+        "Input Parameter",
+        "Target Entity",
+        "Entity",
+        "The entity to which the Creation Disruptor Device is attached"
+       ],
+       [
+        "Input Parameter",
+        "Device Index",
+        "Integer",
+        "The Creation Disruptor Device identifier"
+       ]
+      ]
+     ],
+     "sub": []
+    }
+   ]
   }
  ],
  "flow.zh-cn": [
@@ -25768,6 +26258,12 @@
         "出参",
         "当前受打断状态",
         "枚举",
+        ""
+       ],
+       [
+        "出参",
+        "造物重量",
+        "浮点数",
         ""
        ]
       ]
@@ -31644,6 +32140,12 @@
         "Current Interrupt Status",
         "Enumeration",
         ""
+       ],
+       [
+        "Output Parameter",
+        "Creation Weight",
+        "Floating Point Numbers",
+        ""
        ]
       ]
      ],
@@ -34345,10 +34847,10 @@
      "sub": []
     },
     {
-     "title": "2. Query Corresponding Gift Box Consumption",
+     "title": "Query Corresponding Gorgeous Performance Box Consumption Quantity",
      "text": [
       "Node Functions",
-      "Searches the consumed quantity of the specified Gift Box on the Player Entity",
+      "Queries the number of Gorgeous Performance Boxes consumed by the player entity (cannot be used for other gift box types)",
       "Node Parameters",
       "[TABLE 0]"
      ],
@@ -35262,10 +35764,10 @@
      "sub": []
     },
     {
-     "title": "11. 模运算",
+     "title": "11. 余运算",
      "text": [
       "节点功能",
-      "返回输入1对输入2的取模运算，输入1为被除数",
+      "返回输入1对输入2的取余运算，输入1为被除数",
       "节点参数",
       "[TABLE 0]"
      ],
@@ -38241,10 +38743,10 @@
      "sub": []
     },
     {
-     "title": "27. Modulo Operation",
+     "title": "27. Modulo",
      "text": [
       "Node Functions",
-      "Returns the result of input 1 modulo input 2, with input 1 as the dividend",
+      "Returns the remainder of Input 1 divided by Input 2, with Input 1 as the dividend",
       "Node Parameters",
       "[TABLE 0]"
      ],

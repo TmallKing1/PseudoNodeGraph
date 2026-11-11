@@ -3,11 +3,11 @@
 | 页面 | 中文页节点数 | 英文页节点数 | 函数(声明) | 函数(真实实现) | 原生语法映射 | TODO | 缺失 |
 |---|---|---|---|---|---|---|---|
 | 事件节点 mhn7ko01v3yw | 65 | 65 | 65 | 0 | 0 | 0 | 0 |
-| 执行节点 mhw66orrrfkm | 207 | 207 | 202 | 0 | 5 | 0 | 0 |
+| 执行节点 mhw66orrrfkm | 213 | 213 | 208 | 0 | 5 | 0 | 0 |
 | 流程控制节点 mhe8yn9bysd6 | 2 | 2 | 0 | 0 | 2 | 0 | 0 |
 | 查询节点 mhwbqlrw655q | 151 | 151 | 129 | 21 | 1 | 0 | 0 |
 | 运算节点 mhnd4l069tk0 | 62 | 62 | 0 | 59 | 3 | 0 | 0 |
-| **合计** | 487 | 487 | 396 | 80 | 11 | 0 | 0 |
+| **合计** | 493 | 493 | 402 | 80 | 11 | 0 | 0 |
 
 函数声明在 src 中存在性校验失败：无
 
@@ -124,11 +124,14 @@
 | exec | 激活/关闭原生碰撞可攀爬性 | Activate/Disable Native Collision Climbability | 声明 | `activateDisableNativeCollisionClimbability` |
 | exec | 激活/关闭额外碰撞 | Activate/Disable Extra Collision | 声明 | `activateDisableExtraCollision` |
 | exec | 激活/关闭额外碰撞可攀爬性 | Activate/Disable Extra Collision Climbability | 声明 | `activateDisableExtraCollisionClimbability` |
+| exec | 激活/关闭原生推挤碰撞 | Activate/Disable Native Push Collision | 声明 | `activateDisableNativePushCollision` |
+| exec | 激活/关闭额外推挤碰撞 | Activate/Disable Extra Push Collision | 声明 | `activateDisableExtraPushCollision` |
 | exec | 激活/关闭碰撞触发器 | Activate/Disable Collision Trigger | 声明 | `activateDisableCollisionTrigger` |
 | exec | 发起攻击 | Initiate Attack | 声明 | `initiateAttack` |
 | exec | 恢复生命 | Recover HP | 声明 | `recoverHP` |
 | exec | 损失生命 | HP Loss | 声明 | `hpLoss` |
 | exec | 直接恢复生命 | Recover HP Directly | 声明 | `recoverHPDirectly` |
+| exec | 切换战斗文字提示过滤模板 | Switch Combat Text Filter Template | 声明 | `switchCombatTextFilterTemplate` |
 | exec | 添加匀速直线型基础运动器 | Add Uniform Basic Linear Motion Device | 声明 | `addUniformBasicLinearMotionDevice` |
 | exec | 添加匀速旋转型基础运动器 | Add Uniform Basic Rotation-Based Motion Device | 声明 | `addUniformBasicRotationBasedMotionDevice` |
 | exec | 停止并删除基础运动器 | Stop and Delete Basic Motion Device | 声明 | `stopAndDeleteBasicMotionDevice` |
@@ -181,6 +184,8 @@
 | exec | 设置角色技能冷却 | Set Character Skill CD | 声明 | `setCharacterSkillCD` |
 | exec | 增加角色技能冷却 | Increase Character Skill CD | 声明 | `increaseCharacterSkillCD` |
 | exec | 按最大冷却时间比例设置技能冷却 | Set Skill CD Based on Maximum CD Percentage | 声明 | `setSkillCDBasedOnMaximumCDPercentage` |
+| exec | 设置指定技能实例冷却 | Set CD for Specified Skill Instance | 声明 | `setCDForSpecifiedSkillInstance` |
+| exec | 增加指定技能实例冷却 | Increase CD for Specified Skill Instance | 声明 | `increaseCDForSpecifiedSkillInstance` |
 | exec | 绑定自定义技能实例到指定槽位 | Bind Custom Skill Instance to Specified Slot | 声明 | `bindCustomSkillInstanceToSpecifiedSlot` |
 | exec | 解绑技能实例 | Unbind Skill Instance | 声明 | `unbindSkillInstance` |
 | exec | 解绑槽位上的所有技能实例 | Unbind all Skill Instances on the Slot | 声明 | `unbindAllSkillInstancesOnTheSlot` |
@@ -287,6 +292,7 @@
 | exec | 设置玩家光标是否常驻 | Set Player's Cursor to Always Visible | 声明 | `setPlayersCursorToAlwaysVisible` |
 | exec | 设置玩家光标点击可选取目标 | Enable Player's Cursor to Click Selectable Targets | 声明 | `enablePlayersCursorToClickSelectableTargets` |
 | exec | 设置玩家光标是否穿透UI控件 | Set Player's Cursor to Click Through UI Controls | 声明 | `setPlayersCursorToClickThroughUIControls` |
+| exec | 设置造物扰动装置 | Set Creation Disruptor Device | 声明 | `setCreationDisruptorDevice` |
 | flow | 双分支 | Double Branch | 原生语法 | `if (cond) { ... } else { ... }` |
 | flow | 多分支 | Multiple Branches | 原生语法 | `switch (expr) { case 1: ...; default: ... }（仅整数或字符串）` |
 | query | 获取局部变量 | Get Local Variable | 原生语法 | `let x: T = initial;（读取直接使用变量 x）` |
@@ -431,7 +437,7 @@
 | query | 获取玩家逃跑合法性 | Get Player Escape Validity | 声明 | `getPlayerEscapeValidity` |
 | query | 查询当前激活的实体布设组列表 | Get Currently Active Entity Deployment Groups | 声明 | `getCurrentlyActiveEntityDeploymentGroups` |
 | query | 查询对应礼盒数量 | Query Corresponding Gift Box Quantity | 声明 | `queryCorrespondingGiftBoxQuantity` |
-| query | 查询对应华丽演绎礼盒消耗数量 | Query Corresponding Gift Box Consumption | 声明 | `queryCorrespondingGiftBoxConsumption` |
+| query | 查询对应华丽演绎礼盒消耗数量 | Query Corresponding Gorgeous Performance Box Consumption Quantity | 声明 | `queryCorrespondingGorgeousPerformanceBoxConsumptionQuantity` |
 | query | 获取复杂造物的预设状态值 | Get the Preset Status Value of the Complex Creation | 声明 | `getThePresetStatusValueOfTheComplexCreation` |
 | query | 查询指定任务计数 | Query Specified Task Count | 声明 | `querySpecifiedTaskCount` |
 | query | 查询指定任务是否完成 | Query If Specified Task is Completed | 声明 | `queryIfSpecifiedTaskIsCompleted` |
@@ -454,7 +460,7 @@
 | operation | 减法运算 | Subtraction | 实现 | `subtraction` |
 | operation | 乘法运算 | Multiplication | 实现 | `multiplication` |
 | operation | 除法运算 | Division | 实现 | `division` |
-| operation | 模运算 | Modulo Operation | 实现 | `moduloOperation` |
+| operation | 余运算 | Modulo | 实现 | `moduloOperation` |
 | operation | 幂运算 | Exponentiation | 实现 | `exponentiation` |
 | operation | 取较大值 | Take Larger Value | 实现 | `takeLargerValue` |
 | operation | 取较小值 | Take Smaller Value | 实现 | `takeSmallerValue` |

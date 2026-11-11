@@ -125,6 +125,34 @@ export declare function increaseCharacterSkillCD(targetEntity: Entity, character
 export declare function setSkillCDBasedOnMaximumCDPercentage(targetEntity: Entity, characterSkillSlot: E.SkillSlot, ratioValue: float, limitMaximumCDTime: bool): void;
 
 /**
+ * 【设置指定技能实例冷却】 Set CD for Specified Skill Instance
+ * 分类：执行节点 / 二十五、技能（XXV. Skills）
+ *
+ * 直接设置目标角色指定技能实例的冷却时间为指定值
+ *
+ * @en Directly sets the cooldown of the specified skill instance on the target character to the specified value
+ * @param targetEntity 生效的角色实体（目标实体：实体）
+ * @param skillInstanceID 技能实例的标识（技能实例ID：整数）
+ * @param cd 修改后的冷却时间为该输入值（冷却时间：浮点数）
+ * @param limitMaximumCDTime 为“是”时，修改后的冷却时间不会超过技能配置的最大冷却时间（是否限制最大冷却时间：布尔值）
+ */
+export declare function setCDForSpecifiedSkillInstance(targetEntity: Entity, skillInstanceID: int, cd: float, limitMaximumCDTime: bool): void;
+
+/**
+ * 【增加指定技能实例冷却】 Increase CD for Specified Skill Instance
+ * 分类：执行节点 / 二十五、技能（XXV. Skills）
+ *
+ * 增加目标角色指定技能实例的冷却时间；输入负数时会减少冷却时间
+ *
+ * @en Increases the cooldown of the specified skill instance on the target character. A negative input reduces the cooldown
+ * @param targetEntity 生效的角色实体（目标实体：实体）
+ * @param skillInstanceID 技能实例的标识（技能实例ID：整数）
+ * @param cdIncreaseValue 修改后的值为：原值+增加值（冷却时间增加值：浮点数）
+ * @param limitMaximumCDTime 为“是”时，修改后的冷却时间不会超过技能配置的最大冷却时间（是否限制最大冷却时间：布尔值）
+ */
+export declare function increaseCDForSpecifiedSkillInstance(targetEntity: Entity, skillInstanceID: int, cdIncreaseValue: float, limitMaximumCDTime: bool): void;
+
+/**
  * 【绑定自定义技能实例到指定槽位】 Bind Custom Skill Instance to Specified Slot
  * 分类：执行节点 / 二十五、技能（XXV. Skills）
  *

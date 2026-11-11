@@ -34,7 +34,9 @@ ENUMMAP=[ # (zh param name, desc keyword or None, enum type)
 SIGOV={
  'assemblyDictionary':('<K extends DictKey, V extends NodeValue>','...pairs: [key: K, value: V][]','Dict<K, V>'),
 }
-ZHNAME={'是否暴击':'isCrit','能力单元所属实体':'abilityUnitOwnerEntity'}
+ZHNAME={'是否暴击':'isCrit','能力单元所属实体':'abilityUnitOwnerEntity','受击等级':'hitLevel','发起者实体':'initiatorEntity'}
+# 官方英文名变更时保留已有标识符（避免运算节点实现键失效）
+ID_OVERRIDE={('operation','余运算'):'moduloOperation'}
 SIGOV['sendSignal']=('<K extends SignalName>','signalName: K, params: SignalParams<K>','void')
 SIGOV['sendClientScriptedSignal']=('<K extends SignalName>','signalName: K, targetPlayer: Entity, params: SignalParams<K>','void')
 SIGBASE=['','—— 信号语义（创作者补充）——','信号在编辑器【服务器信号管理器】中定义：每个信号有信号名和有序参数列表（参数名+类型），信号名与参数列表一一对应。','在节点上选择信号名后，节点会追加该信号的参数引脚。伪代码中用 SignalRegistry 声明信号（见 core/signals.ts / README），信号名与参数在类型检查时校验。']
@@ -169,7 +171,7 @@ def gen_node(x):
     head.append('@param handler 事件触发时调用，参数为该事件节点的全部出参')
     lines.append(doc(head)); lines.append(f'export declare function {nm}{tp}({", ".join(args)}): void;')
     COVER.append(dict(page=p,zh=zt,en=et,kind='function',target=nm)); return '\n'.join(lines)
-  nm=uniq(camel(et))
+  nm=uniq(ID_OVERRIDE.get((p,zt)) or camel(et))
   if nm in RESERVED: nm=uniq(nm+'Node')
   pre=[]
   if len(outs)==0: ret='void'

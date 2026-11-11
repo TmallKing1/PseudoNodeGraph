@@ -85,6 +85,7 @@ export * from './execution/52-floatingInteractionPage';
 export * from './execution/53-stageQuests';
 export * from './execution/54-controlMotionDevice';
 export * from './execution/55-cursor';
+export * from './execution/56-creationDisruptorDevice';
 export * from './query/01-general';
 export * from './query/02-math';
 export * from './query/03-listRelated';

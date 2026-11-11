@@ -41,6 +41,10 @@ export interface AttackedEvent {
    * 是否暴击（是否暴击：布尔值）
    */
   readonly isCrit: bool;
+  /**
+   * 受击等级（受击等级：枚举）
+   */
+  readonly hitLevel: OpaqueEnum<"受击等级">;
 }
 /**
  * 【受到攻击时】 When Attacked
@@ -89,7 +93,7 @@ export interface AttackHitsEvent {
   /**
    * 是否暴击（是否暴击：布尔值）
    */
-  readonly isCrit: bool;
+  readonly critHitOrNot: bool;
 }
 /**
  * 【攻击命中时】 When Attack Hits

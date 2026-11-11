@@ -54,3 +54,29 @@ export declare function activateDisableExtraCollision(targetEntity: Entity, extr
  * @param activate “是”为激活（是否激活：布尔值）
  */
 export declare function activateDisableExtraCollisionClimbability(targetEntity: Entity, extraCollisionID: int, activate: bool): void;
+
+/**
+ * 【激活/关闭原生推挤碰撞】 Activate/Disable Native Push Collision
+ * 分类：执行节点 / 九、碰撞（IX. Collision）
+ *
+ * 激活或关闭造物实体上对应序号的原生推挤碰撞
+ *
+ * @en Enables or disables the native push collision with the specified index on the creation entity
+ * @param creationEntity 生效的造物实体（造物实体：实体）
+ * @param nativePushCollisionID 原生推挤碰撞的标识。某些造物可能没有原生推挤碰撞，某些造物可能有多个原生推挤碰撞（原生推挤碰撞序号：整数）
+ * @param activate 是则为激活（是否激活：布尔值）
+ */
+export declare function activateDisableNativePushCollision(creationEntity: Entity, nativePushCollisionID: int, activate: bool): void;
+
+/**
+ * 【激活/关闭额外推挤碰撞】 Activate/Disable Extra Push Collision
+ * 分类：执行节点 / 九、碰撞（IX. Collision）
+ *
+ * 激活或关闭造物实体上对应序号的额外推挤碰撞
+ *
+ * @en Enables or disables the extra push collision with the specified index on the creation entity
+ * @param creationEntity 生效的造物实体（造物实体：实体）
+ * @param extraPushCollisionID 额外推挤碰撞的标识（额外推挤碰撞序号：整数）
+ * @param activate 是则为激活（是否激活：布尔值）
+ */
+export declare function activateDisableExtraPushCollision(creationEntity: Entity, extraPushCollisionID: int, activate: bool): void;

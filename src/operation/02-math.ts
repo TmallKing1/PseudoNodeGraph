@@ -188,12 +188,12 @@ export function division<T extends Num = Num>(a: T, b: T): T {
 }
 
 /**
- * 【模运算】 Modulo Operation
+ * 【余运算】 Modulo
  * 分类：运算节点 / 二、数学（II. Math）
  *
- * 返回输入1对输入2的取模运算，输入1为被除数
+ * 返回输入1对输入2的取余运算，输入1为被除数
  *
- * @en Returns the result of input 1 modulo input 2, with input 1 as the dividend
+ * @en Returns the remainder of Input 1 divided by Input 2, with Input 1 as the dividend
  * @param a （：整数）
  * @param b （：整数）
  * @returns 结果（结果：整数）
