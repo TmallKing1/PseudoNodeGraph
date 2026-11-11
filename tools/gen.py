@@ -30,13 +30,41 @@ ENUMMAP=[ # (zh param name, desc keyword or None, enum type)
  ('技能槽位',None,'SkillSlot'),('角色技能槽位',None,'SkillSlot'),('指定槽位',None,'SkillSlot'),('原槽位技能处理',None,'OriginalSlotSkillHandling'),
  ('衰减方式',None,'SoundAttenuationMode'),('刷新方式',None,'DeckSelectorRefreshMode'),('结算状态','逃跑','RankSettlementStatus'),('结算状态',None,'SettlementStatus'),
  ('掉落类型',None,'LootType'),('规则类型',None,'ScanTagRuleType'),('游玩方式',None,'GameplayMode'),('当前受打断状态',None,'InterruptStatus'),
- ('输入设备类型',None,'InputDeviceType'),('取整方式',None,'RoundingMode')]
+ ('输入设备类型',None,'InputDeviceType'),('取整方式',None,'RoundingMode'),
+ ('受击等级',None,'HitLevel')]
 SIGOV={
  'assemblyDictionary':('<K extends DictKey, V extends NodeValue>','...pairs: [key: K, value: V][]','Dict<K, V>'),
 }
 ZHNAME={'是否暴击':'isCrit','能力单元所属实体':'abilityUnitOwnerEntity','受击等级':'hitLevel','发起者实体':'initiatorEntity'}
 # 官方英文名变更时保留已有标识符（避免运算节点实现键失效）
 ID_OVERRIDE={('operation','余运算'):'moduloOperation'}
+# 编辑器截图覆盖（2026-11-11）：官方英文文档滞后于中文页/编辑器，重新从教程页生成时仍以编辑器为准。
+# pins: 中文参数名 → 英文编辑器参数名。枚举取值见 src/core/enums.ts（HitLevel）。
+EDITOR_OVERRIDES={
+  ('event','受到攻击时'):{
+    # When Attacked 出参：Event Source Entity, Event Source GUID, Attacker Entity,
+    # Damage, Attack Tag List, Elemental Type, Elemental Attack Potency,
+    # CRIT Hit or Not, Hit Level（官方英文页缺后两项）
+    'pins':{
+      '是否暴击':'CRIT Hit or Not',
+      '受击等级':'Hit Level',
+    },
+  },
+  ('exec','损失生命'):{
+    # 英文编辑器节点名为 Lose HP（官方英文页作 HP Loss）；标识符仍用文档标题生成的 hpLoss。
+    # 入参顺序：Target Entity, HP Loss Amount, Lethal, Can Be Blocked by Invincible,
+    # Can Be Blocked by Locked HP, Damage Pop-Up Type, Initiator Entity
+    'pins':{
+      '目标实体':'Target Entity',
+      '生命损失量':'HP Loss Amount',
+      '是否致命':'Lethal',
+      '是否可被无敌抵挡':'Can Be Blocked by Invincible',
+      '是否可被锁定生命值抵挡':'Can Be Blocked by Locked HP',
+      '伤害跳字类型':'Damage Pop-Up Type',
+      '发起者实体':'Initiator Entity',
+    },
+  },
+}
 SIGOV['sendSignal']=('<K extends SignalName>','signalName: K, params: SignalParams<K>','void')
 SIGOV['sendClientScriptedSignal']=('<K extends SignalName>','signalName: K, targetPlayer: Entity, params: SignalParams<K>','void')
 SIGBASE=['','—— 信号语义（创作者补充）——','信号在编辑器【服务器信号管理器】中定义：每个信号有信号名和有序参数列表（参数名+类型），信号名与参数列表一一对应。','在节点上选择信号名后，节点会追加该信号的参数引脚。伪代码中用 SignalRegistry 声明信号（见 core/signals.ts / README），信号名与参数在类型检查时校验。']
@@ -79,14 +107,16 @@ def esc(s): return s.replace('*/','*\\/')
 KM={'入参':'in','出参':'out','Input Parameter':'in','Output Parameter':'out','Input Paraneter':'in'}
 def rows(x):
   z=x['zh']['tables'][0][1:]; e=x['en']['tables'][0][1:]
-  # 按(方向,同方向序号)对齐
+  # 按(方向,同方向序号)对齐；编辑器覆盖优先于官方英文页（文档滞后）
   ek=collections.defaultdict(list)
   for r in e: ek[KM.get(r[0],r[0])].append(r)
   cnt=collections.Counter(); res=[]
+  ov=(EDITOR_OVERRIDES.get((x['page'], title(x['zh']['title']))) or {}).get('pins') or {}
   for r in z:
     k=KM.get(r[0],'none'); i=cnt[k]; cnt[k]+=1
     er=ek[k][i] if i<len(ek[k]) else None
-    res.append(dict(kind=k,zh=r[1],ztype=r[2],zdesc=r[3] if len(r)>3 else '',en=er[1] if er else None,edesc=er[3] if er and len(er)>3 else ''))
+    en=ov[r[1]] if r[1] in ov else (er[1] if er else None)
+    res.append(dict(kind=k,zh=r[1],ztype=r[2],zdesc=r[3] if len(r)>3 else '',en=en,edesc=er[3] if er and len(er)>3 else ''))
   return res
 def tsType(r,x,ctx):
   t=r['ztype']; zt=title(x['zh']['title'])

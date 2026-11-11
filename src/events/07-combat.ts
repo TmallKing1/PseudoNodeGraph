@@ -40,11 +40,11 @@ export interface AttackedEvent {
   /**
    * 是否暴击（是否暴击：布尔值）
    */
-  readonly isCrit: bool;
+  readonly critHitOrNot: bool;
   /**
    * 受击等级（受击等级：枚举）
    */
-  readonly hitLevel: OpaqueEnum<"受击等级">;
+  readonly hitLevel: E.HitLevel;
 }
 /**
  * 【受到攻击时】 When Attacked

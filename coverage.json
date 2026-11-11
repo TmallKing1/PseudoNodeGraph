@@ -848,7 +848,7 @@
   "en": "HP Loss",
   "kind": "function",
   "target": "hpLoss",
-  "sig": "hpLoss(targetEntity: Entity, hpLoss: float, lethal: bool, canBeBlockedByInvincibility: bool, canBeBlockedByLockedHP: bool, damagePopUpType: DamagePopUpType, initiatorEntity: Entity): void"
+  "sig": "hpLoss(targetEntity: Entity, hpLossAmount: float, lethal: bool, canBeBlockedByInvincible: bool, canBeBlockedByLockedHP: bool, damagePopUpType: DamagePopUpType, initiatorEntity: Entity): void"
  },
  {
   "page": "exec",

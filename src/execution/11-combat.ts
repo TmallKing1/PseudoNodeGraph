@@ -52,14 +52,14 @@ export declare function recoverHP(targetEntity: Entity, recoveryAmount: float, a
  *
  * @en Directly cause the specified target to lose HP. Losing HP is not an attack, so it does not trigger attack-related events
  * @param targetEntity 损失生命的目标（目标实体：实体）
- * @param hpLoss 该次损失生命值的损失量（生命损失量：浮点数）
+ * @param hpLossAmount 该次损失生命值的损失量（生命损失量：浮点数）
  * @param lethal 为“否”时，该次损失生命最多使目标生命扣为1点（是否致命：布尔值）
- * @param canBeBlockedByInvincibility 为“是”时，如果目标已经通过单位状态设置为了无敌，则损失生命不生效（是否可被无敌抵挡：布尔值）
+ * @param canBeBlockedByInvincible 为“是”时，如果目标已经通过单位状态设置为了无敌，则损失生命不生效（是否可被无敌抵挡：布尔值）
  * @param canBeBlockedByLockedHP 为“是”时，如果目标已经通过单位状态设置为了锁定生命值，则损失生命不生效（是否可被锁定生命值抵挡：布尔值）
  * @param damagePopUpType 无跳字 普通跳字 暴击跳字（伤害跳字类型：枚举）
  * @param initiatorEntity 该次损失生命的发起者，用于伤害归因。留空表示无来源（发起者实体：实体）
  */
-export declare function hpLoss(targetEntity: Entity, hpLoss: float, lethal: bool, canBeBlockedByInvincibility: bool, canBeBlockedByLockedHP: bool, damagePopUpType: E.DamagePopUpType, initiatorEntity: Entity): void;
+export declare function hpLoss(targetEntity: Entity, hpLossAmount: float, lethal: bool, canBeBlockedByInvincible: bool, canBeBlockedByLockedHP: bool, damagePopUpType: E.DamagePopUpType, initiatorEntity: Entity): void;
 
 /**
  * 【直接恢复生命】 Recover HP Directly

@@ -14,7 +14,7 @@ const HEAL_TIMER = str('heal');        // 字符串字面量用 str() 构造
 
 onAttacked((ev) => {
   // 运算节点有真实实现，也可以直接写原生运算符 ev.damage > 100
-  if (logicalANDOperation(greaterThan(ev.damage, 100), ev.isCrit)) { // 双分支 → if
+  if (logicalANDOperation(greaterThan(ev.damage, 100), ev.critHitOrNot)) { // 双分支 → if
     const r = addUnitStatus(ev.eventSourceEntity, ev.attackerEntity, BURN_STATUS, 1, new Map());
     switch (r.applicationResult) { // 多分支 → switch
       case UnitStatusApplyResult.SuccessNewStatus:
